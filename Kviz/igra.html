@@ -14,23 +14,26 @@
               <h1>KVIZ</h1>
             </div>
             <div class="submitAnswer">
-                <button onclick="changeQuestion(0);" class="nextQuestion">Započni kviz</button>
+                <button  id="start" class="nextQuestion">Započni kviz</button>
             </div>
         </div>
 
         <div class="question" id="question1" style="display: none;">
-            <div class="pitanje">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquid voluptatibus cumque optio facilis fugiat ipsum ratione dignissimos hic, iure dolorem, dolore nisi necessitatibus quibusdam quas quo tempore asperiores illo nam autem explicabo. Quae molestias odit, porro, magnam harum tempora esse, temporibus alias ipsum veniam totam obcaecati eius exercitationem quaerat inventore! Consequuntur, sapiente quae, laboriosam explicabo doloribus corrupti libero exercitationem quod ipsam aperiam neque placeat tempore at numquam temporibus, amet eligendi ab. Tempore dolorum qui minus, quo, maxime dolore numquam nulla obcaecati non eveniet velit dolorem. Minima recusandae accusantium corrupti! Blanditiis odio dicta distinctio ut quo quas asperiores nobis iure.
+            <div class="pitanje" id="pitanje">
+        
             </div>
+            <div id="timer"></div>
             <div class="odgovor">
                 <input class="yourAnswer" id="yourAnswer1" type="text" placeholder="Unesite Vaš odgovor">
             </div>
             <div class="submitAnswer">
-                <button onclick="changeQuestion(1);" class="nextQuestion">Sljedeće pitanje</button>
+                <button class="nextQuestion" id="back"  style="display: none;">Nazad</button>
+                <button class="nextQuestion" id="confirmAnswer">Potvrdi</button>
+                <button class="nextQuestion" id="nextQuestion">Sljedeće pitanje</button>
             </div>
         </div>
 
-        <div class="question" id="question2" style="display: none;">
+        <!-- <div class="question" id="question2" style="display: none;">
             <div class="pitanje">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquid voluptatibus cumque optio facilis fugiat ipsum ratione dignissimos hic, iure dolorem, dolore nisi necessitatibus quibusdam quas quo tempore asperiores illo nam autem explicabo. Quae molestias odit, porro, magnam harum tempora esse, temporibus alias ipsum veniam totam obcaecati eius exercitationem quaerat inventore! Consequuntur, sapiente quae, laboriosam explicabo doloribus corrupti libero exercitationem quod ipsam aperiam neque placeat tempore at numquam temporibus, amet eligendi ab. Tempore dolorum qui minus, quo, maxime dolore numquam nulla obcaecati non eveniet velit dolorem. Minima recusandae accusantium corrupti! Blanditiis odio dicta distinctio ut quo quas asperiores nobis iure.
             </div>
@@ -62,10 +65,10 @@
             <div class="submitAnswer">
                 <button onclick="changeQuestion(4);" class="nextQuestion">Sljedeće pitanje</button>
             </div>
-        </div>
+        </div> -->
     </div>
-
-<script>
+<script type="module" src="script.js"></script>
+<!-- <script>
 
 const odgovori = [];
 
@@ -78,17 +81,17 @@ function changeQuestion(id){
         odgovor = document.getElementById('yourAnswer' + id).value;
     }
     
-    if(id){
-        odgovori.push(odgovor);
-    }
+    // if(id){
+    //     odgovori.push(odgovor);
+    // }
 
-    id++;
+    // id++;
     
     if(document.getElementById('question' + id)){
         document.getElementById('question' + id).style.display = '';
     }
     console.log(odgovori);
 }
-</script>
+</script> -->
 </body>
 </html>
