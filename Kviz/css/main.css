@@ -1,0 +1,178 @@
+@font-face {
+    font-family: "Balsamiq Sans";
+    src: url("../fonts/BalsamiqSans-Regular.ttf");
+}
+
+:root {
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    
+    --clr-imperial-red: rgb(230, 57, 70);
+    --clr-honeydew: rgb(241, 250, 238);
+    --clr-powder-blue: rgb(168, 218, 220);
+    --clr-celadon-blue: rgb(69, 123, 157);
+    --clr-prussian-blue: rgb(29, 53, 87);
+
+    --clr-black: rgb(0, 0, 0);
+    --clr-white: rgb(255, 255, 255);
+    --clr-green: rgb(85, 166, 48);
+    --clr-purple: rgb(57, 60, 112);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+body {
+    background-image: url('../images/plants.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.quiz {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    height:80%;
+    /* min-height:50%; */
+    border: 3px solid var(--clr-black);
+    border-radius: 0.5rem;
+    background-image: url('../images/stripes.jpg');
+    background-position: center;
+    background-size: cover;
+    /* opacity: 0.8; */
+}
+
+.header {
+    font-size: 1.6em;
+    color: var(--clr-white);
+    text-align: center;
+    margin: 15px;
+}
+
+.btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.btn {
+    display: block;
+    padding: .8em;
+    border-radius:0.5em;
+    color: white;
+    font-size: 1.2rem;
+    transition: 200ms ease-in-out all;
+}
+.btn i {
+    float: left;
+    margin-right: 10px;
+}
+.start {
+    background-color: var(--clr-prussian-blue);
+    border: 3px solid var(--clr-prussian-blue);
+}
+.results {
+    margin-top: 0.4em;
+    background-color: var(--clr-green);
+    border: 3px solid var(--clr-green);
+}
+.btn:hover {
+    color: white;
+}
+.start:hover {
+    background-color: transparent;
+}
+.results:hover {
+    background-color: transparent;
+}
+
+.question {
+    position: relative;
+    width: 90%;
+    height:0%;
+    top: 10%;
+    left: 5%;
+    border-radius: 0.5rem;
+    background-color: var(--clr-purple);
+    box-shadow: 10px 10px 10px 10px var(--clr-black);
+    animation: slide  ease 3.5s forwards;
+}
+
+#timer{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.pitanje {
+    position: relative;
+    height: 40%;
+    padding: 0 1rem;
+    padding-top: 1rem;
+    font-size: 20px;
+    color: var(--clr-white);
+}
+
+.odgovor {
+    position: relative;
+    height: 40%;
+    text-align: center;
+}
+
+.submitAnswer {
+    position: relative;
+    height: 10%;
+    text-align: center;
+}
+
+.nextQuestion {
+    font-size: 16px;
+    padding: 11px 22px;
+    border: 3px solid var(--clr-white);
+    border-radius: 40px;
+    background-color: transparent;
+    color: var(--clr-white);
+    cursor: pointer;
+}
+.nextQuestion:hover {
+    border-color: var(--clr-white);
+    background-color: var(--clr-white);
+    color: var(--clr-purple);
+}
+.nextQuestion:active {
+    transform: scale(0.90);
+}
+
+.yourAnswer {
+    width: 50%;
+    margin-top: 7rem;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: var(--clr-black);
+    border: 3px solid var(--clr-white);
+    background: var(--clr-white);
+    transition: border .3s ease;
+}
+
+
+/* animations */
+@keyframes slide {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 80%;;
+    }
+}
