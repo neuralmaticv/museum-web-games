@@ -1,97 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="./main.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kviz - Muzej RS</title>
+    <link rel="icon" type="image/png" href="images/quiz-favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/quiz-favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/quiz-favicon-96x96.png" sizes="96x96" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="icons/fontawesome-free-5.15.3-web/css/all.css" />
 </head>
 <body>
+
     <div class="quiz">
         <div class="question" id="question0">
-            <div class="pitanje">
-              <h1>KVIZ</h1>
+            <div class="header">
+                <h1>Kviz</h1>
             </div>
-            <div class="submitAnswer">
-                <button  id="start" class="nextQuestion">Započni kviz</button>
+
+            <div class="btns">
+                <a class="btn start" id="start"><i class="fas fa-play"></i>Započni kviz</a>
+                <a class="btn results" href="./listaRezultata.html"><i class="fas fa-sort-amount-up-alt"></i>Pogledaj
+                    rezultate</a>
             </div>
         </div>
 
-        <div class="question" id="question1" style="display: none;">
-            <div class="pitanje" id="pitanje">
-        
-            </div>
+        <div class="question" id="question1" style="display: none">
+            <div class="pitanje" id="pitanje"></div>
             <div id="timer"></div>
             <div class="odgovor">
-                <input class="yourAnswer" id="yourAnswer1" type="text" placeholder="Unesite Vaš odgovor">
+                <input class="yourAnswer" id="yourAnswer1" type="text" placeholder="Unesite Vaš odgovor" />
             </div>
             <div class="submitAnswer">
-                <button class="nextQuestion" id="back"  style="display: none;">Nazad</button>
+                <button class="nextQuestion" id="back" style="display: none">
+                    Nazad
+                </button>
                 <button class="nextQuestion" id="confirmAnswer">Potvrdi</button>
-                <button class="nextQuestion" id="nextQuestion">Sljedeće pitanje</button>
+                <button class="nextQuestion" id="nextQuestion">
+                    Sljedeće pitanje
+                </button>
             </div>
         </div>
-
-        <!-- <div class="question" id="question2" style="display: none;">
-            <div class="pitanje">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquid voluptatibus cumque optio facilis fugiat ipsum ratione dignissimos hic, iure dolorem, dolore nisi necessitatibus quibusdam quas quo tempore asperiores illo nam autem explicabo. Quae molestias odit, porro, magnam harum tempora esse, temporibus alias ipsum veniam totam obcaecati eius exercitationem quaerat inventore! Consequuntur, sapiente quae, laboriosam explicabo doloribus corrupti libero exercitationem quod ipsam aperiam neque placeat tempore at numquam temporibus, amet eligendi ab. Tempore dolorum qui minus, quo, maxime dolore numquam nulla obcaecati non eveniet velit dolorem. Minima recusandae accusantium corrupti! Blanditiis odio dicta distinctio ut quo quas asperiores nobis iure.
-            </div>
-            <div class="odgovor">
-                <input class="yourAnswer" id="yourAnswer2" type="text" placeholder="Unesite Vaš odgovor">
-            </div>
-            <div class="submitAnswer">
-                <button onclick="changeQuestion(2);" class="nextQuestion">Sljedeće pitanje</button>
-            </div>
-        </div>
-        <div class="question" id="question3" style="display: none;">
-            <div class="pitanje">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquid voluptatibus cumque optio facilis fugiat ipsum ratione dignissimos hic, iure dolorem, dolore nisi necessitatibus quibusdam quas quo tempore asperiores illo nam autem explicabo. Quae molestias odit, porro, magnam harum tempora esse, temporibus alias ipsum veniam totam obcaecati eius exercitationem quaerat inventore! Consequuntur, sapiente quae, laboriosam explicabo doloribus corrupti libero exercitationem quod ipsam aperiam neque placeat tempore at numquam temporibus, amet eligendi ab. Tempore dolorum qui minus, quo, maxime dolore numquam nulla obcaecati non eveniet velit dolorem. Minima recusandae accusantium corrupti! Blanditiis odio dicta distinctio ut quo quas asperiores nobis iure.
-            </div>
-            <div class="odgovor">
-                <input class="yourAnswer" id="yourAnswer3" type="text" placeholder="Unesite Vaš odgovor">
-            </div>
-            <div class="submitAnswer">
-                <button onclick="changeQuestion(3);" class="nextQuestion">Sljedeće pitanje</button>
-            </div>
-        </div>
-        <div class="question" id="question4" style="display: none;">
-            <div class="pitanje">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquid voluptatibus cumque optio facilis fugiat ipsum ratione dignissimos hic, iure dolorem, dolore nisi necessitatibus quibusdam quas quo tempore asperiores illo nam autem explicabo. Quae molestias odit, porro, magnam harum tempora esse, temporibus alias ipsum veniam totam obcaecati eius exercitationem quaerat inventore! Consequuntur, sapiente quae, laboriosam explicabo doloribus corrupti libero exercitationem quod ipsam aperiam neque placeat tempore at numquam temporibus, amet eligendi ab. Tempore dolorum qui minus, quo, maxime dolore numquam nulla obcaecati non eveniet velit dolorem. Minima recusandae accusantium corrupti! Blanditiis odio dicta distinctio ut quo quas asperiores nobis iure.
-            </div>
-            <div class="odgovor">
-                <input class="yourAnswer" id="yourAnswer4" type="text" placeholder="Unesite Vaš odgovor">
-            </div>
-            <div class="submitAnswer">
-                <button onclick="changeQuestion(4);" class="nextQuestion">Sljedeće pitanje</button>
-            </div>
-        </div> -->
     </div>
-<script type="module" src="script.js"></script>
-<!-- <script>
 
-const odgovori = [];
-
-function changeQuestion(id){
-    document.getElementById('question' + id).style.display = "none";
-
-    let odgovor = '';
-
-    if(document.getElementById('yourAnswer' + id)){
-        odgovor = document.getElementById('yourAnswer' + id).value;
-    }
-    
-    // if(id){
-    //     odgovori.push(odgovor);
-    // }
-
-    // id++;
-    
-    if(document.getElementById('question' + id)){
-        document.getElementById('question' + id).style.display = '';
-    }
-    console.log(odgovori);
-}
-</script> -->
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
