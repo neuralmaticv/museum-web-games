@@ -1,7 +1,7 @@
 // const data = require('./zagonetke.json');
 // console.log(data)
 
-import zagonetke from "./zagonetke.js"
+import zagonetke from "../data/zagonetke.js"
 
 console.log(zagonetke);
 let start = document.querySelector("#start");
@@ -90,14 +90,14 @@ function isAnswerTrue() {
         if (userAnswer.value.toUpperCase() === trueAnswer.toUpperCase()) {
             console.log("tacno")
             points++
-            userAnswer.style.backgroundColor = 'rgb(125, 235, 52)';
+            userAnswer.style.backgroundColor = 'rgb(85, 166, 48)';
             correct.play();
 
         }
 
         else {
             console.log("netacno")
-            userAnswer.style.backgroundColor = 'red';
+            userAnswer.style.backgroundColor = 'rgb(230, 57, 70)';
             wrong.play();
         }
 
