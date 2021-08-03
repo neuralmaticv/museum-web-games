@@ -18,9 +18,9 @@ let counter = 0;
 let back = document.querySelector("#back");
 let next = document.querySelector("#nextQuestion");
 let confirmAnswer = document.querySelector("#confirmAnswer")
-let userAnswer = document.querySelector("#yourAnswer1");
+let userAnswer = document.querySelector("#userAnswer");
 let trueAnswer = ""
-let question = document.querySelector("#pitanje");
+let question = document.querySelector("#pitanjeT2");
 
 let wrong = new Audio('Zvuci/wrong.wav');
 let correct = new Audio('Zvuci/correct.wav');
@@ -31,8 +31,9 @@ let countdown = undefined;
 
 
 function backToMenu() {
-    document.getElementById('question0').style.display = "block";
-    document.getElementById('question1').style.display = "none";
+    document.getElementById('homeScreen').style.display = "block";
+    document.getElementById('questionType1').style.display = "none";
+    document.getElementById('questionType2').style.display = "none";
     counter = 0;
     points = 0;
 }
@@ -45,7 +46,7 @@ function gameEnd() {
 }
 
 function newRiddle() {
-    if (counter == 10) {
+    if (counter == 5) {
         gameEnd();
     }
     clearInterval(countdown);
@@ -61,7 +62,7 @@ function newRiddle() {
             confirmAnswer.disabled = true;
             userAnswer.style.backgroundColor = 'red';
             wrong.play();
-            if (counter == 10)
+            if (counter == 5)
                 gameEnd();
 
         }
@@ -106,14 +107,15 @@ function isAnswerTrue() {
         userAnswer.disabled = true;
         confirmAnswer.disabled = true;
 
-        if (counter == 10)
+        if (counter == 5)
             gameEnd();
     }
 }
 
 function startQuiz() {
-    document.getElementById('question0').style.display = "none";
-    document.getElementById('question1').style.display = "block";
+    document.getElementById('homeScreen').style.display = "none";
+    document.getElementById('questionType1').style.display = "none";
+    document.getElementById('questionType2').style.display = "block";
     back.style.display = "none";
     confirmAnswer.style.display = "inline";
     next.style.display = "inline";
