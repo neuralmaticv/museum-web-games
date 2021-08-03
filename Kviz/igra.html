@@ -14,7 +14,7 @@
 <body>
 
     <div class="quiz">
-        <div class="question" id="question0">
+        <div class="question" id="homeScreen">
             <div class="header">
                 <h1>Kviz</h1>
             </div>
@@ -26,11 +26,21 @@
             </div>
         </div>
 
-        <div class="question" id="question1" style="display: none">
-            <div class="pitanje" id="pitanje"></div>
+        <div class="question" id="questionType1" style="display: none">
+            <div class="pitanje" id="pitanjeT1"></div>
+            <div id="odgovoriT1">
+                <button class="btn-odgovor">Odgovor A</button>
+                <button class="btn-odgovor">Odgovor B</button>
+                <button class="btn-odgovor">Odgovor C</button>
+                <button class="btn-odgovor">Odgovor D</button>
+            </div>
+        </div>
+
+        <div class="question" id="questionType2" style="display: none">
+            <div class="pitanje" id="pitanjeT2"></div>
             <div id="timer"></div>
             <div class="odgovor">
-                <input class="yourAnswer" id="yourAnswer1" type="text" placeholder="Unesite Vaš odgovor" />
+                <input class="yourAnswer" id="userAnswer" type="text" placeholder="Unesite Vaš odgovor" />
             </div>
             <div class="submitAnswer">
                 <button class="nextQuestion" id="back" style="display: none">
@@ -42,6 +52,7 @@
                 </button>
             </div>
         </div>
+
     </div>
 
     <script type="module" src="js/script.js"></script>

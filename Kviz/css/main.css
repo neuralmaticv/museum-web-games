@@ -165,7 +165,15 @@ body {
     background: var(--clr-white);
     transition: border .3s ease;
 }
-
+.odgovoriT1 button {
+    width: 50%;
+    margin: 0 auto;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    border-radius: 6px;
+    display: block;
+}
 
 /* animations */
 @keyframes slide {
