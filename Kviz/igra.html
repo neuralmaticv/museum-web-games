@@ -21,7 +21,7 @@
 
             <div class="btns">
                 <a class="btn start" id="start"><i class="fas fa-play"></i>Započni kviz</a>
-                <a class="btn results" href="./listaRezultata.html"><i class="fas fa-sort-amount-up-alt"></i>Pogledaj
+                <a class="btn results" id="results"><i class="fas fa-sort-amount-up-alt"></i>Pogledaj
                     rezultate</a>
             </div>
         </div>
@@ -71,6 +71,21 @@
             </form>
         </div>
 
+
+        <div class="question hide" id="resultsList">
+            <div class="header">
+                <h1>Rezultati:</h1>
+            </div>
+
+            <div class="container">
+                <ul id="list"></ul>
+            </div>
+             <div class="submitAnswer">
+                <button class="nextQuestion" id="backToHome">
+                    Nazad na početnu
+                </button>
+            </div>
+        </div>
     </div>
 
     <script type="module" src="js/script.js"></script>

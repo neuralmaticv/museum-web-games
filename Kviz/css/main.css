@@ -189,6 +189,21 @@ body {
     background-color: var(--clr-imperial-red);
 }
 
+.container {
+    margin: 0 auto;
+    width: 50vw;
+    height: 70%;
+    color: var(--clr-white);
+    overflow-x: auto;
+}
+.container ul li {
+    border-bottom: 1px dashed var(--clr-imperial-red);
+    margin: 15px 0;
+}
+.container ul li span {
+    float: right;
+}
+
 /* animations */
 @keyframes slide {
     0% {

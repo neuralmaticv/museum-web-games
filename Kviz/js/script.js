@@ -39,6 +39,10 @@ const submitInput = document.getElementById("submitForm");
 const userName = document.getElementById("firstName");
 const userSurname = document.getElementById("lastName");
 const quizResults = JSON.parse(localStorage.getItem("quizResults")) || [];
+const resultsList = document.getElementById("list");
+const resultsBtn = document.getElementById("results");
+const resultsSection = document.getElementById("resultsList");
+const backToHome = document.getElementById("backToHome");
 
 let currentQuestionIndex, shuffledQuestions;
 
@@ -247,6 +251,16 @@ const addResult = (event) => {
     backToMenu();
 }
 
+resultsList.innerHTML = quizResults.map(res => {
+    return `<li>${res.firstName} ${res.lastName} <span>${res.score}</span></li>`
+}).join("");
+
+function showResults() {
+    homeScreen.classList.add("hide");
+    resultsSection.classList.remove("hide");
+}
+
+
 startButton.addEventListener("click", startQuiz);
 confirmAnswer.addEventListener("click", isAnswerTrue);
 backButton.addEventListener("click", backToMenu);
@@ -256,3 +270,8 @@ nextButton1.addEventListener("click", () => {
 });
 nextButton2.addEventListener("click", newRiddle);
 submitInput.addEventListener("click", addResult);
+resultsBtn.addEventListener("click", showResults);
+backToHome.addEventListener("click", () => {
+    homeScreen.classList.remove("hide");
+    resultsSection.classList.add("hide");
+})
