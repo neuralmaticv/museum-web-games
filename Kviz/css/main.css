@@ -168,10 +168,11 @@ body {
 
 #odgovoriT1 button {
     width: 50%;
-    margin: 0 auto;
+    margin: 5px auto;
     padding: 8px 16px;
     line-height: 25px;
     font-size: 14px;
+    border: none;
     border-radius: 6px;
     display: block;
 }
@@ -204,6 +205,37 @@ body {
     float: right;
 }
 
+
+.image {
+    position: absolute;
+}
+.icon-sun,
+.icon-rainbow {
+    top: 50px;
+}
+.image img {
+    width: 100px;
+    height: 100px;
+}
+.icon-sun {
+    left: 60px;
+    animation: rotation 10s infinite linear;
+}
+.icon-rainbow {
+    right: 60px;
+    animation: movement 3s infinite linear;
+}
+.icon-flower {
+    bottom: -10px;
+    left: 25%;
+}
+.icon-bird {
+    bottom: -20px;
+    right: 30%;
+}
+
+
+
 /* animations */
 @keyframes slide {
     0% {
@@ -211,5 +243,26 @@ body {
     }
     100% {
         height: 80%;;
+    }
+}
+
+@keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+}
+
+@keyframes movement {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
     }
 }
