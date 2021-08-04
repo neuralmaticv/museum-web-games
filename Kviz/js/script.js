@@ -10,6 +10,7 @@ const nextButton2 = document.getElementById("nextQuestionType2");
 
 let points = 0;  // jedan tacan odgovor, jedan poen
 let counter = 0;
+const nQuestions = 10;
 
 let confirmAnswer = document.querySelector("#confirmAnswer")
 let userAnswer = document.querySelector("#userAnswer");
@@ -32,6 +33,12 @@ const questionFormT2 = document.getElementById("questionType2");
 
 const questionElement = document.getElementById("pitanjeT1");
 const answerButtons = document.getElementById("odgovoriT1");
+const submitResult = document.getElementById("submitResult");
+const message = document.getElementById("message");
+const submitInput = document.getElementById("submitForm");
+const userName = document.getElementById("firstName");
+const userSurname = document.getElementById("lastName");
+const quizResults = JSON.parse(localStorage.getItem("quizResults")) || [];
 
 let currentQuestionIndex, shuffledQuestions;
 
@@ -40,20 +47,23 @@ function backToMenu() {
     homeScreen.classList.remove("hide");
     questionFormT1.classList.add("hide");
     questionFormT2.classList.add("hide");
+    submitResult.classList.add("hide");
 
     points = counter = 0;
 }
 
 function gameEnd() {
-    question.textContent = "Imali ste " + points + " tačnih odgovora";
+    message.textContent = "Imali ste " + points + " od 10 tačnih odgovora";
 
-    backButton.classList.remove("hide");
-    confirmAnswer.classList.add("hide");
-    nextButton2.classList.add("hide");
+    questionFormT2.classList.add("hide");
+    submitResult.classList.remove("hide");
+
+    //confirmAnswer.classList.add("hide");
+    //nextButton2.classList.add("hide");
 }
 
 function newRiddle() {
-    if (counter == 10) {
+    if (counter == nQuestions) {
         gameEnd();
     }
     clearInterval(countdown);
@@ -69,7 +79,7 @@ function newRiddle() {
             confirmAnswer.disabled = true;
             userAnswer.style.backgroundColor = 'red';
             wrong.play();
-            if (counter == 10)
+            if (counter == nQuestions)
                 gameEnd();
 
         }
@@ -112,7 +122,7 @@ function isAnswerTrue() {
         userAnswer.disabled = true;
         confirmAnswer.disabled = true;
 
-        if (counter == 10)
+        if (counter == nQuestions)
             gameEnd();
     }
 }
@@ -145,17 +155,6 @@ function randomGenerator() {
     }
     return randomNumbers;
 }
-
-startButton.addEventListener("click", startQuiz);
-confirmAnswer.addEventListener("click", isAnswerTrue);
-backButton.addEventListener("click", backToMenu);
-nextButton1.addEventListener("click", () => {
-    currentQuestionIndex++;
-    setQuestion();
-});
-nextButton2.addEventListener("click", newRiddle);
-
-
 
 function setQuestion() {
     resetPrevState();
@@ -228,3 +227,32 @@ function clearStatusClass(element) {
     element.classList.remove("correct");
     element.classList.remove("wrong");
 }
+
+const addResult = (event) => {
+    event.preventDefault();
+
+    const result = {
+        score: points,
+        firstName: userName.value,
+        lastName: userSurname.value,
+    };
+
+    quizResults.push(result);
+
+    quizResults.sort((a, b) => {
+        return b.score - a.score;
+    })
+
+    localStorage.setItem("quizResults", JSON.stringify(quizResults));
+    backToMenu();
+}
+
+startButton.addEventListener("click", startQuiz);
+confirmAnswer.addEventListener("click", isAnswerTrue);
+backButton.addEventListener("click", backToMenu);
+nextButton1.addEventListener("click", () => {
+    currentQuestionIndex++;
+    setQuestion();
+});
+nextButton2.addEventListener("click", newRiddle);
+submitInput.addEventListener("click", addResult);
