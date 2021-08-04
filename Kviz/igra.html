@@ -14,7 +14,7 @@
 <body>
 
     <div class="quiz">
-        <div class="question" id="homeScreen">
+        <div class="quessution" id="homeScreen">
             <div class="header">
                 <h1>Kviz</h1>
             </div>
@@ -26,28 +26,33 @@
             </div>
         </div>
 
-        <div class="question" id="questionType1" style="display: none">
+        <div class="question hide" id="questionType1">
             <div class="pitanje" id="pitanjeT1"></div>
-            <div id="odgovoriT1">
+            <div class="odgovor" id="odgovoriT1">
                 <button class="btn-odgovor">Odgovor A</button>
                 <button class="btn-odgovor">Odgovor B</button>
                 <button class="btn-odgovor">Odgovor C</button>
                 <button class="btn-odgovor">Odgovor D</button>
             </div>
+            <div class="submitAnswer">
+                <button class="nextQuestion hide" id="nextQuestionType1">
+                    Sljedeće pitanje
+                </button>
+            </div>
         </div>
 
-        <div class="question" id="questionType2" style="display: none">
+        <div class="question hide" id="questionType2">
             <div class="pitanje" id="pitanjeT2"></div>
             <div id="timer"></div>
             <div class="odgovor">
                 <input class="yourAnswer" id="userAnswer" type="text" placeholder="Unesite Vaš odgovor" />
             </div>
             <div class="submitAnswer">
-                <button class="nextQuestion" id="back" style="display: none">
+                <button class="nextQuestion" id="back">
                     Nazad
                 </button>
                 <button class="nextQuestion" id="confirmAnswer">Potvrdi</button>
-                <button class="nextQuestion" id="nextQuestion">
+                <button class="nextQuestion" id="nextQuestionType2">
                     Sljedeće pitanje
                 </button>
             </div>

@@ -165,7 +165,8 @@ body {
     background: var(--clr-white);
     transition: border .3s ease;
 }
-.odgovoriT1 button {
+
+#odgovoriT1 button {
     width: 50%;
     margin: 0 auto;
     padding: 8px 16px;
@@ -173,6 +174,19 @@ body {
     font-size: 14px;
     border-radius: 6px;
     display: block;
+}
+#odgovoriT1 button b {
+    float: left;
+}
+
+.hide {
+    display: none;
+}
+.correct {
+    background-color: var(--clr-green);
+}
+.wrong {
+    background-color: var(--clr-imperial-red);
 }
 
 /* animations */
