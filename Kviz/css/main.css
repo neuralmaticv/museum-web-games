@@ -116,7 +116,7 @@ body {
 
 .pitanje {
     position: relative;
-    height: 40%;
+    height: 30%;
     padding: 0 1rem;
     padding-top: 1rem;
     font-size: 20px;
@@ -155,7 +155,7 @@ body {
 
 .yourAnswer {
     width: 50%;
-    margin-top: 7rem;
+    margin-top: 5rem;
     padding: 8px 16px;
     line-height: 25px;
     font-size: 14px;
@@ -233,6 +233,63 @@ body {
     bottom: -20px;
     right: 30%;
 }
+
+.base-timer {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+}
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: var(--clr-honeydew);
+}
+.base-timer__label {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--clr-white);
+}
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    stroke: var(--clr-green);
+}
+.base-timer__path-remaining.green {
+    stroke: var(--clr-green);
+}
+.base-timer__path-remaining.orange {
+    stroke: rgb(255, 166, 0);
+}
+.base-timer__path-remaining.red {
+    stroke: var(--clr-imperial-red);
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+#warnMessage {
+    height: 90px;
+    padding: 5px;
+    font-weight: bold;
+    color: var(--clr-imperial-red);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
 
 
 
