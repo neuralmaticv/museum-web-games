@@ -1,49 +1,68 @@
 const pitanjaLvl2 = [
     {
-        question: "Korijen koje biljke se upotrebljava kod zarastanja lomova kostiju i tkiva?",
+        question: "Smjernice: postaviti slova na njihovo ispravno mjesto kako bi se dobio ispravan naziv biljke)",
         answers: {
-            a: "plućnjaka",
-            b: "sljeza",
-            c: "gaveza"
+            a: "M I L K A I C A",
+            b: "Š B R LJ E N",
+            c: "V A N D A L A"
         },
-        correctAnswer: "c"
+        correctAnswers: {
+            a: "KAMILICA",
+            b: "BRŠLJEN",
+            c: "LAVANDA"
+        },
     },
     {
-        question: "Zbog svoje izuzetne ljekovitosti, za koju biljku se u narodu kaže: neće grom u _______?",
+        question: "Smjernice: postaviti slova na njihovo ispravno mjesto kako bi se dobio ispravan naziv biljke)",
         answers: {
-            a: "kamilicu",
-            b: "koprive",
-            c: "pelin"
+            a: "N A M E T",
+            b: "M A N I L A",
+            c: "Z E B R A"
         },
-        correctAnswer: "b"
+        correctAnswers: {
+            a: "MENTA",
+            b: "MALINA",
+            c: "BREZA"
+        },
     },
     {
-        question: "Koja od navedenih biljaka se ne koristi za liječenje bolesti disajnih organa?",
+        question: "Smjernice: postaviti slova na njihovo ispravno mjesto kako bi se dobio ispravan naziv biljke)",
         answers: {
-            a: "jagorčevina",
-            b: "bokvica",
-            c: "neven",
-            d: "bršljen"
+            a: "S T R A H",
+            b: "G A B R E M",
+            c: "B U V A K"
         },
-        correctAnswer: "c"
+        correctAnswers: {
+            a: "HRAST",
+            b: "BAGREM",
+            c: "BUKVA"
+        },
     },
     {
-        question: "List koje biljke se koristi za zarastanje rana na tijelu?",
+        question: "Smjernice: postaviti slova na njihovo ispravno mjesto kako bi se dobio ispravan naziv biljke)",
         answers: {
-            a: "žalfije",
-            b: "matičnjaka",
-            c: "hajdučke trave"
+            a: "G O N I K",
+            b: "K O P R A V I",
+            c: "R O B"
         },
-        correctAnswer: "c"
+        correctAnswers: {
+            a: "GINKO",
+            b: "KOPRIVA",
+            c: "BOR"
+        },
     },
     {
-        question: "Za koju biljku se u narodu kaže da njezin cvijet usred ljeta skuplja sunčeve zrake, da bih ih dao ljudima za vrijeme tmurnih mjeseci?",
+        question: "Smjernice: postaviti slova na njihovo ispravno mjesto kako bi se dobio ispravan naziv biljke)",
         answers: {
-            a: "kantarion",
-            b: "zlatnica",
-            c: "žutilovka"
+            a: "M O S K V A",
+            b: "P I L A",
+            c: "M I L U N"
         },
-        correctAnswer: "a"
+        correctAnswers: {
+            a: "SMOKVA",
+            b: "LIPA",
+            c: "LIMUN"
+        },
     }
 ];
 

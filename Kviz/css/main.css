@@ -116,7 +116,7 @@ body {
 
 .pitanje {
     position: relative;
-    height: 40%;
+    height: 30%;
     padding: 0 1rem;
     padding-top: 1rem;
     font-size: 20px;
@@ -155,7 +155,7 @@ body {
 
 .yourAnswer {
     width: 50%;
-    margin-top: 7rem;
+    margin-top: 5rem;
     padding: 8px 16px;
     line-height: 25px;
     font-size: 14px;
@@ -168,10 +168,11 @@ body {
 
 #odgovoriT1 button {
     width: 50%;
-    margin: 0 auto;
+    margin: 5px auto;
     padding: 8px 16px;
     line-height: 25px;
     font-size: 14px;
+    border: none;
     border-radius: 6px;
     display: block;
 }
@@ -189,6 +190,109 @@ body {
     background-color: var(--clr-imperial-red);
 }
 
+.container {
+    margin: 0 auto;
+    width: 50vw;
+    height: 70%;
+    color: var(--clr-white);
+    overflow-x: auto;
+}
+.container ul li {
+    border-bottom: 1px dashed var(--clr-imperial-red);
+    margin: 15px 0;
+}
+.container ul li span {
+    float: right;
+}
+
+
+.image {
+    position: absolute;
+}
+.icon-sun,
+.icon-rainbow {
+    top: 50px;
+}
+.image img {
+    width: 100px;
+    height: 100px;
+}
+.icon-sun {
+    left: 60px;
+    animation: rotation 10s infinite linear;
+}
+.icon-rainbow {
+    right: 60px;
+    animation: movement 3s infinite linear;
+}
+.icon-flower {
+    bottom: -10px;
+    left: 25%;
+}
+.icon-bird {
+    bottom: -20px;
+    right: 30%;
+}
+
+.base-timer {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+}
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: var(--clr-honeydew);
+}
+.base-timer__label {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--clr-white);
+}
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    stroke: var(--clr-green);
+}
+.base-timer__path-remaining.green {
+    stroke: var(--clr-green);
+}
+.base-timer__path-remaining.orange {
+    stroke: rgb(255, 166, 0);
+}
+.base-timer__path-remaining.red {
+    stroke: var(--clr-imperial-red);
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+#warnMessage {
+    height: 90px;
+    padding: 5px;
+    font-weight: bold;
+    color: var(--clr-imperial-red);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+
+
+
 /* animations */
 @keyframes slide {
     0% {
@@ -196,5 +300,26 @@ body {
     }
     100% {
         height: 80%;;
+    }
+}
+
+@keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+}
+
+@keyframes movement {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
     }
 }

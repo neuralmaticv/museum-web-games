@@ -39,8 +39,20 @@ const submitInput = document.getElementById("submitForm");
 const userName = document.getElementById("firstName");
 const userSurname = document.getElementById("lastName");
 const quizResults = JSON.parse(localStorage.getItem("quizResults")) || [];
+const resultsList = document.getElementById("list");
+const resultsBtn = document.getElementById("results");
+const resultsSection = document.getElementById("resultsList");
+const backToHome = document.getElementById("backToHome");
+const warnMsg = document.getElementById("warnMessage");
+const timer = document.getElementById("timer");
+const timerLabel = document.getElementById("base-timer-label");
+const timerPath = document.getElementById("base-timer-path-remaining");
 
 let currentQuestionIndex, shuffledQuestions;
+let timePassed, timeLeft;
+const timeLimit = 15;
+const timeForWARN = 8;
+const timeForALERT = 4;
 
 
 function backToMenu() {
@@ -66,24 +78,44 @@ function newRiddle() {
     if (counter == nQuestions) {
         gameEnd();
     }
+
+    warnMsg.classList.add("hide");
+    timer.classList.remove("hide");
+    timePassed = 0;
+    timeLeft = timeLimit;
+
     clearInterval(countdown);
-    document.getElementById("timer").textContent = 10;
-    seconds = 10;
+    seconds = 15;
+    timerLabel.textContent = seconds;
+    timerPath.classList.remove("red");
+    timerPath.classList.remove("orange");
+    timerPath.classList.add("green");
+
     countdown = setInterval(function () {
         seconds--;
-        document.getElementById("timer").textContent = seconds;
+        timerLabel.textContent = seconds;
+        
         if (seconds <= 0) {
             clearInterval(countdown);
-            question.textContent = "Vrijeme je isteklo";
+            timer.classList.add("hide");
+            warnMsg.classList.remove("hide");
+
             userAnswer.disabled = true;
             confirmAnswer.disabled = true;
             userAnswer.style.backgroundColor = 'red';
+            
             wrong.play();
-            if (counter == nQuestions)
+            if (counter == nQuestions) {
                 gameEnd();
-
+            }
         }
+
+        timePassed = timePassed += 1;
+        timeLeft = timeLimit - timePassed;
+        setRemainingPathColor(timeLeft);
+        setCircleDasharray();
     }, 1000);
+
     userAnswer.disabled = false;
     confirmAnswer.disabled = false;
     userAnswer.value = "";
@@ -247,6 +279,37 @@ const addResult = (event) => {
     backToMenu();
 }
 
+resultsList.innerHTML = quizResults.map(res => {
+    return `<li>${res.firstName} ${res.lastName} <span>${res.score}</span></li>`
+}).join("");
+
+function showResults() {
+    homeScreen.classList.add("hide");
+    resultsSection.classList.remove("hide");
+}
+
+// Funkcije za animaciju tajmera
+function calcTimeFraction() {
+    const rawTimeFraction = timeLeft / timeLimit;
+    return rawTimeFraction - (1 / timeLimit) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+    const circleDasharray = `${(calcTimeFraction() * 283).toFixed(0)} 283`;
+    timerPath.setAttribute("stroke-dasharray", circleDasharray);
+}
+
+function setRemainingPathColor(leftTime) {
+    if (leftTime <= timeForALERT) {
+        timerPath.classList.remove("orange");
+        timerPath.classList.add("red");
+    } else if (leftTime <= timeForWARN) {
+        timerPath.classList.remove("green");
+        timerPath.classList.add("orange");
+    }
+}
+
+
 startButton.addEventListener("click", startQuiz);
 confirmAnswer.addEventListener("click", isAnswerTrue);
 backButton.addEventListener("click", backToMenu);
@@ -256,3 +319,8 @@ nextButton1.addEventListener("click", () => {
 });
 nextButton2.addEventListener("click", newRiddle);
 submitInput.addEventListener("click", addResult);
+resultsBtn.addEventListener("click", showResults);
+backToHome.addEventListener("click", () => {
+    homeScreen.classList.remove("hide");
+    resultsSection.classList.add("hide");
+})
