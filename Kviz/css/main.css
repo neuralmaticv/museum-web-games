@@ -37,6 +37,16 @@ body {
     background-size: cover;
 }
 
+.hide {
+    display: none;
+}
+.correct {
+    background-color: var(--clr-green);
+}
+.wrong {
+    background-color: var(--clr-imperial-red);
+}
+
 .quiz {
     position: absolute;
     top: 10%;
@@ -52,13 +62,14 @@ body {
     /* opacity: 0.8; */
 }
 
+
+/* Glavni meni - pocetni prikaz */
 .header {
     font-size: 1.6em;
     color: var(--clr-white);
     text-align: center;
     margin: 15px;
 }
-
 .btns {
     position: absolute;
     top: 50%;
@@ -96,116 +107,6 @@ body {
 .results:hover {
     background-color: transparent;
 }
-
-.question {
-    position: relative;
-    width: 90%;
-    height:0%;
-    top: 10%;
-    left: 5%;
-    border-radius: 0.5rem;
-    background-color: var(--clr-purple);
-    box-shadow: 10px 10px 10px 10px var(--clr-black);
-    animation: slide  ease 3.5s forwards;
-}
-
-#timer{
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.pitanje {
-    position: relative;
-    height: 30%;
-    padding: 0 1rem;
-    padding-top: 1rem;
-    font-size: 20px;
-    color: var(--clr-white);
-}
-
-.odgovor {
-    position: relative;
-    height: 40%;
-    text-align: center;
-}
-
-.submitAnswer {
-    position: relative;
-    height: 10%;
-    text-align: center;
-}
-
-.nextQuestion {
-    font-size: 16px;
-    padding: 11px 22px;
-    border: 3px solid var(--clr-white);
-    border-radius: 40px;
-    background-color: transparent;
-    color: var(--clr-white);
-    cursor: pointer;
-}
-.nextQuestion:hover {
-    border-color: var(--clr-white);
-    background-color: var(--clr-white);
-    color: var(--clr-purple);
-}
-.nextQuestion:active {
-    transform: scale(0.90);
-}
-
-.yourAnswer {
-    width: 50%;
-    margin-top: 5rem;
-    padding: 8px 16px;
-    line-height: 25px;
-    font-size: 14px;
-    border-radius: 6px;
-    color: var(--clr-black);
-    border: 3px solid var(--clr-white);
-    background: var(--clr-white);
-    transition: border .3s ease;
-}
-
-#odgovoriT1 button {
-    width: 50%;
-    margin: 5px auto;
-    padding: 8px 16px;
-    line-height: 25px;
-    font-size: 14px;
-    border: none;
-    border-radius: 6px;
-    display: block;
-}
-#odgovoriT1 button b {
-    float: left;
-}
-
-.hide {
-    display: none;
-}
-.correct {
-    background-color: var(--clr-green);
-}
-.wrong {
-    background-color: var(--clr-imperial-red);
-}
-
-.container {
-    margin: 0 auto;
-    width: 50vw;
-    height: 70%;
-    color: var(--clr-white);
-    overflow-x: auto;
-}
-.container ul li {
-    border-bottom: 1px dashed var(--clr-imperial-red);
-    margin: 15px 0;
-}
-.container ul li span {
-    float: right;
-}
-
-
 .image {
     position: absolute;
 }
@@ -234,10 +135,59 @@ body {
     right: 30%;
 }
 
+
+/* Container za kviz */
+.question {
+    position: relative;
+    width: 90%;
+    height:0%;
+    top: 10%;
+    left: 5%;
+    border-radius: 0.5rem;
+    background-color: var(--clr-purple);
+    box-shadow: 10px 10px 10px 10px var(--clr-black);
+    animation: slide  ease 3.5s forwards;
+}
+
+/* Za sva pitanja */
+.pitanje {
+    position: relative;
+    height: 30%;
+    padding: 0 1rem;
+    padding-top: 1rem;
+    font-size: 20px;
+    color: var(--clr-white);
+}
+
+.odgovor {
+    position: relative;
+    height: 30%;
+}
+
+/* Pitanja T1*/
+#odgovoriT1 {
+    height: 40%;
+}
+#odgovoriT1 button {
+    display: block;
+    width: 50%;
+    margin: 5px auto;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    display: block;
+}
+#odgovoriT1 button b {
+    float: left;
+}
+
+/* Pitanja T2*/
 .base-timer {
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     margin: 0 auto;
 }
 .base-timer__circle {
@@ -250,8 +200,8 @@ body {
 }
 .base-timer__label {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     top: 0;
     display: flex;
     align-items: center;
@@ -276,7 +226,6 @@ body {
 .base-timer__path-remaining.red {
     stroke: var(--clr-imperial-red);
 }
-
 .base-timer__svg {
     transform: scaleX(-1);
 }
@@ -290,7 +239,118 @@ body {
     letter-spacing: 0.2em;
 }
 
+.yourAnswer {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: var(--clr-black);
+    border: 3px solid var(--clr-white);
+    background: var(--clr-white);
+    transition: border .3s ease;
+}
 
+
+/* Kontrolna dugmad */
+.submitAnswer {
+    position: relative;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nextQuestion {
+    font-size: 16px;
+    padding: 11px 22px;
+    border: 3px solid var(--clr-white);
+    border-radius: 40px;
+    background-color: transparent;
+    color: var(--clr-white);
+    cursor: pointer;
+}
+.nextQuestion:hover {
+    border-color: var(--clr-white);
+    background-color: var(--clr-white);
+    color: var(--clr-purple);
+}
+.nextQuestion:active {
+    transform: scale(0.90);
+}
+
+
+/* Container za istu rezultata */
+.container {
+    margin: 0 auto;
+    width: 50vw;
+    height: 70%;
+    color: var(--clr-white);
+    overflow-y: auto;
+}
+.container ul li {
+    border-bottom: 1px dashed var(--clr-imperial-red);
+    margin: 15px 0;
+}
+.container ul li span {
+    float: right;
+}
+
+
+/* Unos rezultata */
+#message {
+    text-align: center;
+}
+.question form {
+    width: 50%;
+    padding: 25px;
+    border: 5px solid var(--clr-white);
+    border-radius: 40px;
+    margin: 0 auto;
+}
+.question form label,
+.question form input {
+    width: 100%;
+}
+.question form label {
+    color: var(--clr-white);
+    margin-top: 5px;
+    letter-spacing: 1.2px;
+}
+.question form input {
+    font-size: 1.2em;
+    padding: 5px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--clr-honeydew);
+    margin-bottom: 10px;
+}
+.question form input:focus {
+    border: 5px solid var(--clr-green);
+    outline: none;
+}
+#submitForm {
+    width: 100%;
+    padding: .8em;
+    background-color: var(--clr-green);
+    border-radius: 1rem;
+    border: 3px solid var(--clr-green);
+    color: var(--clr-purple);
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    font-size: 1em;
+    cursor: pointer;
+}
+#submitForm i {
+    margin-right: 1px;
+}
+#submitForm:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-green);
+}
 
 
 /* animations */
