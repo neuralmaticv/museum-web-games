@@ -393,7 +393,12 @@ body {
     background-color: rgba(33, 35, 61, 0.6);
     color: var(--clr-white);
 }
-
+#error-message {
+    visibility: hidden;
+    color: var(--clr-imperial-red);
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
 /* animations */
 @keyframes slide {

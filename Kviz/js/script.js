@@ -38,6 +38,7 @@ const message = document.getElementById("message");
 const submitInput = document.getElementById("submitForm");
 const userName = document.getElementById("firstName");
 const userSurname = document.getElementById("lastName");
+const errorMsg = document.getElementById("error-message");
 const quizResults = JSON.parse(localStorage.getItem("quizResults")) || [];
 const resultsList = document.getElementById("list");
 const resultsBtn = document.getElementById("results");
@@ -260,9 +261,21 @@ function clearStatusClass(element) {
     element.classList.remove("wrong");
 }
 
-const addResult = (event) => {
+function handleUserInput(event) {
     event.preventDefault();
+    resetForm();
 
+    if ((checkInputLength(userName.value) && checkInputValidity(userName.value))
+    && (checkInputLength(lastName.value) && checkInputValidity(lastName.value))) {
+        addResult();
+    } else {
+        showErrorMessage("Unos nije korektan!");
+        clearUserInput();
+        return;
+    }
+}
+
+function addResult() {
     const result = {
         score: points,
         firstName: userName.value,
@@ -276,8 +289,38 @@ const addResult = (event) => {
     })
 
     localStorage.setItem("quizResults", JSON.stringify(quizResults));
+    clearUserInput();
     backToMenu();
 }
+
+function checkInputLength(input) {
+    if (input === '' || input.length < 2 || input.length > 20) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function checkInputValidity(input) {
+    const regEx = /^[a-zA-Z]+$/g;
+
+    return regEx.test(input);
+}
+
+function showErrorMessage(message) {
+    errorMsg.innerHTML = message;
+    errorMsg.style.visibility = "initial";
+}
+
+function resetForm() {
+    errorMsg.style.visibility = "hidden";
+}
+
+function clearUserInput() {
+    userName.value = "";
+    userSurname.value = "";
+}
+
 
 resultsList.innerHTML = quizResults.map(res => {
     return `<li>${res.firstName} ${res.lastName} <span>${res.score}</span></li>`
@@ -318,7 +361,7 @@ nextButton1.addEventListener("click", () => {
     setQuestion();
 });
 nextButton2.addEventListener("click", newRiddle);
-submitInput.addEventListener("click", addResult);
+submitInput.addEventListener("click", handleUserInput);
 resultsBtn.addEventListener("click", showResults);
 backToHome.addEventListener("click", () => {
     homeScreen.classList.remove("hide");
