@@ -37,6 +37,16 @@ body {
     background-size: cover;
 }
 
+.hide {
+    display: none;
+}
+.correct {
+    background-color: var(--clr-green);
+}
+.wrong {
+    background-color: var(--clr-imperial-red);
+}
+
 .quiz {
     position: absolute;
     top: 10%;
@@ -52,13 +62,14 @@ body {
     /* opacity: 0.8; */
 }
 
+
+/* Glavni meni - pocetni prikaz */
 .header {
     font-size: 1.6em;
     color: var(--clr-white);
     text-align: center;
-    margin: 15px;
+    margin: 10px;
 }
-
 .btns {
     position: absolute;
     top: 50%;
@@ -96,116 +107,6 @@ body {
 .results:hover {
     background-color: transparent;
 }
-
-.question {
-    position: relative;
-    width: 90%;
-    height:0%;
-    top: 10%;
-    left: 5%;
-    border-radius: 0.5rem;
-    background-color: var(--clr-purple);
-    box-shadow: 10px 10px 10px 10px var(--clr-black);
-    animation: slide  ease 3.5s forwards;
-}
-
-#timer{
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.pitanje {
-    position: relative;
-    height: 30%;
-    padding: 0 1rem;
-    padding-top: 1rem;
-    font-size: 20px;
-    color: var(--clr-white);
-}
-
-.odgovor {
-    position: relative;
-    height: 40%;
-    text-align: center;
-}
-
-.submitAnswer {
-    position: relative;
-    height: 10%;
-    text-align: center;
-}
-
-.nextQuestion {
-    font-size: 16px;
-    padding: 11px 22px;
-    border: 3px solid var(--clr-white);
-    border-radius: 40px;
-    background-color: transparent;
-    color: var(--clr-white);
-    cursor: pointer;
-}
-.nextQuestion:hover {
-    border-color: var(--clr-white);
-    background-color: var(--clr-white);
-    color: var(--clr-purple);
-}
-.nextQuestion:active {
-    transform: scale(0.90);
-}
-
-.yourAnswer {
-    width: 50%;
-    margin-top: 5rem;
-    padding: 8px 16px;
-    line-height: 25px;
-    font-size: 14px;
-    border-radius: 6px;
-    color: var(--clr-black);
-    border: 3px solid var(--clr-white);
-    background: var(--clr-white);
-    transition: border .3s ease;
-}
-
-#odgovoriT1 button {
-    width: 50%;
-    margin: 5px auto;
-    padding: 8px 16px;
-    line-height: 25px;
-    font-size: 14px;
-    border: none;
-    border-radius: 6px;
-    display: block;
-}
-#odgovoriT1 button b {
-    float: left;
-}
-
-.hide {
-    display: none;
-}
-.correct {
-    background-color: var(--clr-green);
-}
-.wrong {
-    background-color: var(--clr-imperial-red);
-}
-
-.container {
-    margin: 0 auto;
-    width: 50vw;
-    height: 70%;
-    color: var(--clr-white);
-    overflow-x: auto;
-}
-.container ul li {
-    border-bottom: 1px dashed var(--clr-imperial-red);
-    margin: 15px 0;
-}
-.container ul li span {
-    float: right;
-}
-
-
 .image {
     position: absolute;
 }
@@ -234,10 +135,59 @@ body {
     right: 30%;
 }
 
+
+/* Container za kviz */
+.question {
+    position: relative;
+    width: 90%;
+    height:0%;
+    top: 10%;
+    left: 5%;
+    border-radius: 0.5rem;
+    background-color: var(--clr-purple);
+    box-shadow: 10px 10px 10px 10px var(--clr-black);
+    animation: slide  ease 3.5s forwards;
+}
+
+/* Za sva pitanja */
+.pitanje {
+    position: relative;
+    height: 30%;
+    padding: 0 1rem;
+    padding-top: 1rem;
+    font-size: 20px;
+    color: var(--clr-white);
+}
+
+.odgovor {
+    position: relative;
+    height: 30%;
+}
+
+/* Pitanja T1*/
+#odgovoriT1 {
+    height: 40%;
+}
+#odgovoriT1 button {
+    display: block;
+    width: 50%;
+    margin: 5px auto;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    display: block;
+}
+#odgovoriT1 button b {
+    float: left;
+}
+
+/* Pitanja T2*/
 .base-timer {
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     margin: 0 auto;
 }
 .base-timer__circle {
@@ -250,8 +200,8 @@ body {
 }
 .base-timer__label {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     top: 0;
     display: flex;
     align-items: center;
@@ -276,7 +226,6 @@ body {
 .base-timer__path-remaining.red {
     stroke: var(--clr-imperial-red);
 }
-
 .base-timer__svg {
     transform: scaleX(-1);
 }
@@ -290,8 +239,166 @@ body {
     letter-spacing: 0.2em;
 }
 
+.yourAnswer {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: var(--clr-black);
+    border: 3px solid var(--clr-white);
+    background: var(--clr-white);
+    transition: border .3s ease;
+}
 
 
+/* Kontrolna dugmad */
+.submitAnswer {
+    position: relative;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nextQuestion {
+    font-size: 16px;
+    padding: 8px 22px;
+    margin: 0 5px 0 5px;
+    border: 3px solid var(--clr-white);
+    border-radius: 40px;
+    background-color: transparent;
+    color: var(--clr-white);
+    cursor: pointer;
+}
+.nextQuestion:hover {
+    border-color: var(--clr-white);
+    background-color: var(--clr-white);
+    color: var(--clr-purple);
+}
+.nextQuestion:active {
+    transform: scale(0.90);
+}
+#confirmAnswer i {
+    float: left;
+    margin-right: 10px;
+}
+#nextQuestionType1 i,
+#nextQuestionType2 i {
+    float: right;
+    margin-left: 10px;
+}
+
+
+/* Container za listu rezultata */
+#resultsList .header {
+    font-size: 1.4em;
+}
+.container {
+    margin: 0 auto;
+    width: 50vw;
+    height: 65%;
+    color: var(--clr-white);
+    overflow-y: auto;
+}
+.container ul li {
+    border-bottom: 1px dashed var(--clr-imperial-red);
+    margin: 15px 0;
+}
+.container ul li span {
+    float: right;
+}
+
+
+/* Unos rezultata */
+#message {
+    text-align: center;
+}
+.question form {
+    width: 50%;
+    padding: 25px;
+    margin: 0 auto;
+    border: 5px double var(--clr-white);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 25px 10px rgb(160, 165, 235);
+}
+.question form div {
+    position: relative;
+    padding: 15px 0 0;
+    margin-bottom: 15px;
+    left: 20%;
+}
+.question form input {
+    width: 60%;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px 0; 
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--clr-white);
+    color: var(--clr-white);
+}
+.question form input::placeholder {
+    color: transparent;
+}
+.question form input:placeholder-shown ~ label {
+    top: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-white);
+    cursor: text;
+}
+.question form label, 
+.question form input:focus ~ label {
+    position: absolute;
+    top: 0;
+    display: block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:  rgb(160, 165, 235);
+}
+.question form input:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(160, 165, 235);
+}
+#submitForm {
+    display: block;
+    margin: 0 auto;
+    padding: .8em;
+    background-color: var(--clr-white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: rgb(33, 35, 61);
+    box-shadow: 4px 6px rgb(33, 35, 61);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+#submitForm i {
+    float: left;
+    margin-right: 10px;
+}
+#submitForm:active {
+    transform: translate(4px, 6px);
+    box-shadow: 1px 1px rgb(33, 35, 61);
+}
+#submitForm:hover {
+    background-color: rgba(33, 35, 61, 0.6);
+    color: var(--clr-white);
+}
+#error-message {
+    visibility: hidden;
+    color: var(--clr-imperial-red);
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
 /* animations */
 @keyframes slide {
