@@ -53,6 +53,7 @@ let timePassed, timeLeft;
 const timeLimit = 15;
 const timeForWARN = 8;
 const timeForALERT = 4;
+let gameInProgress = true;
 
 
 function backToMenu() {
@@ -65,6 +66,7 @@ function backToMenu() {
 }
 
 function gameEnd() {
+    gameInProgress = false;
     message.textContent = "Imali ste " + points + " od 10 tačnih odgovora";
 
     questionFormT2.classList.add("hide");
@@ -95,7 +97,7 @@ function newRiddle() {
         seconds--;
         timerLabel.textContent = seconds;
         
-        if (seconds <= 0) {
+        if (seconds <= 0 && gameInProgress) {
             clearInterval(countdown);
             timer.classList.add("hide");
             warnMsg.classList.remove("hide");
@@ -144,9 +146,7 @@ function isAnswerTrue() {
             userAnswer.style.backgroundColor = 'rgb(125, 235, 52)';
             correct.play();
 
-        }
-
-        else {
+        } else {
             userAnswer.style.backgroundColor = 'rgb(230, 57, 70)';
             wrong.play();
         }
