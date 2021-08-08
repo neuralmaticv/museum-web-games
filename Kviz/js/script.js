@@ -48,6 +48,7 @@ const warnMsg = document.getElementById("warnMessage");
 const timer = document.getElementById("timer");
 const timerLabel = document.getElementById("base-timer-label");
 const timerPath = document.getElementById("base-timer-path-remaining");
+const answer = document.getElementById("correctAnswer");
 
 let currentQuestionIndex, shuffledQuestions;
 let timePassed, timeLeft;
@@ -84,6 +85,7 @@ function newRiddle() {
 
     warnMsg.classList.add("hide");
     timer.classList.remove("hide");
+    answer.classList.add("hide");
     timePassed = 0;
     timeLeft = timeLimit;
 
@@ -108,11 +110,13 @@ function newRiddle() {
             userAnswer.style.backgroundColor = 'red';
             
             wrong.play();
+            answer.classList.remove("hide");
+            answer.innerHTML = "Tačan odgovor je <b>" + trueAnswer.toLowerCase() + "</b>";
             if (counter == nQuestions) {
                 gameEnd();
             }
         }
-
+        
         timePassed = timePassed += 1;
         timeLeft = timeLimit - timePassed;
         setRemainingPathColor(timeLeft);
@@ -146,10 +150,11 @@ function isAnswerTrue() {
             points++
             userAnswer.style.backgroundColor = 'rgb(125, 235, 52)';
             correct.play();
-
         } else {
             userAnswer.style.backgroundColor = 'rgb(230, 57, 70)';
             wrong.play();
+            answer.classList.remove("hide");
+            answer.innerHTML = "Tačan odgovor je <b>" + trueAnswer.toLowerCase() + "</b>";
         }
 
         userAnswer.disabled = true;
