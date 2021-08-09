@@ -1,5 +1,8 @@
 body {
-    background-image: url('../img/bg.jpeg');
+    background-image: url('../img/mainBG.jpg');
+    background-repeat: no-repeat;
+    background-size: 1550px 722px;
+    user-select: none;
 }
 
 .myCard {
@@ -8,7 +11,6 @@ body {
 
 img {
     position: relative;
-    border: 3px solid black;
     border-radius: 25px;
     width: 150px;
     height: 150px;
@@ -29,37 +31,23 @@ img {
 }
 
 .result {
-    padding: 5%;
     background-image: url('../img/endBG.jpeg');
     background-size: cover;
     position: relative;
     display: none;
     width: 100%;
-    height: 200px;
+    box-sizing: border-box;
     border-radius: 30px;
     border: 4px solid black;
-}
-
-#restart {
-    border: 5px solid white;
-    color: white;
-    font-size: x-large;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    border-radius: 30px;
-    width: 200px;
-    height: 30px;
-    padding: 10px;
-    margin: auto;
-    user-select: none;
+    padding: 5%;
 }
 
 @media only screen and (max-width: 2000px) {
     body {
-        margin-top: 100px;
-        margin-bottom: 100px;
-        margin-left: 25%;
-        margin-right: 25%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 27.74%;
+        margin-right: 27.74%;
     }
 }
 
@@ -70,4 +58,54 @@ img {
         margin-left: 20%;
         margin-right: 20%;
     }
+}
+
+
+.level1 img {
+    border: 3px solid rgb(58, 175, 12);
+}
+
+.level2 img {
+    border: 3px solid rgb(194, 38, 17);
+}
+
+.level3 img {
+    border: 3px solid rgb(2, 22, 109);
+}
+
+.start {
+    box-sizing: border-box;
+    padding: 5%;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    border-radius: 30px;
+    border: 4px solid black;
+}
+
+.btn {
+    position: relative;
+    display: block;
+    border: 5px solid white;
+    text-align: center;
+    color: black;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 30px;
+    width: 35%;
+    height: 30px;
+    padding: 10px;
+    margin: auto;
+}
+
+.btn:hover {
+    background:linear-gradient(to bottom, #0877ff 5%, #0053ec 100%);
+	background-color:#476e9e;
+}
+
+.scene {
+    box-sizing: border-box;
+    width: 100%;
+    display: none;
 }
