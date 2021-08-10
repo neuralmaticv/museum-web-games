@@ -18,6 +18,8 @@
     --clr-white: rgb(255, 255, 255);
     --clr-green: rgb(85, 166, 48);
     --clr-purple: rgb(57, 60, 112);
+    --clr-lilac: rgb(160, 165, 235);
+    
 }
 
 * {
@@ -158,7 +160,6 @@ body {
     font-size: 20px;
     color: var(--clr-white);
 }
-
 .odgovor {
     position: relative;
     height: 30%;
@@ -238,7 +239,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
-
 .yourAnswer {
     width: 50%;
     position: absolute;
@@ -254,7 +254,6 @@ body {
     background: var(--clr-white);
     transition: border .3s ease;
 }
-
 #correctAnswer {
     color: var(--clr-white);
     text-align: center;
@@ -264,6 +263,26 @@ body {
     color: var(--clr-green);
     letter-spacing: 0.1em;
 }
+
+/* Pitanja T3*/
+.pitanje ul {
+    margin-top: 15px;
+    text-align: center;
+}
+.pitanje ul li {
+    display: inline-block;
+    width: 40px;
+    margin: 5px;
+    padding: 0.2em 0;
+    background-color: var(--clr-white);
+    font-size: 12px;
+    color: var(--clr-lilac);
+    font-weight: bold;
+    border: 5px solid var(--clr-lilac);
+    border-radius: 6px;
+    box-shadow: 0 0 3px 3px white;
+}
+
 
 /* Kontrolna dugmad */
 .submitAnswer {
@@ -332,7 +351,7 @@ body {
     margin: 0 auto;
     border: 5px double var(--clr-white);
     border-radius: 0.8rem;
-    box-shadow: 0 0 25px 10px rgb(160, 165, 235);
+    box-shadow: 0 0 25px 10px var(--clr-lilac);
 }
 .question form div {
     position: relative;
@@ -368,11 +387,11 @@ body {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color:  rgb(160, 165, 235);
+    color:  var(--clr-lilac);
 }
 .question form input:focus {
     outline: none;
-    border-bottom: 1px solid rgb(160, 165, 235);
+    border-bottom: 1px solid var(--clr-lilac);
 }
 #submitForm {
     display: block;

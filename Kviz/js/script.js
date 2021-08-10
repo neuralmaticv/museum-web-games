@@ -1,6 +1,6 @@
 import pitanjaLvl1 from "../data/pitanja1.js"
-import zagonetke from "../data/zagonetke.js"
-
+import pitanjaLvl2 from "../data/zagonetke.js"
+import pitanjaLvl3 from "../data/pitanja3.js"
 
 const startButton = document.getElementById("start");
 const backButton = document.getElementById("back");
@@ -10,7 +10,7 @@ const nextButton2 = document.getElementById("nextQuestionType2");
 
 let points = 0;  // jedan tacan odgovor, jedan poen
 let counter = 0;
-const nQuestions = 10;
+const nQuestions = 8;
 
 let confirmAnswer = document.querySelector("#confirmAnswer")
 let userAnswer = document.querySelector("#userAnswer");
@@ -32,6 +32,7 @@ const questionFormT2 = document.getElementById("questionType2");
 
 
 const questionElement = document.getElementById("pitanjeT1");
+const questionElement3 = document.getElementById("pitanjeT3");
 const answerButtons = document.getElementById("odgovoriT1");
 const submitResult = document.getElementById("submitResult");
 const message = document.getElementById("message");
@@ -50,6 +51,7 @@ const timerLabel = document.getElementById("base-timer-label");
 const timerPath = document.getElementById("base-timer-path-remaining");
 const answer = document.getElementById("correctAnswer");
 
+
 let currentQuestionIndex, shuffledQuestions;
 let timePassed, timeLeft;
 const timeLimit = 15;
@@ -57,6 +59,31 @@ const timeForWARN = 8;
 const timeForALERT = 4;
 let gameInProgress = true;
 
+
+function startQuiz() {
+    homeScreen.classList.add("hide");
+    questionFormT1.classList.remove("hide");
+    questionFormT2.classList.add("hide");
+
+    backButton.classList.add("hide");
+    confirmAnswer.classList.add("hide");
+    nextButton2.classList.add("hide");
+
+    shuffledQuestions = pitanjaLvl1.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    setQuestionT1();
+}
+
+function gameEnd() {
+    gameInProgress = false;
+    message.textContent = "Imali ste " + points + " od " + nQuestions + " tačnih odgovora";
+
+    questionFormT2.classList.add("hide");
+    submitResult.classList.remove("hide");
+
+    //confirmAnswer.classList.add("hide");
+    //nextButton2.classList.add("hide");
+}
 
 function backToMenu() {
     homeScreen.classList.remove("hide");
@@ -67,18 +94,92 @@ function backToMenu() {
     points = counter = 0;
 }
 
-function gameEnd() {
-    gameInProgress = false;
-    message.textContent = "Imali ste " + points + " od 10 tačnih odgovora";
 
-    questionFormT2.classList.add("hide");
-    submitResult.classList.remove("hide");
 
-    //confirmAnswer.classList.add("hide");
-    //nextButton2.classList.add("hide");
+/**
+ * 
+ * Funkcije za pitanja Lvl1. - ponuđeni odgovori
+ * 
+ */
+function setQuestionT1() {
+    resetPrevState1();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
-function newRiddle() {
+function showQuestion(q) {
+    questionElement.innerText = q.question;
+
+    let chr;
+    for (chr in q.answers) {
+        const button = document.createElement("button");
+        button.innerHTML = "<b>" + chr.toUpperCase() + ")</b>" + q.answers[chr];
+        button.classList.add("btn-odgovor");
+
+        button.addEventListener("click", function(event) {
+            const selectedAnswer = event.target.innerHTML[3];
+            const correctAnswer = q.correctAnswer;
+
+            if (selectedAnswer === correctAnswer.toUpperCase()) {
+                points++;
+                correct.play();
+            } else {
+                wrong.play();
+            }
+
+            setStatusClass(document.body, selectedAnswer, correctAnswer);
+            Array.from(answerButtons.children).forEach(button => {
+                setStatusClass(button, button.innerHTML[3], correctAnswer);
+            });
+
+            if (counter == 4) {
+                questionFormT1.classList.add("hide");
+                questionFormT2.classList.remove("hide");
+            
+                confirmAnswer.classList.remove("hide");
+                nextButton2.classList.remove("hide");
+        
+                setQuestionT2();
+            } else {
+                nextButton1.classList.remove("hide");
+            }
+        });
+        answerButtons.appendChild(button);
+    }
+
+    counter++;
+    console.log("Pitanje broj %d, odgovor = %s; POINTS %d", counter, q.correctAnswer, points);
+}
+
+function resetPrevState1() {
+    nextButton1.classList.add("hide");
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+
+function setStatusClass(element, selected, correct) {
+    clearStatusClass(element);
+
+    if (selected === correct.toUpperCase()) {
+        element.classList.add("correct");
+    } else {
+        element.classList.add("wrong");
+    }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove("correct");
+    element.classList.remove("wrong");
+}
+
+
+
+/**
+ * 
+ * Funkcije za pitanja level 2 i 3 - zagonetke i anagrami
+ * 
+ */
+ function setQuestionT2() {
     if (counter == nQuestions) {
         gameEnd();
     }
@@ -134,12 +235,28 @@ function newRiddle() {
         if (!(n in randomNumbers)) {
             randomNumbers.push(n);
             counter++;
+            resetPrevState2(); 
             break;
         }
     }
 
-    question.textContent = zagonetke[n].question;
-    trueAnswer = zagonetke[n].correctAnswer;
+    if (counter <= 6) {
+        question.textContent = pitanjaLvl2[n].question;
+        trueAnswer = pitanjaLvl2[n].correctAnswer;
+    } else if (counter > 6 && counter <= 8) {
+        questionElement3.classList.remove("hide");
+        question.textContent = pitanjaLvl3[n].question;
+        trueAnswer = pitanjaLvl3[n].correctAnswer;
+
+        for (let c of pitanjaLvl3[n].letters) { 
+            if (c != ' ') {
+                const li = document.createElement("li");
+                li.innerHTML = c;
+                questionElement3.appendChild(li);
+            }
+        }    
+    }
+
     console.log("Pitanje broj %d, odgovor = %s; POINTS %d", counter, trueAnswer, points);
 }
 
@@ -165,20 +282,6 @@ function isAnswerTrue() {
     }
 }
 
-function startQuiz() {
-    homeScreen.classList.add("hide");
-    questionFormT1.classList.remove("hide");
-    questionFormT2.classList.add("hide");
-
-    backButton.classList.add("hide");
-    confirmAnswer.classList.add("hide");
-    nextButton2.classList.add("hide");
-
-    shuffledQuestions = pitanjaLvl1.sort(() => Math.random() - .5);
-    currentQuestionIndex = 0;
-    setQuestion();
-}
-
 function randomNumber(max) {
     return Math.floor(Math.random() * max);
 }
@@ -194,78 +297,19 @@ function randomGenerator() {
     return randomNumbers;
 }
 
-function setQuestion() {
-    resetPrevState();
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
-}
-
-function showQuestion(q) {
-    questionElement.innerText = q.question;
-
-    let chr;
-    for (chr in q.answers) {
-        const button = document.createElement("button");
-        button.innerHTML = "<b>" + chr.toUpperCase() + ")</b>" + q.answers[chr];
-        button.classList.add("btn-odgovor");
-
-        button.addEventListener("click", function(event) {
-            const selectedAnswer = event.target.innerHTML[3];
-            const correctAnswer = q.correctAnswer;
-
-            if (selectedAnswer === correctAnswer.toUpperCase()) {
-                points++;
-                correct.play();
-            } else {
-                wrong.play();
-            }
-
-            setStatusClass(document.body, selectedAnswer, correctAnswer);
-            Array.from(answerButtons.children).forEach(button => {
-                setStatusClass(button, button.innerHTML[3], correctAnswer);
-            });
-
-            if (counter == 5) {
-                questionFormT1.classList.add("hide");
-                questionFormT2.classList.remove("hide");
-            
-                confirmAnswer.classList.remove("hide");
-                nextButton2.classList.remove("hide");
-        
-                newRiddle();
-            } else {
-                nextButton1.classList.remove("hide");
-            }
-        });
-        answerButtons.appendChild(button);
-    }
-
-    counter++;
-    console.log("Pitanje broj %d, odgovor = %s; POINTS %d", counter, q.correctAnswer, points);
-}
-
-function resetPrevState() {
-    nextButton1.classList.add("hide");
-    while (answerButtons.firstChild) {
-        answerButtons.removeChild(answerButtons.firstChild);
+function resetPrevState2() {
+    while (questionElement3.firstChild) {
+        questionElement3.removeChild(questionElement3.firstChild);
     }
 }
 
 
-function setStatusClass(element, selected, correct) {
-    clearStatusClass(element);
 
-    if (selected === correct.toUpperCase()) {
-        element.classList.add("correct");
-    } else {
-        element.classList.add("wrong");
-    }
-}
-
-function clearStatusClass(element) {
-    element.classList.remove("correct");
-    element.classList.remove("wrong");
-}
-
+/**
+ * 
+ * Funkcije za unos, upis i prikaz rezultata 
+ * 
+ */
 function handleUserInput(event) {
     event.preventDefault();
     resetForm();
@@ -326,7 +370,6 @@ function clearUserInput() {
     userSurname.value = "";
 }
 
-
 resultsList.innerHTML = quizResults.map(res => {
     return `<li>${res.firstName} ${res.lastName} <span>${res.score}</span></li>`
 }).join("");
@@ -336,7 +379,60 @@ function showResults() {
     resultsSection.classList.remove("hide");
 }
 
-// Funkcije za animaciju tajmera
+
+
+/**
+ * 
+ * Funkcije za animaciju tajmera
+ * 
+ */
+ function startTimer(tAnswer) {
+    warnMsg.classList.add("hide");
+    timer.classList.remove("hide");
+    answer.classList.add("hide");
+    timePassed = 0;
+    timeLeft = timeLimit;
+
+    clearInterval(countdown);
+    seconds = 15;
+    timerLabel.textContent = seconds;
+    timerPath.classList.remove("red");
+    timerPath.classList.remove("orange");
+    timerPath.classList.add("green");
+
+    countdown = setInterval(function () {
+        seconds--;
+        timerLabel.textContent = seconds;
+        
+        if (seconds <= 0 && gameInProgress) {
+            clearInterval(countdown);
+            timer.classList.add("hide");
+            warnMsg.classList.remove("hide");
+
+            userAnswer.disabled = true;
+            confirmAnswer.disabled = true;
+            userAnswer.style.backgroundColor = 'red';
+            
+            wrong.play();
+            answer.classList.remove("hide");
+            answer.innerHTML = "Tačan odgovor je <b>" + tAnswer.toLowerCase() + "</b>";
+            if (counter == 6) {
+                setQuestionT3();
+            }
+        }
+        
+        timePassed = timePassed += 1;
+        timeLeft = timeLimit - timePassed;
+        setRemainingPathColor(timeLeft);
+        setCircleDasharray();
+    }, 1000);
+
+    userAnswer.disabled = false;
+    confirmAnswer.disabled = false;
+    userAnswer.value = "";
+    userAnswer.style.backgroundColor = 'rgb(255, 255, 255)';
+}
+
 function calcTimeFraction() {
     const rawTimeFraction = timeLeft / timeLimit;
     return rawTimeFraction - (1 / timeLimit) * (1 - rawTimeFraction);
@@ -358,14 +454,16 @@ function setRemainingPathColor(leftTime) {
 }
 
 
+
+// Click events
 startButton.addEventListener("click", startQuiz);
 confirmAnswer.addEventListener("click", isAnswerTrue);
 backButton.addEventListener("click", backToMenu);
 nextButton1.addEventListener("click", () => {
     currentQuestionIndex++;
-    setQuestion();
+    setQuestionT1();
 });
-nextButton2.addEventListener("click", newRiddle);
+nextButton2.addEventListener("click", setQuestionT2);
 submitInput.addEventListener("click", handleUserInput);
 resultsBtn.addEventListener("click", showResults);
 backToHome.addEventListener("click", () => {
