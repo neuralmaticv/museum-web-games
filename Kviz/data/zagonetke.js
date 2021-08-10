@@ -1,4 +1,4 @@
-const zagonetke = [
+const pitanjaLvl2 = [
     {
         "id": 1,
         "question": "Žut jesam, ali nemam žuticu, dobar sam ti drug kad imaš groznicu",
@@ -53,4 +53,4 @@ const zagonetke = [
     }
 ];
 
-export default zagonetke
+export default pitanjaLvl2
