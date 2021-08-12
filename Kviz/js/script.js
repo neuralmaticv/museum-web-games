@@ -1,74 +1,83 @@
-import pitanjaLvl1 from "../data/pitanja1.js"
-import pitanjaLvl2 from "../data/zagonetke.js"
-import pitanjaLvl3 from "../data/pitanja3.js"
+import pitanjaLvl1 from "../data/pitanja1.js"       // izaberi tacan odgovor
+import pitanjaLvl2 from "../data/zagonetke.js"      // zagonetke
+import pitanjaLvl3 from "../data/pitanja3.js"       // anagrami
 
-const startButton = document.getElementById("start");
-const backButton = document.getElementById("back");
-const nextButton1 = document.getElementById("nextQuestionType1");
-const nextButton2 = document.getElementById("nextQuestionType2");
-
-
-let points = 0;  // jedan tacan odgovor, jedan poen
-let counter = 0;
-const nQuestions = 8;
-
-let confirmAnswer = document.querySelector("#confirmAnswer")
-let userAnswer = document.querySelector("#userAnswer");
-let trueAnswer = ""
-let question = document.querySelector("#pitanjeT2");
-
-let wrong = new Audio('Zvuci/wrong.wav');
-let correct = new Audio('Zvuci/correct.wav');
-let seconds = undefined;
-let randomNumbers = []
-let n = randomGenerator;
-let countdown = undefined;
-
-
-
+// Elementi za pocetni meni i neke bitnije promjenljive
 const homeScreen = document.getElementById("homeScreen");
+const startButton = document.getElementById("start");
+let gameInProgress = false;                          // da li je kviz u toku
+let points = 0;                                      // brojac osvojenih poena
+let counter = 0;                                     // brojac pitanja 
+const nQuestions = 8;                                // ukupan broj pitanja
+const wrongSound = new Audio('Zvuci/wrong.wav');
+const correctSound = new Audio('Zvuci/correct.wav');
+
+
+// Elementi i promjenljive za prvi tip pitanja
 const questionFormT1 = document.getElementById("questionType1");
-const questionFormT2 = document.getElementById("questionType2");
-
-
+const nextButton1 = document.getElementById("nextQuestionType1");
 const questionElement = document.getElementById("pitanjeT1");
-const questionElement3 = document.getElementById("pitanjeT3");
 const answerButtons = document.getElementById("odgovoriT1");
-const submitResult = document.getElementById("submitResult");
-const message = document.getElementById("message");
-const submitInput = document.getElementById("submitForm");
-const userName = document.getElementById("firstName");
-const userSurname = document.getElementById("lastName");
-const errorMsg = document.getElementById("error-message");
-const quizResults = JSON.parse(localStorage.getItem("quizResults")) || [];
-const resultsList = document.getElementById("list");
-const resultsBtn = document.getElementById("results");
-const resultsSection = document.getElementById("resultsList");
-const backToHome = document.getElementById("backToHome");
+let currentQuestionIndex, shuffledQuestions;          
+
+
+// Elementi i promjenljive za drugi i treci tip pitanja
+const questionFormT2 = document.getElementById("questionType2");
+const question = document.querySelector("#pitanjeT2");
+const userAnswer = document.querySelector("#userAnswer");
+const confirmAnswer = document.querySelector("#confirmAnswer");
+const nextButton2 = document.getElementById("nextQuestionType2");
+const questionElement3 = document.getElementById("pitanjeT3");
 const warnMsg = document.getElementById("warnMessage");
 const timer = document.getElementById("timer");
 const timerLabel = document.getElementById("base-timer-label");
 const timerPath = document.getElementById("base-timer-path-remaining");
 const answer = document.getElementById("correctAnswer");
+let trueAnswer = "";
+let seconds = 15, countdown;
+let randomNumbers = []
+let timePassed, timeLeft;                               // proteklo i preostalo vrijeme u sekundama
+/**
+ * timeLimit    == vremensko ogranicenje,      15 za zagonetke, 30 za anagrame
+ * timeForWARN  == vrijeme za prvo upozorenje,  8 za zagonetke, 18 za anagrame
+ * timeForALERT == vrijeme za drugo upozorenje, 4 za zagonetke, 10 za anagrame
+ */
+let timeLimit = 15;
+let timeForWARN = 8;                      
+let timeForALERT = 4;
 
 
-let currentQuestionIndex, shuffledQuestions;
-let timePassed, timeLeft;
-const timeLimit = 15;
-const timeForWARN = 8;
-const timeForALERT = 4;
-let gameInProgress = true;
+// Elementi za unos unos rezultata
+const submitResult = document.getElementById("submitResult");
+const message = document.getElementById("message");
+const userName = document.getElementById("firstName");
+const userSurname = document.getElementById("lastName");
+const errorMsg = document.getElementById("error-message");
+const submitInput = document.getElementById("submitForm");
 
 
+// Elementi za listu rezultata
+const quizResults = JSON.parse(localStorage.getItem("quizResults")) || [];
+const resultsList = document.getElementById("list");
+const resultsBtn = document.getElementById("results");
+const resultsSection = document.getElementById("resultsList");
+const backToHome = document.getElementById("backToHome");
+
+
+/**
+ * 
+ * Funkcije za pocetak, kraj i povratak na pocetni meni
+ *
+ */
 function startQuiz() {
     homeScreen.classList.add("hide");
     questionFormT1.classList.remove("hide");
     questionFormT2.classList.add("hide");
 
-    backButton.classList.add("hide");
     confirmAnswer.classList.add("hide");
     nextButton2.classList.add("hide");
 
+    gameInProgress = true;
     shuffledQuestions = pitanjaLvl1.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     setQuestionT1();
@@ -106,6 +115,9 @@ function setQuestionT1() {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
+/**
+ * @param {Object} q - pitanje
+ */
 function showQuestion(q) {
     questionElement.innerText = q.question;
 
@@ -121,9 +133,9 @@ function showQuestion(q) {
 
             if (selectedAnswer === correctAnswer.toUpperCase()) {
                 points++;
-                correct.play();
+                correctSound.play();
             } else {
-                wrong.play();
+                wrongSound.play();
             }
 
             setStatusClass(document.body, selectedAnswer, correctAnswer);
@@ -157,6 +169,11 @@ function resetPrevState1() {
     }
 }
 
+/**
+ * @param {Element} element - button element u kome je ponudjen odgovor
+ * @param {string} selected - izabrani odgovor od strane igraca
+ * @param {string} correct  - tacan odgovor
+ */
 function setStatusClass(element, selected, correct) {
     clearStatusClass(element);
 
@@ -184,50 +201,7 @@ function clearStatusClass(element) {
         gameEnd();
     }
 
-    warnMsg.classList.add("hide");
-    timer.classList.remove("hide");
-    answer.classList.add("hide");
-    timePassed = 0;
-    timeLeft = timeLimit;
-
-    clearInterval(countdown);
-    seconds = 15;
-    timerLabel.textContent = seconds;
-    timerPath.classList.remove("red");
-    timerPath.classList.remove("orange");
-    timerPath.classList.add("green");
-
-    countdown = setInterval(function () {
-        seconds--;
-        timerLabel.textContent = seconds;
-        
-        if (seconds <= 0 && gameInProgress) {
-            clearInterval(countdown);
-            timer.classList.add("hide");
-            warnMsg.classList.remove("hide");
-
-            userAnswer.disabled = true;
-            confirmAnswer.disabled = true;
-            userAnswer.style.backgroundColor = 'red';
-            
-            wrong.play();
-            answer.classList.remove("hide");
-            answer.innerHTML = "Tačan odgovor je <b>" + trueAnswer.toLowerCase() + "</b>";
-            if (counter == nQuestions) {
-                gameEnd();
-            }
-        }
-        
-        timePassed = timePassed += 1;
-        timeLeft = timeLimit - timePassed;
-        setRemainingPathColor(timeLeft);
-        setCircleDasharray();
-    }, 1000);
-
-    userAnswer.disabled = false;
-    confirmAnswer.disabled = false;
-    userAnswer.value = "";
-    userAnswer.style.backgroundColor = 'rgb(255, 255, 255)';
+    startTimer(trueAnswer, seconds);
 
     let n;
     while (true) {
@@ -243,10 +217,15 @@ function clearStatusClass(element) {
     if (counter <= 6) {
         question.textContent = pitanjaLvl2[n].question;
         trueAnswer = pitanjaLvl2[n].correctAnswer;
+        seconds = 15;
     } else if (counter > 6 && counter <= 8) {
         questionElement3.classList.remove("hide");
         question.textContent = pitanjaLvl3[n].question;
         trueAnswer = pitanjaLvl3[n].correctAnswer;
+        seconds = 30;
+        timeLimit = 30;
+        timeForWARN = 18;
+        timeForALERT = 10;
 
         for (let c of pitanjaLvl3[n].letters) { 
             if (c != ' ') {
@@ -266,10 +245,10 @@ function isAnswerTrue() {
         if (userAnswer.value.toUpperCase() === trueAnswer.toUpperCase()) {
             points++
             userAnswer.style.backgroundColor = 'rgb(125, 235, 52)';
-            correct.play();
+            correctSound.play();
         } else {
             userAnswer.style.backgroundColor = 'rgb(230, 57, 70)';
-            wrong.play();
+            wrongSound.play();
             answer.classList.remove("hide");
             answer.innerHTML = "Tačan odgovor je <b>" + trueAnswer.toLowerCase() + "</b>";
         }
@@ -342,6 +321,10 @@ function addResult() {
     backToMenu();
 }
 
+/**
+ * @param {string} input - korisnicki unos
+ * @returns {boolean}
+ */
 function checkInputLength(input) {
     if (input === '' || input.length < 2 || input.length > 20) {
         return false;
@@ -356,6 +339,9 @@ function checkInputValidity(input) {
     return regEx.test(input);
 }
 
+/**
+ * @param {string} message - poruka za igraca
+ */
 function showErrorMessage(message) {
     errorMsg.innerHTML = message;
     errorMsg.style.visibility = "initial";
@@ -386,7 +372,12 @@ function showResults() {
  * Funkcije za animaciju tajmera
  * 
  */
- function startTimer(tAnswer) {
+
+/**
+ * @param {string} tAnswer  - tacan odgovor
+ * @param {number} sec      - broj sekundi za odgovor
+ */
+ function startTimer(tAnswer, sec) {
     warnMsg.classList.add("hide");
     timer.classList.remove("hide");
     answer.classList.add("hide");
@@ -394,7 +385,7 @@ function showResults() {
     timeLeft = timeLimit;
 
     clearInterval(countdown);
-    seconds = 15;
+    seconds = sec;
     timerLabel.textContent = seconds;
     timerPath.classList.remove("red");
     timerPath.classList.remove("orange");
@@ -413,11 +404,11 @@ function showResults() {
             confirmAnswer.disabled = true;
             userAnswer.style.backgroundColor = 'red';
             
-            wrong.play();
+            wrongSound.play();
             answer.classList.remove("hide");
             answer.innerHTML = "Tačan odgovor je <b>" + tAnswer.toLowerCase() + "</b>";
-            if (counter == 6) {
-                setQuestionT3();
+            if (counter == nQuestions) {
+                gameEnd();
             }
         }
         
@@ -443,6 +434,9 @@ function setCircleDasharray() {
     timerPath.setAttribute("stroke-dasharray", circleDasharray);
 }
 
+/**
+ * @param {number} leftTime - preostalo vrijeme u sekundama
+ */
 function setRemainingPathColor(leftTime) {
     if (leftTime <= timeForALERT) {
         timerPath.classList.remove("orange");
@@ -458,7 +452,6 @@ function setRemainingPathColor(leftTime) {
 // Click events
 startButton.addEventListener("click", startQuiz);
 confirmAnswer.addEventListener("click", isAnswerTrue);
-backButton.addEventListener("click", backToMenu);
 nextButton1.addEventListener("click", () => {
     currentQuestionIndex++;
     setQuestionT1();
