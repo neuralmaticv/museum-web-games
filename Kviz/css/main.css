@@ -162,12 +162,12 @@ body {
 }
 .odgovor {
     position: relative;
-    height: 30%;
+    height: 35%;
 }
 
 /* Pitanja T1*/
 #odgovoriT1 {
-    height: 40%;
+    height: 50%;
 }
 #odgovoriT1 button {
     display: block;
@@ -287,7 +287,7 @@ body {
 /* Kontrolna dugmad */
 .submitAnswer {
     position: relative;
-    height: 20%;
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -426,6 +426,51 @@ body {
     color: var(--clr-imperial-red);
     text-align: center;
     margin-bottom: 1rem;
+}
+
+/* css za pogodi sliku */
+
+.imgCenter{
+    position: relative;
+    top: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   max-width: 50%;
+   height:30%;
+}
+
+#pitanjeT4{
+    height: 12%;
+}
+
+#odgovoriT4{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 15%;
+}
+
+.btnT4{
+    
+    margin-right: 20px;
+    color: black;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+     
+}
+
+#next4{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 20%;
 }
 
 /* animations */

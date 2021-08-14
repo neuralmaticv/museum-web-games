@@ -1,6 +1,7 @@
 import pitanjaLvl1 from "../data/pitanja1.js"       // izaberi tacan odgovor
 import pitanjaLvl2 from "../data/zagonetke.js"      // zagonetke
 import pitanjaLvl3 from "../data/pitanja3.js"       // anagrami
+import pitanjaLvl4 from "../data/pitanja4.js";
 
 // Elementi za pocetni meni i neke bitnije promjenljive
 const homeScreen = document.getElementById("homeScreen");
@@ -8,7 +9,7 @@ const startButton = document.getElementById("start");
 let gameInProgress = false;                          // da li je kviz u toku
 let points = 0;                                      // brojac osvojenih poena
 let counter = 0;                                     // brojac pitanja 
-const nQuestions = 8;                                // ukupan broj pitanja
+const nQuestions = 10;                                // ukupan broj pitanja
 const wrongSound = new Audio('Zvuci/wrong.wav');
 const correctSound = new Audio('Zvuci/correct.wav');
 
@@ -18,7 +19,7 @@ const questionFormT1 = document.getElementById("questionType1");
 const nextButton1 = document.getElementById("nextQuestionType1");
 const questionElement = document.getElementById("pitanjeT1");
 const answerButtons = document.getElementById("odgovoriT1");
-let currentQuestionIndex, shuffledQuestions;          
+let currentQuestionIndex, shuffledQuestions;
 
 
 // Elementi i promjenljive za drugi i treci tip pitanja
@@ -37,13 +38,23 @@ let trueAnswer = "";
 let seconds = 15, countdown;
 let randomNumbers = []
 let timePassed, timeLeft;                               // proteklo i preostalo vrijeme u sekundama
+
+// cetrvti tip
+let shuffledQuestions4
+const questionFormT4 = document.getElementById("questionType4");
+let answersT4 = document.getElementsByClassName("btnT4");
+let picture = document.getElementById("picture");
+let questionType4Counter = 0;
+const answerButtons4 = document.getElementById("odgovoriT4");
+const nextButton4=document.getElementById("nextQuestionType4");
+
 /**
  * timeLimit    == vremensko ogranicenje,      15 za zagonetke, 30 za anagrame
  * timeForWARN  == vrijeme za prvo upozorenje,  8 za zagonetke, 18 za anagrame
  * timeForALERT == vrijeme za drugo upozorenje, 4 za zagonetke, 10 za anagrame
  */
 let timeLimit = 15;
-let timeForWARN = 8;                      
+let timeForWARN = 8;
 let timeForALERT = 4;
 
 
@@ -89,6 +100,7 @@ function gameEnd() {
 
     questionFormT2.classList.add("hide");
     submitResult.classList.remove("hide");
+    questionFormT4.classList.add("hide");
 
     //confirmAnswer.classList.add("hide");
     //nextButton2.classList.add("hide");
@@ -127,7 +139,9 @@ function showQuestion(q) {
         button.innerHTML = "<b>" + chr.toUpperCase() + ")</b>" + q.answers[chr];
         button.classList.add("btn-odgovor");
 
-        button.addEventListener("click", function(event) {
+        button.addEventListener("click", function (event) {
+
+
             const selectedAnswer = event.target.innerHTML[3];
             const correctAnswer = q.correctAnswer;
 
@@ -146,10 +160,10 @@ function showQuestion(q) {
             if (counter == 4) {
                 questionFormT1.classList.add("hide");
                 questionFormT2.classList.remove("hide");
-            
+
                 confirmAnswer.classList.remove("hide");
                 nextButton2.classList.remove("hide");
-        
+
                 setQuestionT2();
             } else {
                 nextButton1.classList.remove("hide");
@@ -191,12 +205,15 @@ function clearStatusClass(element) {
 
 
 
+
+
+
 /**
  * 
  * Funkcije za pitanja level 2 i 3 - zagonetke i anagrami
  * 
  */
- function setQuestionT2() {
+function setQuestionT2() {
     if (counter == nQuestions) {
         gameEnd();
     }
@@ -209,7 +226,7 @@ function clearStatusClass(element) {
         if (!(n in randomNumbers)) {
             randomNumbers.push(n);
             counter++;
-            resetPrevState2(); 
+            resetPrevState2();
             break;
         }
     }
@@ -227,16 +244,86 @@ function clearStatusClass(element) {
         timeForWARN = 18;
         timeForALERT = 10;
 
-        for (let c of pitanjaLvl3[n].letters) { 
+        for (let c of pitanjaLvl3[n].letters) {
             if (c != ' ') {
                 const li = document.createElement("li");
                 li.innerHTML = c;
                 questionElement3.appendChild(li);
             }
-        }    
+        }
+    }
+    // cetvrti tip pitanja
+
+    else if (counter =9) {
+        clearInterval(countdown);
+        questionFormT2.classList.add("hide");
+        shuffledQuestions4 = pitanjaLvl4.sort(() => Math.random() - .5);
+        console.log("nesto")
+        setQuestionT4();
     }
 
     console.log("Pitanje broj %d, odgovor = %s; POINTS %d", counter, trueAnswer, points);
+}
+
+function setQuestionT4() {
+    // console.log(pitanjaLvl4)
+    if(counter==11){
+        gameEnd()
+        return
+    } 
+   Array.from(answerButtons4.children).forEach(btn => {
+        btn.remove()
+    });
+    questionFormT4.classList.remove("hide");
+
+    // objekat iz podataka ->q4
+    let q4 = shuffledQuestions4[questionType4Counter]
+    picture.src = q4.picture;
+    let answerCounter = 0
+    console.log(answersT4)
+   
+
+    q4.answers.forEach(e => {
+        const btn4 = document.createElement("button");
+        btn4.textContent = e;
+        btn4.classList.add("btnT4");
+        btn4.addEventListener("click", function(e){
+            const selectedAnswer = e.target.innerHTML;
+            const correctAnswer = q4.correctAnswer;
+            console.log(selectedAnswer)
+            console.log(correctAnswer)
+            if (selectedAnswer.toUpperCase() === correctAnswer.toUpperCase()) {
+                points++;
+                correctSound.play();
+            } else {
+                wrongSound.play();
+            }
+
+            console.log(answerButtons4.children)
+           
+            Array.from(answerButtons4.children).forEach(btn => {
+                if(btn.textContent==correctAnswer){
+                    btn.classList.add("correct");
+                   
+                }
+                else{
+                    btn.classList.add("wrong");
+                   
+                }
+            });
+
+        })
+    
+        
+        answerButtons4.appendChild(btn4);
+    })
+
+    questionType4Counter++
+    counter++
+
+
+
+
 }
 
 function isAnswerTrue() {
@@ -294,7 +381,7 @@ function handleUserInput(event) {
     resetForm();
 
     if ((checkInputLength(userName.value) && checkInputValidity(userName.value))
-    && (checkInputLength(lastName.value) && checkInputValidity(lastName.value))) {
+        && (checkInputLength(lastName.value) && checkInputValidity(lastName.value))) {
         addResult();
     } else {
         showErrorMessage("Unos nije korektan!");
@@ -377,7 +464,7 @@ function showResults() {
  * @param {string} tAnswer  - tacan odgovor
  * @param {number} sec      - broj sekundi za odgovor
  */
- function startTimer(tAnswer, sec) {
+function startTimer(tAnswer, sec) {
     warnMsg.classList.add("hide");
     timer.classList.remove("hide");
     answer.classList.add("hide");
@@ -394,7 +481,7 @@ function showResults() {
     countdown = setInterval(function () {
         seconds--;
         timerLabel.textContent = seconds;
-        
+
         if (seconds <= 0 && gameInProgress) {
             clearInterval(countdown);
             timer.classList.add("hide");
@@ -403,7 +490,7 @@ function showResults() {
             userAnswer.disabled = true;
             confirmAnswer.disabled = true;
             userAnswer.style.backgroundColor = 'red';
-            
+
             wrongSound.play();
             answer.classList.remove("hide");
             answer.innerHTML = "Tačan odgovor je <b>" + tAnswer.toLowerCase() + "</b>";
@@ -411,7 +498,7 @@ function showResults() {
                 gameEnd();
             }
         }
-        
+
         timePassed = timePassed += 1;
         timeLeft = timeLimit - timePassed;
         setRemainingPathColor(timeLeft);
@@ -463,3 +550,4 @@ backToHome.addEventListener("click", () => {
     homeScreen.classList.remove("hide");
     resultsSection.classList.add("hide");
 })
+nextButton4.addEventListener("click", setQuestionT4 )
