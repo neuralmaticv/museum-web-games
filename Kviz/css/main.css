@@ -428,32 +428,28 @@ body {
     margin-bottom: 1rem;
 }
 
-/* css za pogodi sliku */
 
-.imgCenter{
+/* css za pogodi sliku */
+.imgCenter {
     position: relative;
     top: 10%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-   max-width: 50%;
-   height:30%;
+    max-width: 50%;
+    height:30%;
 }
-
-#pitanjeT4{
+#pitanjeT4 {
     height: 12%;
 }
-
-#odgovoriT4{
+#odgovoriT4 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     top: 15%;
 }
-
-.btnT4{
-    
+.btnT4 {
     margin-right: 20px;
     color: black;
     border: none;
@@ -464,14 +460,14 @@ body {
     font-size: 16px;
      
 }
-
-#next4{
+#next4 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     top: 20%;
 }
+
 
 /* animations */
 @keyframes slide {
@@ -501,5 +497,44 @@ body {
     }
     100% {
       transform: rotate(0deg);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .pitanje {
+        height: 28%;
+        font-size: 18px;
+    }
+    .odgovor {
+        height: 30%;
+    }
+    .base-timer {
+        height: 65px;
+        width: 65px;
+        margin-bottom: 15px;
+    }
+    .base-timer__label {
+        width: 65px;
+        height: 65px;
+        font-size: 25px;
+    }
+    .pitanje ul {
+        margin: 0 5px 0 5px;
+    }
+    .pitanje ul li {
+        width: 30px;
+        margin: 8px;
+        padding: 0.2em 0;
+    }
+    .yourAnswer {
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    #resultsList .header {
+        font-size: 1.2em;
+    }
+    .container {
+        height: 60%;
     }
 }
