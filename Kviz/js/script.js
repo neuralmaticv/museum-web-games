@@ -97,7 +97,7 @@ function startQuiz() {
 
 function gameEnd() {
     gameInProgress = false;
-    message.textContent = "Imali ste " + points + " od " + nQuestions + " tačnih odgovora";
+    message.textContent = "Имали сте " + points + " од " + nQuestions + " тачних одговора";
 
     questionFormT4.classList.add("hide");
     submitResult.classList.remove("hide");
@@ -312,7 +312,7 @@ function isAnswerTrue() {
             userAnswer.style.backgroundColor = 'rgb(230, 57, 70)';
             wrongSound.play();
             answer.classList.remove("hide");
-            answer.innerHTML = "Tačan odgovor je <b>" + trueAnswer.toLowerCase() + "</b>";
+            answer.innerHTML = "Тачан одговор је <b>" + trueAnswer.toLowerCase() + "</b>";
         }
 
         userAnswer.disabled = true;
@@ -362,7 +362,7 @@ function handleUserInput(event) {
         && (checkInputLength(lastName.value) && checkInputValidity(lastName.value))) {
         addResult();
     } else {
-        showErrorMessage("Unos nije korektan!");
+        showErrorMessage("Унос није коректан!");
         clearUserInput();
         return;
     }
@@ -471,7 +471,7 @@ function startTimer(tAnswer, sec) {
 
             wrongSound.play();
             answer.classList.remove("hide");
-            answer.innerHTML = "Tačan odgovor je <b>" + tAnswer.toLowerCase() + "</b>";
+            answer.innerHTML = "Тачан одговор је <b>" + tAnswer.toLowerCase() + "</b>";
 
             if (counter == nQuestions) {
                 gameEnd();
