@@ -1,7 +1,7 @@
-import pitanjaLvl1 from "../data/pitanja1.js"       // izaberi tacan odgovor
-import pitanjaLvl2 from "../data/zagonetke.js"      // zagonetke
-import pitanjaLvl3 from "../data/pitanja3.js"       // anagrami
-import pitanjaLvl4 from "../data/pitanja4.js";
+import pitanjaLvl1 from "../data/srp_pitanja1.js"       // izaberi tacan odgovor
+import pitanjaLvl2 from "../data/srp_pitanja2.js"      // zagonetke
+import pitanjaLvl3 from "../data/srp_pitanja3.js"       // anagrami
+import pitanjaLvl4 from "../data/srp_pitanja4.js";
 
 // Elementi za pocetni meni i neke bitnije promjenljive
 const homeScreen = document.getElementById("homeScreen");
@@ -399,7 +399,8 @@ function checkInputLength(input) {
 }
 
 function checkInputValidity(input) {
-    const regEx = /^[a-zA-Z]+$/g;
+    // regularni izraz za prepoznavanje latinicnih i cirilicnih karaktera
+    const regEx = /^[a-zA-Z\u0400-\u04FF]+$/g;
 
     return regEx.test(input);
 }
