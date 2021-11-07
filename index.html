@@ -6,12 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interaktivne igrice - Muzej RS</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-        <a href="">Погоди биљку <span>Узраст до 9 година</span></a>
-        <a href="memory/index.html">Мемори <span>Узраст до 9 година</span></a>
-        <a href="kviz/index.html">Квиз <span>Узраст 9+ година</span></a>
+        <div class="languages">
+            <button id="sr" onClick="changeLang(this.id)" title="srpski"></button>
+            <button id="en" onClick="changeLang(this.id)" title="english"></button>
+            <button id="ru" onClick="changeLang(this.id)" title="русский"></button>
+        </div>
+
+        <a class="hide" lang="sr" href="">Погоди биљку <span>Узраст до 9 година</span></a>
+        <a class="hide" lang="en" href="">Guess the plant <span>Age up to 9 years</span></a>
+        <a class="hide" lang="ru" href="">Угадай растение <span>Возраст до 9 лет</span></a>
+        
+        <a class="hide" lang="sr" href="memory/index.html">Мемори <span>Узраст до 9 година</span></a>
+        <a class="hide" lang="en" href="memory/index.html">Memory <span>Age up to 9 years</span></a>
+        <a class="hide" lang="ru" href="memory/index.html">Игра на запоминание <span>Возраст до 9 лет</span></a>
+        
+        <a class="hide" lang="sr" href="kviz/index-sr.html">Квиз <span>Узраст 9+ година</span></a>
+        <a class="hide" lang="en" href="kviz/index-en.html">Quiz <span>Age 9+ years</span></a>
+        <a class="hide" lang="ru" href="kviz/index-ru.html">Викторина <span>Возраст 9+ лет </span></a>
     </div>
+
+    <script>
+        function changeLang(langID) {
+            const games = document.querySelectorAll("a");
+            games.forEach(t => {
+                console.log(t.lang)
+                if (t.lang == langID) {
+                    t.classList.remove("hide");
+                } else {
+                    t.classList.add("hide");
+                }
+            });
+        }
+    </script>
 </body>
 </html>

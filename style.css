@@ -13,7 +13,7 @@
     margin: 5px;
     border: 3px solid rgb(155, 218, 119);
     border-radius: 25px;
-    width: 300px;
+    width: 330px;
     color: rgb(10, 88, 36);
 }
 .container a span {
@@ -22,4 +22,27 @@
 .container a:hover {
     background-color: rgb(155, 218, 119);
     color: black;
+}
+.hide {
+    display: none !important;
+}
+
+.languages {
+    text-align: center;
+}
+button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: none;
+    border-style: none;
+}
+#sr {
+    background-image: url('flag_sr_icon.png');
+}
+#en {
+    background-image: url('flag_en_icon.png');
+}
+#ru {
+    background-image: url('flag_ru_icon.png');
 }

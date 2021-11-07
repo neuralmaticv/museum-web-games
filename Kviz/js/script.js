@@ -12,6 +12,12 @@ let counter = 0;                                     // brojac pitanja
 const nQuestions = 10;                               // ukupan broj pitanja
 const wrongSound = new Audio('Zvuci/wrong.wav');
 const correctSound = new Audio('Zvuci/correct.wav');
+const langCode = document.documentElement.lang;      // vraca ISO oznaku za jezik
+console.log(langCode);
+let mainWordsList = [];
+const srWordsList = ["Имали сте", "од", "тачних одговора", "Тачан одговор је", "Унос није валидан!"];
+const enWordsList = ["You had", "of", "correct answers", "Correct answer is", "Input is not valid!"];
+const ruWordsList = ["Ты имел", "от", "правильные ответы", "Правильный ответ ", "Неверный ввод!"];
 
 
 // Elementi i promjenljive za prvi tip pitanja
@@ -74,6 +80,19 @@ const resultsSection = document.getElementById("resultsList");
 const backToHome = document.getElementById("backToHome");
 
 
+// Kontrola prevoda srp/eng/rus
+// TODO: implementirati pomocu funkcije kada se uvedu prevodi pitanja
+if (langCode == "sr") {
+    mainWordsList = [...srWordsList];
+} else if (langCode == "en") {
+    mainWordsList = [...enWordsList];
+} else if (langCode == "ru") {
+    mainWordsList = [...ruWordsList];
+}
+console.log(mainWordsList);
+console.log(srWordsList);
+console.log(enWordsList);
+console.log(ruWordsList);
 
 /**
  * 
@@ -97,7 +116,7 @@ function startQuiz() {
 
 function gameEnd() {
     gameInProgress = false;
-    message.textContent = "Имали сте " + points + " од " + nQuestions + " тачних одговора";
+    message.textContent = mainWordsList[0] + " " + points + " " + mainWordsList[1] + " " + nQuestions + " " + mainWordsList[2];
 
     questionFormT4.classList.add("hide");
     submitResult.classList.remove("hide");
@@ -108,7 +127,6 @@ function backToMenu() {
     questionFormT1.classList.add("hide");
     questionFormT2.classList.add("hide");
     submitResult.classList.add("hide");
-
     points = counter = 0;
 }
 
@@ -312,7 +330,7 @@ function isAnswerTrue() {
             userAnswer.style.backgroundColor = 'rgb(230, 57, 70)';
             wrongSound.play();
             answer.classList.remove("hide");
-            answer.innerHTML = "Тачан одговор је <b>" + trueAnswer.toLowerCase() + "</b>";
+            answer.innerHTML = mainWordsList[3] + " <b>" + trueAnswer.toLowerCase() + "</b>";
         }
 
         userAnswer.disabled = true;
@@ -362,7 +380,7 @@ function handleUserInput(event) {
         && (checkInputLength(lastName.value) && checkInputValidity(lastName.value))) {
         addResult();
     } else {
-        showErrorMessage("Унос није коректан!");
+        showErrorMessage(mainWordsList[4]);
         clearUserInput();
         return;
     }
@@ -472,7 +490,7 @@ function startTimer(tAnswer, sec) {
 
             wrongSound.play();
             answer.classList.remove("hide");
-            answer.innerHTML = "Тачан одговор је <b>" + tAnswer.toLowerCase() + "</b>";
+            answer.innerHTML = mainWordsList[3] + " <b>" + tAnswer.toLowerCase() + "</b>";
 
             if (counter == nQuestions) {
                 gameEnd();
