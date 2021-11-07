@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz game - Museum of Republic of Srpska</title>
+    <link rel="icon" type="image/png" href="images/quiz-favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/quiz-favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/quiz-favicon-96x96.png" sizes="96x96" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="icons/fontawesome-free-5.15.3-web/css/all.css" />
+</head>
+<body>
+
+    <div class="quiz">
+        <div class="question " id="homeScreen">
+            <div class="header">
+                <h1>Quiz game</h1>
+            </div>
+
+            <div class="btns">
+                <a class="btn start" id="start"><i class="fas fa-play"></i>Start the quiz</a>
+                <a class="btn results" id="results"><i class="fas fa-sort-amount-up-alt"></i>Results table</a>
+            </div>
+
+            <div class="image icon-sun">
+                <img src="./images/icon-sun.png" alt="" loading="lazy" />
+            </div>
+            <div class="image icon-rainbow">
+                <img src="./images/icon-rainbow.png" alt="" loading="lazy" />
+            </div>
+            <div class="image icon-flower">
+                <img src="./images/icon-flower.png" alt="" loading="lazy" />
+            </div>
+            <div class="image icon-bird">
+                <img src="./images/icon-bird.png" alt="" loading="lazy" />
+            </div>
+        </div>
+
+        <div class="question hide" id="questionType1">
+            <div class="pitanje" id="pitanjeT1"></div>
+            <div class="odgovor" id="odgovoriT1">
+                <button class="btn-odgovor">Odgovor A</button>
+                <button class="btn-odgovor">Odgovor B</button>
+                <button class="btn-odgovor">Odgovor C</button>
+                <button class="btn-odgovor">Odgovor D</button>
+            </div>
+            <div class="submitAnswer">
+                <button class="nextQuestion hide" id="nextQuestionType1">
+                    Next question <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="question hide" id="questionType2">
+            <div class="pitanje">
+                <p id="pitanjeT2"></p>
+                <ul class="hide" id="pitanjeT3"></ul>
+            </div>
+
+            <div class="base-timer" id="timer">
+                <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g class="base-timer__circle">
+                        <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+                        <path id="base-timer-path-remaining" stroke-dasharray="283"
+                            class="base-timer__path-remaining ${remainingPathColor}" 
+                            d="
+                                M 50, 50
+                                m -45, 0
+                                a 45,45 0 1,0 90,0
+                                a 45,45 0 1,0 -90,0
+                            "
+                        ></path>
+                    </g>
+                </svg>
+                <span class="base-timer__label" id="base-timer-label"></span>
+            </div>
+            <div class="hide" id="warnMessage">Time is up!</div>
+
+            <div class="odgovor">
+                <input class="yourAnswer" id="userAnswer" type="text" placeholder="Enter your answer" />
+
+                <p class="hide" id="correctAnswer"></p>
+            </div>
+
+            <div class="submitAnswer">
+                <button class="nextQuestion" id="confirmAnswer"><i class="fas fa-check"></i> Confirm</button>
+                <button class="nextQuestion" id="nextQuestionType2">
+                    Next question <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="question hide " id="questionType4">
+            <div class="pitanje" id="pitanjeT4">Connect the picture and the exact name of the plant:</div>
+            <img class="imgCenter responsive" id="picture" alt="Slika nije ucitana">
+
+            <div id="odgovoriT4">
+            </div>
+            <div id="next4">
+                <button class="nextQuestion" id="nextQuestionType4">
+                    Next question <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="question hide" id="submitResult">
+            <div class="pitanje" id="message"></div>
+                
+            <form action="">
+                <div>
+                    <input type="text" id="firstName" name="firstName" placeholder="Name">
+                    <label for="firstName">Name</label>
+                </div>
+                <div>
+                    <input type="text" id="lastName" name="lastName" placeholder="Surname">
+                    <label for="lastName">Surname</label>
+                </div>
+                <p id="error-message"></p>
+                <button type="submit" id="submitForm"><i class="fas fa-save"></i> Submit</button>
+            </form>
+        </div>
+
+        <div class="question hide" id="resultsList">
+            <div class="header">
+                <h1>Results:</h1>
+            </div>
+
+            <div class="container">
+                <ul id="list"></ul>
+            </div>
+             <div class="submitAnswer">
+                <button class="nextQuestion" id="backToHome">
+                    Back to home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
