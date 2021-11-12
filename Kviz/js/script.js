@@ -73,8 +73,8 @@ let gameInProgress = false;                          // da li je kviz u toku
 let points = 0;                                      // brojac osvojenih poena
 let counter = 0;                                     // brojac pitanja 
 const nQuestions = 10;                               // ukupan broj pitanja
-const wrongSound = new Audio('Zvuci/wrong.wav');
-const correctSound = new Audio('Zvuci/correct.wav');
+const wrongSound = new Audio('sounds/wrong.wav');
+const correctSound = new Audio('sounds/correct.wav');
 
 
 // Elementi i promjenljive za prvi tip pitanja
