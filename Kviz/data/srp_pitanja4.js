@@ -1,4 +1,4 @@
-const pitanjaLvl4 = [
+const srpPitanjaLvl4 = [
   {
     picture: "images/kamilica.jpg",
     answers: [
@@ -33,4 +33,4 @@ const pitanjaLvl4 = [
   }
 ];
 
-export default pitanjaLvl4
+export default srpPitanjaLvl4

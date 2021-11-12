@@ -1,4 +1,4 @@
-const pitanjaLvl3 = [
+const srpPitanjaLvl3 = [
     {
         question: "Поставити слова на њихово исправно мјесто како би се добио исправан назив биљке",
         letters: "М И Л К А И Ц А",
@@ -71,4 +71,4 @@ const pitanjaLvl3 = [
     }
 ];
 
-export default pitanjaLvl3
+export default srpPitanjaLvl3
