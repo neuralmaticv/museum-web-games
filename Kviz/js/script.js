@@ -1,7 +1,70 @@
-import pitanjaLvl1 from "../data/srp_pitanja1.js"       // izaberi tacan odgovor
-import pitanjaLvl2 from "../data/srp_pitanja2.js"      // zagonetke
-import pitanjaLvl3 from "../data/srp_pitanja3.js"       // anagrami
-import pitanjaLvl4 from "../data/srp_pitanja4.js";
+/**
+ * Projekat za Muzej RS
+ * Interaktivne veb igrice za izložbu "Upotreba ljekovitog bilja u narodnoj medicini"
+ * 
+ * Posljednja izmjena: 
+ * 2021-11-12
+ * 
+ * Autori:
+ * Aleksandar Obradović 
+ * Vladimir Mijić
+ */
+
+
+
+/**
+ * pitanja 1 - izaberi tacan odgovor
+ * pitanja 2 - zagonetke
+ * pitanja 3 - anagrami
+ * pitanja 4 - pogodi biljku sa slike
+ */
+ import srpPitanjaLvl1 from "../data/srp_pitanja1.js";
+ import srpPitanjaLvl2 from "../data/srp_pitanja2.js";
+ import srpPitanjaLvl3 from "../data/srp_pitanja3.js";
+ import srpPitanjaLvl4 from "../data/srp_pitanja4.js";
+
+ import rusPitanjaLvl1 from "../data/rus_pitanja1.js";
+ import rusPitanjaLvl2 from "../data/rus_pitanja2.js";
+ import rusPitanjaLvl3 from "../data/rus_pitanja3.js";
+ import rusPitanjaLvl4 from "../data/rus_pitanja4.js";
+
+
+// Kontrola prevoda srp/eng/rus
+const langCode = document.documentElement.lang;      // vraca ISO oznaku za jezik
+console.log(langCode);
+let mainWordsList = [];
+const srWordsList = ["Имали сте", "од", "тачних одговора", "Тачан одговор је", "Унос није валидан!"];
+const enWordsList = ["You had", "of", "correct answers", "Correct answer is", "Input is not valid!"];
+const ruWordsList = ["Ты имел", "от", "правильные ответы", "Правильный ответ ", "Неверный ввод!"];
+let pitanjaLvl1, pitanjaLvl2, pitanjaLvl3, pitanjaLvl4;
+
+if (document.documentElement.lang == "sr") {
+    pitanjaLvl1 = srpPitanjaLvl1;
+    pitanjaLvl2 = srpPitanjaLvl2;
+    pitanjaLvl3 = srpPitanjaLvl3;
+    pitanjaLvl4 = srpPitanjaLvl4;
+
+    mainWordsList = [...srWordsList];
+} else if (document.documentElement.lang == "en") {
+    // pitanjaLvl1 = engPitanjaLvl1;
+    // pitanjaLvl2 = engPitanjaLvl2;
+    // pitanjaLvl3 = engPitanjaLvl3;
+    // pitanjaLvl4 = engPitanjaLvl4;
+
+    mainWordsList = [...enWordsList];
+} else if (document.documentElement.lang == "ru") {
+    pitanjaLvl1 = rusPitanjaLvl1;
+    pitanjaLvl2 = rusPitanjaLvl2;
+    pitanjaLvl3 = rusPitanjaLvl3;
+    pitanjaLvl4 = rusPitanjaLvl4;
+
+    mainWordsList = [...ruWordsList];
+}
+console.log(mainWordsList);
+console.log(srWordsList);
+console.log(enWordsList);
+console.log(ruWordsList);
+
 
 // Elementi za pocetni meni i neke bitnije promjenljive
 const homeScreen = document.getElementById("homeScreen");
@@ -12,12 +75,6 @@ let counter = 0;                                     // brojac pitanja
 const nQuestions = 10;                               // ukupan broj pitanja
 const wrongSound = new Audio('Zvuci/wrong.wav');
 const correctSound = new Audio('Zvuci/correct.wav');
-const langCode = document.documentElement.lang;      // vraca ISO oznaku za jezik
-console.log(langCode);
-let mainWordsList = [];
-const srWordsList = ["Имали сте", "од", "тачних одговора", "Тачан одговор је", "Унос није валидан!"];
-const enWordsList = ["You had", "of", "correct answers", "Correct answer is", "Input is not valid!"];
-const ruWordsList = ["Ты имел", "от", "правильные ответы", "Правильный ответ ", "Неверный ввод!"];
 
 
 // Elementi i promjenljive za prvi tip pitanja
@@ -43,7 +100,8 @@ const answer = document.getElementById("correctAnswer");
 let trueAnswer = "";
 let seconds = 15, countdown;
 let randomNumbers = []
-let timePassed, timeLeft;                               // proteklo i preostalo vrijeme u sekundama
+let timePassed, timeLeft;                              // proteklo i preostalo vrijeme u sekundama
+
 
 // cetrvti tip
 let shuffledQuestions4
@@ -80,19 +138,6 @@ const resultsSection = document.getElementById("resultsList");
 const backToHome = document.getElementById("backToHome");
 
 
-// Kontrola prevoda srp/eng/rus
-// TODO: implementirati pomocu funkcije kada se uvedu prevodi pitanja
-if (langCode == "sr") {
-    mainWordsList = [...srWordsList];
-} else if (langCode == "en") {
-    mainWordsList = [...enWordsList];
-} else if (langCode == "ru") {
-    mainWordsList = [...ruWordsList];
-}
-console.log(mainWordsList);
-console.log(srWordsList);
-console.log(enWordsList);
-console.log(ruWordsList);
 
 /**
  * 

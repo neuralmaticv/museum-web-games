@@ -1,4 +1,4 @@
-const pitanjaLvl2 = [
+const srpPitanjaLvl2 = [
     {
         "id": 1,
         "question": "Жут јесам, али немам жутицу, добар сам ти другкад имаш грозницу.",
@@ -53,4 +53,4 @@ const pitanjaLvl2 = [
     }
 ];
 
-export default pitanjaLvl2
+export default srpPitanjaLvl2

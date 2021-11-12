@@ -1,4 +1,4 @@
-const pitanjaLvl1 = [
+const srpPitanjaLvl1 = [
     {
         question: "Биљке су извор хране људима и животињама.",
         answers: {
@@ -122,4 +122,4 @@ const pitanjaLvl1 = [
     }
 ];
 
-export default pitanjaLvl1
+export default srpPitanjaLvl1
