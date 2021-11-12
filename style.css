@@ -1,48 +1,86 @@
+@font-face {
+  font-family: "Balsamiq Sans";
+  src: url("../fonts/BalsamiqSans-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Balsamiq Sans", cursive;
+}
+
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .container a {
-    display: block;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    padding: 10px;
-    margin: 5px;
-    border: 3px solid rgb(155, 218, 119);
-    border-radius: 25px;
-    width: 330px;
-    color: rgb(10, 88, 36);
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px;
+  border: 3px solid rgb(85, 166, 48);
+  border-radius: 25px;
+  width: 380px;
+  color: rgb(10, 88, 36);
 }
 .container a span {
-    float: right;
+  float: right;
 }
 .container a:hover {
-    background-color: rgb(155, 218, 119);
-    color: black;
+  background-color: rgb(85, 166, 48);
+  color: black;
 }
 .hide {
-    display: none !important;
+  display: none !important;
 }
 
 .languages {
-    text-align: center;
+  text-align: center;
 }
 button {
-    width: 32px;
-    height: 32px;
-    border: none;
-    background-color: none;
-    border-style: none;
+  margin: 15px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: none;
+  border-style: none;
+}
+button:focus {
+    outline: none;
 }
 #sr {
-    background-image: url('./images/flag_sr_icon.png');
+  background-image: url("./images/flag_sr_icon.png");
 }
 #en {
-    background-image: url('./images/flag_en_icon.png');
+  background-image: url("./images/flag_en_icon.png");
 }
 #ru {
-    background-image: url('./images/flag_ru_icon.png');
+  background-image: url("./images/flag_ru_icon.png");
+}
+
+img.bg {
+  min-height: 100%;
+  min-width: 1024px;
+
+  width: 100%;
+  height: auto;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  img.bg {
+    left: 50%;
+    margin-left: -512px;
+  }
 }
