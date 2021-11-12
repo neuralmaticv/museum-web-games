@@ -38,11 +38,11 @@ button {
     border-style: none;
 }
 #sr {
-    background-image: url('flag_sr_icon.png');
+    background-image: url('./images/flag_sr_icon.png');
 }
 #en {
-    background-image: url('flag_en_icon.png');
+    background-image: url('./images/flag_en_icon.png');
 }
 #ru {
-    background-image: url('flag_ru_icon.png');
+    background-image: url('./images/flag_ru_icon.png');
 }
