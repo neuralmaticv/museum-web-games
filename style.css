@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Balsamiq Sans";
-  src: url("../fonts/BalsamiqSans-Regular.ttf");
+  src: url("./Kviz/fonts/BalsamiqSans-Regular.ttf");
 }
 
 * {
@@ -23,7 +23,9 @@
 .container a {
   display: block;
   text-decoration: none;
+  text-align: center;
   font-weight: bold;
+  font-size: 18px;
   padding: 10px;
   margin: 5px;
   border: 3px solid rgb(85, 166, 48);
@@ -32,7 +34,8 @@
   color: rgb(10, 88, 36);
 }
 .container a span {
-  float: right;
+  font-style: italic;
+  font-size: 14px;
 }
 .container a:hover {
   background-color: rgb(85, 166, 48);

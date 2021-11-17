@@ -28,6 +28,10 @@
  import rusPitanjaLvl3 from "../data/rus_pitanja3.js";
  import rusPitanjaLvl4 from "../data/rus_pitanja4.js";
 
+ import engPitanjaLvl1 from "../data/eng_pitanja1.js";
+ import engPitanjaLvl2 from "../data/eng_pitanja2.js";
+ import engPitanjaLvl3 from "../data/eng_pitanja3.js";
+ import engPitanjaLvl4 from "../data/eng_pitanja4.js";
 
 // Kontrola prevoda srp/eng/rus
 const langCode = document.documentElement.lang;      // vraca ISO oznaku za jezik
@@ -46,10 +50,10 @@ if (document.documentElement.lang == "sr") {
 
     mainWordsList = [...srWordsList];
 } else if (document.documentElement.lang == "en") {
-    // pitanjaLvl1 = engPitanjaLvl1;
-    // pitanjaLvl2 = engPitanjaLvl2;
-    // pitanjaLvl3 = engPitanjaLvl3;
-    // pitanjaLvl4 = engPitanjaLvl4;
+    pitanjaLvl1 = engPitanjaLvl1;
+    pitanjaLvl2 = engPitanjaLvl2;
+    pitanjaLvl3 = engPitanjaLvl3;
+    pitanjaLvl4 = engPitanjaLvl4;
 
     mainWordsList = [...enWordsList];
 } else if (document.documentElement.lang == "ru") {
