@@ -3,7 +3,7 @@
  * Interaktivne veb igrice za izložbu "Upotreba ljekovitog bilja u narodnoj medicini"
  * 
  * Posljednja izmjena: 
- * 2021-11-12
+ * 2021-11-30
  * 
  * Autori:
  * Aleksandar Obradović 
@@ -35,7 +35,7 @@
 
 // Kontrola prevoda srp/eng/rus
 const langCode = document.documentElement.lang;      // vraca ISO oznaku za jezik
-console.log(langCode);
+
 let mainWordsList = [];
 const srWordsList = ["Имали сте", "од", "тачних одговора", "Тачан одговор је", "Унос није валидан!"];
 const enWordsList = ["You had", "of", "correct answers", "Correct answer is", "Input is not valid!"];
@@ -64,11 +64,6 @@ if (document.documentElement.lang == "sr") {
 
     mainWordsList = [...ruWordsList];
 }
-console.log(mainWordsList);
-console.log(srWordsList);
-console.log(enWordsList);
-console.log(ruWordsList);
-
 
 // Elementi za pocetni meni i neke bitnije promjenljive
 const homeScreen = document.getElementById("homeScreen");
@@ -238,7 +233,6 @@ function showQuestion(q) {
     }
 
     counter++;
-    console.log("Pitanje broj %d, odgovor = %s; POINTS %d", counter, q.correctAnswer, points);
 }
 
 function resetPrevStateQuestionT1() {
@@ -327,8 +321,6 @@ function setQuestionT2() {
 
         setQuestionT4(q4);
     }
-
-    console.log("Pitanje broj %d, odgovor = %s; POINTS %d", counter, trueAnswer, points);
 }
 
 function setQuestionT4(q4) {
