@@ -35,7 +35,6 @@
         function changeLang(langID) {
             const games = document.querySelectorAll("a");
             games.forEach(t => {
-                console.log(t.lang)
                 if (t.lang == langID) {
                     t.classList.remove("hide");
                 } else {
