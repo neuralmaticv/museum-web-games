@@ -31,18 +31,6 @@ svg {
     background-repeat: no-repeat;
 }
 
-.background .water{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url("../img/pr3.png");
-    background-size: 1550px 722px;
-    background-repeat: no-repeat;
-    filter:url("#turbulence");
-}
-
 .myCard {
     display: inline-block;
 }
@@ -119,22 +107,58 @@ img {
     display: none;
 }
 
-.myLvl {
-    width: auto;
-    height: auto;
+#level1start {
+    position: absolute;
+    top: 90px;
+    left: 250px;
+    background-repeat: no-repeat;
+    background-image: url("../img/zeleni-removebg-preview.png");
+    width: 100%;
+    height: 100%;
 }
 
-#level1start {
-    left: 445px;
-    top: 490px;
+#level1start:hover{
+    animation: animate 2s  alternate infinite;
 }
 
 #level2start {
-    left: 1000px;
-    top: 380px;
+    position: absolute;
+    top: 390px;
+    left: 478px;
+    background-repeat: no-repeat;
+    background-image: url("../img/redd.png");
+    width: 100%;
+    height: 100%;
 }
 
+#level2start:hover{
+    animation: animate 2s  alternate infinite;
+}
+
+
 #level3start {
-    top: 10px;
-    left: 290px;
+    position: absolute;
+    top: 271px;
+    left: 1199px;
+    background-repeat: no-repeat;
+    background-image: url("../img/blue.png");
+    width: 100%;
+    height: 100%;
+}
+
+#level3start:hover{
+    animation: animate 2s  alternate infinite;
+}
+
+
+@keyframes animate{
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(14deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
 }
