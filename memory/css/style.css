@@ -1,8 +1,46 @@
 body {
-    background-image: url('../img/mainBG.jpg');
+    background-image: url("../img/p11.jpeg");
     background-repeat: no-repeat;
     background-size: 1550px 722px;
+    font-family: 'Verdana', sans-serif;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     user-select: none;
+}
+
+svg {
+    position: relative;
+    top: 420px;
+    left: 25px;
+    font-weight:bold;
+    max-width:600px;
+    height:62px;
+    user-select: none;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/bg.jpg");
+    background-size: 1550px 722px;
+    background-repeat: no-repeat;
+}
+
+.background .water{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/pr3.png");
+    background-size: 1550px 722px;
+    background-repeat: no-repeat;
+    filter:url("#turbulence");
 }
 
 .myCard {
@@ -25,14 +63,13 @@ img {
 #end {
     font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: black;
     text-align: center;
     font-weight: bold;
 }
 
 .result {
-    background-image: url('../img/endBG.jpeg');
-    background-size: cover;
+    backdrop-filter: blur(5px);
     position: relative;
     display: none;
     width: 100%;
@@ -60,33 +97,10 @@ img {
     }
 }
 
-
-.level1 img {
-    border: 3px solid rgb(58, 175, 12);
-}
-
-.level2 img {
-    border: 3px solid rgb(194, 38, 17);
-}
-
-.level3 img {
-    border: 3px solid rgb(2, 22, 109);
-}
-
-.start {
-    box-sizing: border-box;
-    padding: 5%;
-    width: 100%;
-    position: relative;
-    display: inline-block;
-    border-radius: 30px;
-    border: 4px solid black;
-}
-
 .btn {
     position: relative;
     display: block;
-    border: 5px solid white;
+    border: 5px solid black;
     text-align: center;
     color: black;
     font-size: x-large;
@@ -99,13 +113,28 @@ img {
     margin: auto;
 }
 
-.btn:hover {
-    background:linear-gradient(to bottom, #0877ff 5%, #0053ec 100%);
-	background-color:#476e9e;
-}
-
 .scene {
     box-sizing: border-box;
     width: 100%;
     display: none;
+}
+
+.myLvl {
+    width: auto;
+    height: auto;
+}
+
+#level1start {
+    left: 445px;
+    top: 490px;
+}
+
+#level2start {
+    left: 1000px;
+    top: 380px;
+}
+
+#level3start {
+    top: 10px;
+    left: 290px;
 }

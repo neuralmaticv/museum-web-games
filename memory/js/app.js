@@ -33,12 +33,17 @@ let pair = 0;
 let tap = new Audio('sound/tap.wav');
 let success = new Audio('sound/success.wav');
 
+let play;
+let water;
+
 function check() {
     return first !== null && second !== null;
 }
 
 function displayElements(n, lvl) {
-    $(".start").css("display", "none");
+    water = $("#waterSvg");
+    water.remove();
+    $(".background").css("display", "none");
     $(".scene").css("display", "inline-block");
     $(".scene").addClass("level" + lvl);
     $("body").css("background-image", "url('img/lvl" + lvl + "/bg.jpg')");
@@ -97,19 +102,27 @@ function displayElements(n, lvl) {
 }
 
 $(document).ready(function () {
-    $("#level1start").click(function () {
+    $("#play").click(function () {
+        play = $("#play");
+        play.remove();
+        $(".background").css("display", "inline-block");
+        return;
+    })
+
+    $(".myLvl#level1start").click(function () {
+        console.log("It works.")
         const n = 4;
         displayElements(n, 1);
         return;
     })
 
-    $("#level2start").click(function () {
+    $(".myLvl#level2start").click(function () {
         const n = 6;
         displayElements(n, 2);
         return;
     })
 
-    $("#level3start").click(function () {
+    $(".myLvl#level3start").click(function () {
         const n = 8;
         displayElements(n, 3);
         return;
