@@ -89,8 +89,16 @@ function displayElements(n, lvl) {
                         if (pair == n) {
                             setTimeout(() => {
                                 $(".scene").css("display", "none");
-                                $(".result").css("display", "inline-block");
-                                $("#end").text("Честитамо! Успјешно сте завршили игру са " + counter + " промашаја!");
+                                if(lvl == 1 ){
+                                    $(".end").css("display", "inline-block");
+                                }
+                                else if(lvl == 2 ){
+                                    $(".end1").css("display", "inline-block");
+                                }
+                                else{
+                                    $(".end2").css("display", "inline-block");
+                                }
+
                             }, 1000)
                         }
                         first = null; second = null;
