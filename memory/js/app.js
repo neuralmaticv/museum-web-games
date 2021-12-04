@@ -146,7 +146,7 @@ $(document).ready(function () {
     })
 
     $("#next3").click(function () {
-        location.reload();
+        $(".background").css("display", "inline-block");
         return;
     })
 })
