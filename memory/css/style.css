@@ -44,6 +44,39 @@ img {
     margin-top: 10px;
 }
 
+#next1 {
+    position: absolute;
+    top: 375px;
+    left: 630px;
+    height: 41px;
+    width: 120px;
+    border: none;
+    display: none;
+    background-color: transparent;
+}
+
+#next2 {
+    position: absolute;
+    top: 375px;
+    left: 630px;
+    height: 41px;
+    width: 120px;
+    border: none;
+    display: none;
+    background-color: transparent;
+}
+
+#next3 {
+    position: absolute;
+    top: 375px;
+    left: 630px;
+    height: 41px;
+    width: 120px;
+    border: none;
+    display: none;
+    background-color: transparent;
+}
+
 .open {
     display: none;
 }

@@ -91,12 +91,16 @@ function displayElements(n, lvl) {
                                 $(".scene").css("display", "none");
                                 if(lvl == 1 ){
                                     $(".end").css("display", "inline-block");
+                                    $("#next1").css("display", "inline-block");
+
                                 }
                                 else if(lvl == 2 ){
                                     $(".end1").css("display", "inline-block");
+                                    $("#next2").css("display", "inline-block");
                                 }
                                 else{
                                     $(".end2").css("display", "inline-block");
+                                    $("#next3").css("display", "inline-block");
                                 }
 
                             }, 1000)
@@ -137,6 +141,11 @@ $(document).ready(function () {
     })
 
     $("#restart").click(function () {
+        location.reload();
+        return;
+    })
+
+    $("#next3").click(function () {
         location.reload();
         return;
     })
