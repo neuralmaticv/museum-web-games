@@ -117,20 +117,20 @@ $(document).ready(function () {
         return;
     })
 
-    $("#level1start").click(function () {
+    $(".level1start").click(function () {
         console.log("It works.")
         const n = 4;
         displayElements(n, 1);
         return;
     })
 
-    $("#level2start").click(function () {
+    $(".level2start").click(function () {
         const n = 6;
         displayElements(n, 2);
         return;
     })
 
-    $("#level3start").click(function () {
+    $(".level3start").click(function () {
         const n = 8;
         displayElements(n, 3);
         return;
