@@ -145,6 +145,22 @@ $(document).ready(function () {
         return;
     })
 
+    $("#next1").click(function () {
+        $(".end").css("display", "none");
+        $("#next1").css("display", "none");
+        const n = 6;
+        displayElements(n, 2);
+        return;
+    })
+
+    $("#next2").click(function () {
+        $(".end1").css("display", "none");
+        $("#next2").css("display", "none");
+        const n = 8;
+        displayElements(n, 3);
+        return;
+    })
+
     $("#next3").click(function () {
         $(".background").css("display", "inline-block");
         return;
