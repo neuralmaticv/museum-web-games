@@ -144,11 +144,8 @@ $(document).ready(function () {
     $("#next1").click(function () {
         $(".end").css("display", "none");
         $("#next1").css("display", "none");
-<<<<<<< HEAD
         $(".scene").empty();
         $(".scene").removeClass("level1");
-=======
->>>>>>> 0e1d51e523663206bf04560d87413769878a02f8
         const n = 6;
         displayElements(n, 2);
         return;
@@ -157,11 +154,8 @@ $(document).ready(function () {
     $("#next2").click(function () {
         $(".end1").css("display", "none");
         $("#next2").css("display", "none");
-<<<<<<< HEAD
         $(".scene").empty();
         $(".scene").removeClass("level2");
-=======
->>>>>>> 0e1d51e523663206bf04560d87413769878a02f8
         const n = 8;
         displayElements(n, 3);
         return;
