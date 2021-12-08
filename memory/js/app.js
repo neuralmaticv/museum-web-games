@@ -34,15 +34,12 @@ let tap = new Audio('sound/tap.wav');
 let success = new Audio('sound/success.wav');
 
 let play;
-let water;
 
 function check() {
     return first !== null && second !== null;
 }
 
 function displayElements(n, lvl) {
-    water = $("#waterSvg");
-    water.remove();
     $(".background").css("display", "none");
     $(".scene").css("display", "inline-block");
     $(".scene").addClass("level" + lvl);
@@ -89,20 +86,19 @@ function displayElements(n, lvl) {
                         if (pair == n) {
                             setTimeout(() => {
                                 $(".scene").css("display", "none");
-                                if(lvl == 1 ){
+                                if (lvl == 1) {
                                     $(".end").css("display", "inline-block");
                                     $("#next1").css("display", "inline-block");
-
                                 }
-                                else if(lvl == 2 ){
+                                else if (lvl == 2) {
                                     $(".end1").css("display", "inline-block");
                                     $("#next2").css("display", "inline-block");
                                 }
-                                else{
+                                else {
                                     $(".end2").css("display", "inline-block");
                                     $("#next3").css("display", "inline-block");
                                 }
-
+                                pair = 0;
                             }, 1000)
                         }
                         first = null; second = null;
@@ -145,8 +141,28 @@ $(document).ready(function () {
         return;
     })
 
+    $("#next1").click(function () {
+        $(".end").css("display", "none");
+        $("#next1").css("display", "none");
+        $(".scene").empty();
+        $(".scene").removeClass("level1");
+        const n = 6;
+        displayElements(n, 2);
+        return;
+    })
+
+    $("#next2").click(function () {
+        $(".end1").css("display", "none");
+        $("#next2").css("display", "none");
+        $(".scene").empty();
+        $(".scene").removeClass("level2");
+        const n = 8;
+        displayElements(n, 3);
+        return;
+    })
+
     $("#next3").click(function () {
-        $(".background").css("display", "inline-block");
+        window.location.href = "https://bogdanvjestica.github.io/muzej-rs";
         return;
     })
 })
