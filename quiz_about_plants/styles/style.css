@@ -203,19 +203,17 @@ body {
     margin: 0 auto;
     padding-top: 100px;
     padding-bottom: 50px;
-    display: none;
 }
 
 img {
     width: 50%;
     height: 50%;
 }
-/*
+
 .img {
-    display: none;
     margin: auto;
 }
-*/
+
 .answers{
     margin: auto;
     display: table;

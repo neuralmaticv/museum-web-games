@@ -1,109 +1,70 @@
-/*jshint esversion: 6 */
+import questions from "../data/questions.js"
 
-const allImages = document.getElementsByClassName('img');
-const answers = document.getElementsByClassName('answer');
-const imagesData = [];
-const answersData = [];
-
-setTimeout("hidediv()",10000);
-setTimeout("setActiveImageDisplayBlock()",10001);
-
-for (let img of allImages) {
-    const imgData = {
-        display: false,
-        name: img.alt,
-        id: img.id,
-    };
-    imagesData.push(imgData);
-}
-
-if (imagesData.filter(img => img.display == false).length == allImages.length ) {
-    imagesData[0].display = true;
-} // set visibility on first image
-
-let activeImage = imagesData.find(img => img.display === true); 
-const inactiveImages = imagesData.filter(img => img.display === false);
-
-for (const answer of answers) {
-    const ansData = {
-        display: true,
-        name: answer.textContent,
-        id: answer.id
-    };
-    answersData.push(ansData);
-}
-
-
-let startDate;
-for (const answer of answers) {
-    const answerData = answersData.find(element => element.id === answer.id);
-    answer.addEventListener('click', () => {
-        if(!startDate) {
-            startDate = new Date();
-        }
-        if (isCorrectAnswer(activeImage, answerData)) {
-            removeCorrectAnswer(answerData);
-            activeImage.display = false;
-            setInctiveImagesDisplayNone();
-            if( inactiveImages. length > 0) {
-                activeImage = inactiveImages[0];
-                activeImage.display = true;
-                setActiveImageDisplayBlock();
-                inactiveImages.shift();
-            } else {
-                const endDate = new Date();
-                showSuccessMessage(endDate);
-            }   
-        }
-    } );
-}
-
-
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            const temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
+function getArray(n) {
+    let l = []
+    let i = 0;
+    while (i < n) {
+        let rand = Math.floor(Math.random() * questions.length);
+        let element = questions[rand];
+        if (!l.includes(element)) {
+            l.push(element)
+            i++;
         }
     }
+    return l;
+}
 
-    function hidediv() {
-        document.getElementById("start").style.visibility="hidden";
-        document.getElementById("loading").style.visibility="hidden";
+function getRandomIndex(n) {
+    let l = []
+    let i = 0;
+    while (i < n) {
+        let rand = Math.floor(Math.random() * 8);
+        if (!l.includes(rand)) {
+            l.push(rand)
+            i++;
+        }
+    }
+    return l;
+}
 
-    }
-    function setActiveImageDisplayBlock() {
-        const active = imagesData.find(image => image.display === true);
-        document.getElementById(active.id).style.display = 'block';
-    }
-    function setInctiveImagesDisplayNone() {
-        const inactive = imagesData.filter(image => image.display === false);
-        for (const img of inactive) 
-            document.getElementById(img.id).style.display = 'none';
-    }
-    function removeCorrectAnswer(answer) {
-        const correctAnswer = answersData.find(element => element.id === answer.id);
-        document.getElementById(correctAnswer.id).innerHTML = ''; //.style.display = 'none';
-        document.getElementById(correctAnswer.id).style.backgroundColor = 'transparent';
-    } // or .innerHTML = '';
+let active = null;
+let activeIndex = -1;
 
-    function isCorrectAnswer(image, answer) {
-        if(image.name === answer.name) {
-            return true;
+function displayElements() {
+    let l = getArray(8);
+    let indexList = getRandomIndex(8);
+    let k = 0;
+    $(".images").append("<img class='img' src='" + l[indexList[k]].picture + "' id='" + l[indexList[k]].id + "' alt='" + l[indexList[k]].correctAnswer + "'></img>");
+    activeIndex = l[indexList[k]].id
+    k++;
+    for (let i = 0; i < l.length; i++) {
+        if (i < 4) {
+            $(".g1").append("<div class='answer' id='" + l[i].id + "'>" + l[i].correctAnswer + "</div>")
         } else {
-            return false;
+            $(".g2").append("<div class='answer' id='" + l[i].id + "'>" + l[i].correctAnswer + "</div>")
         }
+        $(".answer").on('click', function () {
+            active = $(this)
+            if (active.attr('id') == activeIndex) {
+                if(k == 8) {
+                    $(".finish-message").css("display", "block");
+                }
+                active.css("visibility", "hidden");
+                $(".img#" + activeIndex).css("display", "none");
+                $(".images").append("<img class='img' src='" + l[indexList[k]].picture + "' id='" + l[indexList[k]].id + "' alt='" + l[indexList[k]].correctAnswer + "'></img>");
+                activeIndex = l[indexList[k]].id
+                k++;
+            }
+        })
     }
+}
 
-    function showSuccessMessage(date) {
-        document.getElementById('answers').style.display = 'none';
-        document.getElementById('images').style.display = 'none';
-        document.getElementById('finish-message').style.display = 'block';
-        const time = date - startDate;
-        const message = `Uspiješno ste riješili kviz za ${time/1000} sekundi. Čestitamo.`;
-        document.getElementById('add-message').innerText += message;
-    }
+$(document).ready(function () {
+    setTimeout(() => {
+        $(".home").css("display", "none");
+        displayElements();
+    }, 2000)
 
-    
-
+    console.log(getRandomIndex(8))
+    return;
+})
