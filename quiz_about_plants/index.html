@@ -3,7 +3,7 @@
 <head>
     <title>Memory game</title>
     <link rel="stylesheet" href="styles/style.css">
-
+    <link rel="stylesheet" href="styles/wrapper.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -48,12 +48,24 @@
             <div class="group g2">
             </div>
         </div>
+        
+        <div class="wbody">
+            <div class="wrapper" id="wrap">
+                <div class="lid one"></div>
+                <div class="lid two"></div>
+                <div class="envelope"></div>
+                <div class="letter">
+                    <p id="par"></p>
+                </div>
+            </div>
+        </div>
 
         <div class="finish-message" id="finish-message">
             <h1>Bravo!</h1>
             <h3 id="add-message"> </h3>
             <button onclick="window.location.reload()">Igraj ponovo</button>
         </div>
+
     </div>
     <script src="scripts/jquery-3.6.0.js"></script>
     <script type="module" src="scripts/app.js"></script>

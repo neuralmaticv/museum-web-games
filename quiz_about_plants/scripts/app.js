@@ -35,7 +35,7 @@ function displayElements() {
     let indexList = getRandomIndex(8);
     let k = 0;
     $(".images").append("<img class='img' src='" + l[indexList[k]].picture + "' id='" + l[indexList[k]].id + "' alt='" + l[indexList[k]].correctAnswer + "'></img>");
-    activeIndex = l[indexList[k]].id
+    activeIndex = l[indexList[k]]
     k++;
     for (let i = 0; i < l.length; i++) {
         if (i < 4) {
@@ -43,17 +43,28 @@ function displayElements() {
         } else {
             $(".g2").append("<div class='answer' id='" + l[i].id + "'>" + l[i].correctAnswer + "</div>")
         }
-        $(".answer").on('click', function () {
-            active = $(this)
-            if (active.attr('id') == activeIndex) {
-                if(k == 8) {
+        $(".answer").unbind().on('click', function () {
+            active = $(this);
+            let current = k;
+            if (active.attr('id') == activeIndex.id) {
+                console.log(k)
+                if (k == 8) {
                     $(".finish-message").css("display", "block");
                 }
                 active.css("visibility", "hidden");
-                $(".img#" + activeIndex).css("display", "none");
+                $(".img#" + activeIndex.id).css("display", "none");
                 $(".images").append("<img class='img' src='" + l[indexList[k]].picture + "' id='" + l[indexList[k]].id + "' alt='" + l[indexList[k]].correctAnswer + "'></img>");
-                activeIndex = l[indexList[k]].id
+                activeIndex = l[indexList[k]]
                 k++;
+            }
+            else {
+                console.log("uslog")
+                $(".images").css("display", "none");
+                $(".answers").css("display", "none");
+                $(".wbody").css("display", "flex");
+                $("#wrap").mouseenter(function () {
+                    $("#par").text(activeIndex.explanation);
+                })
             }
         })
     }
@@ -65,6 +76,5 @@ $(document).ready(function () {
         displayElements();
     }, 2000)
 
-    console.log(getRandomIndex(8))
     return;
 })
