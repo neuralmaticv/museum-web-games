@@ -37,7 +37,7 @@
 
 /* Lid when closed */
 .lid.one {
-    border-top: 100px solid #42bdbd;
+    border-top: 100px solid #24c7c7;
     transform: rotateX(0deg);
     z-index: 3;
     transition-delay: 0.75s;
@@ -45,7 +45,7 @@
 
 /* Lid when opened */
 .lid.two {
-    border-top: 100px solid #5b7dd36c;
+    border-top: 100px solid #07f1f14d;
     transform: rotateX(90deg);
     z-index: 1;
     transition-delay: 0.5s;
@@ -58,11 +58,12 @@
     top: 0;
     left: 0;
     border-top: 100px solid transparent;
-    border-right: 150px solid #198585;
-    border-bottom: 100px solid #198585;
-    border-left: 150px solid #459494;
+    border-right: 150px solid #247c7c;
+    border-bottom: 100px solid #247c7c;
+    border-left: 150px solid #247c7c;
     z-index: 3;
 }
+
 
 .letter {
     position: absolute;
@@ -77,8 +78,13 @@
 
 .letter p {
     text-align: center;
-    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
     margin-top: 0px;
+    padding-top: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-weight: bold;
     color: #3B4049;
 }
 
