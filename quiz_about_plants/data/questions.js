@@ -117,7 +117,7 @@ const questions = [
     },
     {
         id: 14,
-        picture: "images/",
+        picture: "images/w1-removebg-preview.png",
         correctAnswer: "Дивља ружа",
         explanation: "Шипак или дивља ружа је трновит и разгранат жбун са лијепим, ружичастим до бијелим"+ 
         "цвјетовима, врло пријатног мириса. Зрели плодови су наранџасто-црвени и богати"+
@@ -153,7 +153,7 @@ const questions = [
     },
     {
         id: 18,
-        picture: "images/",
+        picture: "images/Silver-birch-removebg-preview.png",
         correctAnswer: "Бреза",
         explanation: "Бреза је препознатљиво дрво по бијелој кори која се лако гули и одваја. Листови су"+
         "троугласти, по рубу зупчасти. Мушки цвјетови су висеће ресе, док женске стоје усправно."+
@@ -162,7 +162,7 @@ const questions = [
     },
     {
         id: 19,
-        picture: "images/",
+        picture: "images/shepherds-purse-capsella-bursapastoris-isolated-260nw-1958118127-removebg-preview.png",
         correctAnswer: "Хоћу-нећу",
         explanation: "Хоћу-нећу или русомача је зељаста биљка са усправним стаблом. Листови розете су на"+ 
         "дршкама, док су листови стабла сједећи. Има ситне цвјетове скупљене у гроздове, а"+
@@ -170,7 +170,7 @@ const questions = [
     },
     {
         id: 20,
-        picture: "images/",
+        picture: "images/image (9).png",
         correctAnswer: "Росопас",
         explanation: "Росопас је зељаста биљка која расте као коров. Кад се биљка озлиједи, из ње цури"+
         "наранџасти млијечни сок који је љутог и горког мириса и укуса. Због тога га животиње"+
@@ -214,7 +214,7 @@ const questions = [
     },
     {
         id: 25,
-        picture: "images/",
+        picture: "images/ll-removebg-preview.png",
         correctAnswer: "Шумска јагода",
         explanation: "Шумска јагода је опште позната и препознатљива шумска биљка, врло омиљена код"+ 
         "становништва. Чај од коријена шумске јагоде употребљава се за лијечење пролива, а чај"+ 
