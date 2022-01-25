@@ -100,7 +100,7 @@ const questions = [
     },
     {
         id: 12,
-        picture: "images/",
+        picture: "images/mallow-flower-on-white-background-260nw-1712657380-removebg-preview.png",
         correctAnswer: "Црни сљез",
         explanation: "Црни сљез је љековита и јестива биљка из породице сљезова. Показао се као одлично"+ 
         "средство које поспјешује растварање и излучивање слузи код болести дисајних органа."
@@ -136,7 +136,7 @@ const questions = [
     },
     {
         id: 16,
-        picture: "images/",
+        picture: "images/360_F_111593254_LPpRCYUEgoij4f4g0GQgj1ptGn12ZwYl-removebg-preview.png",
         correctAnswer: "Зова",
         explanation: "Зова расте као грм или мање дрво које красе ситни, бијели мирисни цвјетићи скупљени"+
         "у велику цваст на врховима грана. Чај од зове се показао као одлично средство против"+
@@ -144,7 +144,7 @@ const questions = [
     },
     {
         id: 17,
-        picture: "images/",
+        picture: "images/image (8).png",
         correctAnswer: "Дивизма",
         explanation: "Дивизма расте као коров свуда око нас. Прве године образује велику розету крупних"+ 
         "листова, а друге године израста стабљика до 2 метра висине. Листови су вунасто длакави,"+ 
@@ -188,7 +188,7 @@ const questions = [
     },
     {
         id: 22,
-        picture: "images/",
+        picture: "images/kantarion-removebg-preview.png",
         correctAnswer: "Кантарион",
         explanation: "Кантарион због своје љековитости има примјену од давнина. Има чврсту и разгранату"+ 
         "стабљику са малим листовима, прекривеним уљаним жлијездама попут тачкица."+
@@ -230,7 +230,7 @@ const questions = [
     },
     {
         id: 27,
-        picture: "images/",
+        picture: "images/zenskabokv.png",
         correctAnswer: "Женска боквица",
         explanation: "Женска боквица има широке листове, густо послагане у приземну розету из које избија"+ 
         "једна или више цвјетних стабљика. На врху стабљика налази се дуга класаста цваст. Када"+ 
