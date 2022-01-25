@@ -90,7 +90,7 @@ const questions = [
     },
     {
         id: 11,
-        picture: "images/nnana-removebg-preview.png",
+        picture: "images/nnana-removebg-preview1.png",
         correctAnswer: "Нана",
         explanation: "У природи расте неколико различитих врста нана и углавном све имају љековита"+
         "својства (питома, дуголисна, барска, кудрава нана итд). Нана је нашла добру примјену у"+
