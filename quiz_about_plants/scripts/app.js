@@ -58,13 +58,18 @@ function displayElements() {
                 k++;
             }
             else {
-                console.log("uslog")
                 $(".images").css("display", "none");
                 $(".answers").css("display", "none");
                 $(".wbody").css("display", "flex");
                 $("#wrap").mouseenter(function () {
                     $("#par").text(activeIndex.explanation);
                 })
+                $(".lt").css("display", "inline-block");
+                /*
+                    .
+                    .
+                    .
+                */
             }
         })
     }

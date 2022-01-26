@@ -245,6 +245,10 @@ img {
     align-items: center; 
 }
 
+.lt {
+    display: none;
+}
+
 .finish-message {
     position:absolute;
     top: 0;
