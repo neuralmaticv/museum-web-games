@@ -14,7 +14,6 @@ body {
     background-color: transparent;
 }
 
-
 .text-loading {
     position: absolute;
     font-size: 45px;
@@ -23,6 +22,12 @@ body {
     color: black;
     font-family: 'Brush Script MT', cursive;
     
+}
+
+.sr {
+    font-size: 31px;
+    top: 330px;
+    left: 434px;
 }
 
 .box {
@@ -72,6 +77,10 @@ body {
     background-color:#222;
 }
     
+.lte {
+    margin-top: -18px;
+    margin-left: 167px;
+}
 .cupcakeInner {
     align-self:center;
     -ms-align-self:center;
@@ -106,7 +115,11 @@ body {
     margin-left: 135px;
     background-color:#222;
 }
-    
+ 
+.lte1 {
+    margin-top: -8px;
+    margin-left: 177px;
+}
 .cupcakeInner1 {
     align-self:center;
     -ms-align-self:center;
@@ -142,7 +155,10 @@ body {
     background-color:#222;
 }
 
-    
+.lte2 {
+    margin-top: -8px;
+    margin-left: 187px;
+}   
 .cupcakeInner2 {
     align-self:center;
     -ms-align-self:center;
