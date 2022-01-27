@@ -101,7 +101,27 @@ img {
     height: 100%;
 }
 
+@media only screen and (max-width: 2000px) {
+    body {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 27.74%;
+        margin-right: 27.74%;
+    }
 
+    .background {
+        background-size: 1550px 722px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    body {
+        margin-top: 85px;
+        margin-bottom: 85px;
+        margin-left: 29%;
+        margin-right: 29%;
+    }
+}
 
 .btn {
     position: relative;
