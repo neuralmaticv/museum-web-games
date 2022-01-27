@@ -1,10 +1,12 @@
 body {
     background-image: url('../images/background.jpg');
-    background-position: center;
-    background-size: cover;
     user-select: none;
-
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 .container {
     position: absolute;
     top: 6%;
@@ -21,7 +23,7 @@ body {
     left: 455px;
     color: black;
     font-family: 'Brush Script MT', cursive;
-    
+
 }
 
 .sr {
@@ -38,178 +40,187 @@ body {
     display: -webkit-flex;
     display: flex;
 }
-    
-.cupcakeCircle, .cupcakeInner, .cupcakeCore,.cupcakeCircle1, .cupcakeInner1, .cupcakeCore1,
+
+.cupcakeCircle, .cupcakeInner, .cupcakeCore, .cupcakeCircle1, .cupcakeInner1, .cupcakeCore1,
 .cupcakeCircle2, .cupcakeInner2, .cupcakeCore2 {
-    border-radius:50%;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    -ms-border-radius:50%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
 }
-    
+
 .cupcake, .letter, .cupcakeCircle, .cupcakeInner, .cupcakeCore, .cupcakeCircle1, .cupcakeInner1, .cupcakeCore1,
 .cupcakeCircle2, .cupcakeInner2, .cupcakeCore2 {
-    flex:none;
-    -webkit-flex:none;
-    -moz-flex:none;
-    -ms-flex:none;
-    -o-flex:none;
+    flex: none;
+    -webkit-flex: none;
+    -moz-flex: none;
+    -ms-flex: none;
+    -o-flex: none;
 }
-    
+
 .letter, .cupcakeCircle, .cupcakeCircle1, .cupcakeCircle2 {
-    align-self:center;
-    -webkit-align-self:center;
-    -moz-align-self:center;
-    -o-align-self:center;
-    -ms-align-self:center;
-   
+    align-self: center;
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -o-align-self: center;
+    -ms-align-self: center;
+
 }
 
 .cupcakeCircle {
-    align-items:center;
-    -ms-align-items:center;
-    justify-content:center;
-    -ms-justify-content:center;
-    height:8px;
-    width:8px;
+    align-items: center;
+    -ms-align-items: center;
+    justify-content: center;
+    -ms-justify-content: center;
+    height: 8px;
+    width: 8px;
     margin-top: -23px;
     margin-left: 124px;
-    background-color:#222;
+    background-color: #222;
 }
-    
+
 .lte {
     margin-top: -18px;
     margin-left: 167px;
 }
+
 .cupcakeInner {
-    align-self:center;
-    -ms-align-self:center;
-    justify-content:center;
-    -ms-justify-content:center;
-    height:50%;
-    width:50%;
-    background-color:rgb(0, 216, 215);
+    align-self: center;
+    -ms-align-self: center;
+    justify-content: center;
+    -ms-justify-content: center;
+    height: 50%;
+    width: 50%;
+    background-color: rgb(0, 216, 215);
     animation: cupcakeAnimate 500ms alternate ease-in-out infinite;
-    
+
 }
 
 .cupcakeCore {
-    align-self:center;
-    -ms-align-self:center;
-    height:15%;
-    width:15%;
-    background-color:#222;
+    align-self: center;
+    -ms-align-self: center;
+    height: 15%;
+    width: 15%;
+    background-color: #222;
     animation: coreAnimate 1s alternate ease-in-out infinite;
 
 }
 
 
 .cupcakeCircle1 {
-    align-items:center;
-    -ms-align-items:center;
-    justify-content:center;
-    -ms-justify-content:center;
-    height:8px;
-    width:8px;
+    align-items: center;
+    -ms-align-items: center;
+    justify-content: center;
+    -ms-justify-content: center;
+    height: 8px;
+    width: 8px;
     margin-top: -8px;
     margin-left: 135px;
-    background-color:#222;
+    background-color: #222;
 }
- 
+
 .lte1 {
     margin-top: -8px;
     margin-left: 177px;
 }
+
 .cupcakeInner1 {
-    align-self:center;
-    -ms-align-self:center;
-    justify-content:center;
-    -ms-justify-content:center;
-    height:50%;
-    width:50%;
-    background-color:rgb(0, 216, 215);
+    align-self: center;
+    -ms-align-self: center;
+    justify-content: center;
+    -ms-justify-content: center;
+    height: 50%;
+    width: 50%;
+    background-color: rgb(0, 216, 215);
     animation: cupcakeAnimate 500ms alternate ease-in-out infinite;
-    
+
 }
 
 .cupcakeCore1 {
-    align-self:center;
-    -ms-align-self:center;
-    height:15%;
-    width:15%;
-    background-color:#222;
+    align-self: center;
+    -ms-align-self: center;
+    height: 15%;
+    width: 15%;
+    background-color: #222;
     animation: coreAnimate 1s alternate ease-in-out infinite;
 
 }
 
 
-.cupcakeCircle2 { 
-    align-items:center;
-    -ms-align-items:center;
-    justify-content:center;
-    -ms-justify-content:center;
-    height:8px;
-    width:8px;
+.cupcakeCircle2 {
+    align-items: center;
+    -ms-align-items: center;
+    justify-content: center;
+    -ms-justify-content: center;
+    height: 8px;
+    width: 8px;
     margin-top: -8px;
     margin-left: 145px;
-    background-color:#222;
+    background-color: #222;
 }
 
 .lte2 {
     margin-top: -8px;
     margin-left: 187px;
-}   
+}
+
 .cupcakeInner2 {
-    align-self:center;
-    -ms-align-self:center;
-    justify-content:center;
-    -ms-justify-content:center;
-    height:50%;
-    width:50%;
-    background-color:rgb(0, 216, 215);
+    align-self: center;
+    -ms-align-self: center;
+    justify-content: center;
+    -ms-justify-content: center;
+    height: 50%;
+    width: 50%;
+    background-color: rgb(0, 216, 215);
     animation: cupcakeAnimate 500ms alternate ease-in-out infinite;
-    
+
 }
 
 .cupcakeCore2 {
-    align-self:center;
-    -ms-align-self:center;
-    height:15%;
-    width:15%;
-    background-color:#222;
+    align-self: center;
+    -ms-align-self: center;
+    height: 15%;
+    width: 15%;
+    background-color: #222;
     animation: coreAnimate 1s alternate ease-in-out infinite;
 
 }
-    
+
 @-webkit-keyframes cupcakeAnimate {
-    to { 
-        height:90%; width:90%; 
+    to {
+        height: 90%;
+        width: 90%;
     }
 }
+
 @keyframes cupcakeAnimate {
-    to { 
-        height:90%; width:90%; 
+    to {
+        height: 90%;
+        width: 90%;
     }
 }
 
 @-webkit-keyframes coreAnimate {
-    to { 
-        height:90%; width:90%; 
+    to {
+        height: 90%;
+        width: 90%;
     }
 }
+
 @keyframes coreAnimate {
     to {
-    height:90%; width:90%; 
+        height: 90%;
+        width: 90%;
     }
 }
 
 
 
 .start {
-    position: absolute;  
+    position: absolute;
     left: 360px;
     bottom: 156px;
-   
+
 }
 
 
@@ -234,13 +245,14 @@ img {
     width: 60%;
 }
 
-.answers{
+.answers {
     position: relative;
     top: -55px;
     left: 29px;
     margin: auto;
     display: table;
 }
+
 .answer {
     background-color: #1d6e6f;
     color: lightblue;
@@ -249,7 +261,7 @@ img {
     font-weight: bold;
     font-size: 15px;
     max-width: 140px;
-    min-width:140px;
+    min-width: 140px;
     max-height: 20px;
     min-height: 30px;
     margin: 5px 5px;
@@ -258,7 +270,7 @@ img {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    align-items: center; 
+    align-items: center;
 }
 
 .lt {
@@ -266,12 +278,12 @@ img {
 }
 
 .finish-message {
-    position:absolute;
+    position: absolute;
     top: 120px;
     bottom: 0;
     left: 0;
     right: 0;
-    margin:auto;
+    margin: auto;
     color: rgb(182, 237, 255);
     width: 500px;
     height: 300px;
@@ -300,9 +312,8 @@ img {
     font-size: medium;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) { 
-    img {
-        width: 30%;
-        height: 45%;
+@media (min-width: 1281px) and (orientation: landscape) {
+    body {
+        background-position: center;
     }
 }

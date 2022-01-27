@@ -88,7 +88,7 @@
 
     $(document).ready(function () {
         setTimeout(() => {
-            $(".home").css("display", "none");
+            $(".home").css("visibility", "hidden");
             displayElements();
         }, 2000)
 
