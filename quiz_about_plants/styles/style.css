@@ -251,17 +251,17 @@ img {
 
 .finish-message {
     position:absolute;
-    top: 0;
+    top: 120px;
     bottom: 0;
     left: 0;
     right: 0;
     margin:auto;
-    color: lightblue;
+    color: rgb(182, 237, 255);
     width: 500px;
     height: 300px;
     font-family: Arial, Helvetica, sans-serif;
     display: none;
-    font-size: x-large;
+    font-size: 17px;
 }
 
 .finish-message h1, h3 {
@@ -270,12 +270,12 @@ img {
 
 .finish-message button {
     display: block;
-    width: 150px;
-    height: 50px;
-    background-color: rgb(63, 59, 179);
+    width: 140px;
+    height: 40px;
+    background-color: #1d6e6f;
     color: lightblue;
     text-align: center;
-    border: 8px solid rgb(63, 59, 179);
+    border: 8px solid #1d6e6f;
     cursor: pointer;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;

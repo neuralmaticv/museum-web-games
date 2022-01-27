@@ -1,4 +1,4 @@
-    import questions from "../data/questions-sr.js"
+    import questions from "../data/questions-en.js"
 
     function getArray(n) {
         let l = []

@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>Guess the plant</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/wrapper.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="home">
+            <div id="start" class="start">
+                <img class="gif" src="images/61ba18d6235a7526585610.gif" id="gifBackground">
+            </div>
+
+            <div class="text-loading" id="loading">
+                Loading
+                <div class="cupcakeCircle box">
+                    <div class="cupcakeInner box">
+                        <div class="cupcakeCore box"></div>
+                    </div>
+                </div>
+
+                <div class="cupcakeCircle1 box">
+                    <div class="cupcakeInner1 box">
+                        <div class="cupcakeCore1 box"></div>
+                    </div>
+                </div>
+
+                <div class="cupcakeCircle2 box">
+                    <div class="cupcakeInner2 box">
+                        <div class="cupcakeCore2 box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="images" id="images">
+
+        </div>
+
+        <div class="answers" id="answers">
+            <div class="group g1">
+            </div>
+            <div class="group g2">
+            </div>
+        </div>
+
+        <div class="wbody">
+            <div class="wrapper" id="wrap">
+                <div class="lid one">
+                </div>
+                <div class="lid two"></div>
+                <div class="envelope"></div>
+                <div class="letter">
+                    <p id="par"></p>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <div class="answer lt">
+                Dalje
+            </div>
+        </center>
+
+        <div class="finish-message" id="finish-message">
+            <h1>Честитамо!
+            <br>Успјешно сте завршили квиз!</h1>
+            <h3 id="add-message"> </h3>
+            <button onclick="window.location.reload()">Играј поново</button>
+        </div>
+
+    </div>
+    <script src="scripts/jquery-3.6.0.js"></script>
+    <script type="module" src="scripts/app1.js"></script>
+</body>
+
+</html>
