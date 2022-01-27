@@ -3,10 +3,10 @@ body {
     background-repeat: no-repeat;
     background-size: 1550px 722px;
     font-family: 'Verdana', sans-serif;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     user-select: none;
 }
 
@@ -14,9 +14,9 @@ svg {
     position: relative;
     top: 420px;
     left: 25px;
-    font-weight:bold;
-    max-width:600px;
-    height:62px;
+    font-weight: bold;
+    max-width: 600px;
+    height: 62px;
     user-select: none;
 }
 
@@ -27,7 +27,6 @@ svg {
     height: 100%;
     width: 100%;
     background-image: url("../img/bg.jpg");
-    background-size: 1550px 722px;
     background-repeat: no-repeat;
 }
 
@@ -94,6 +93,7 @@ img {
     width: 100%;
     height: 100%;
 }
+
 .end2 {
     top: 20px;
     display: none;
@@ -101,23 +101,7 @@ img {
     height: 100%;
 }
 
-@media only screen and (max-width: 2000px) {
-    body {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        margin-left: 27.74%;
-        margin-right: 27.74%;
-    }
-}
 
-@media only screen and (max-width: 1280px) {
-    body {
-        margin-top: 85px;
-        margin-bottom: 85px;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-}
 
 .btn {
     position: relative;
@@ -149,8 +133,8 @@ img {
     height: auto;
 }
 
-.level1start:hover{
-    animation: animate 2s  alternate infinite;
+.level1start:hover {
+    animation: animate 2s alternate infinite;
 }
 
 .level2start {
@@ -161,8 +145,8 @@ img {
     height: auto;
 }
 
-.level2start:hover{
-    animation: animate 2s  alternate infinite;
+.level2start:hover {
+    animation: animate 2s alternate infinite;
 }
 
 
@@ -174,19 +158,21 @@ img {
     height: auto;
 }
 
-.level3start:hover{
-    animation: animate 2s  alternate infinite;
+.level3start:hover {
+    animation: animate 2s alternate infinite;
 }
 
 
-@keyframes animate{
-    0%{
+@keyframes animate {
+    0% {
         transform: rotateX(0deg);
     }
-    50%{
+
+    50% {
         transform: rotateX(38deg);
     }
-    100%{
+
+    100% {
         transform: rotateX(0deg);
     }
 }
