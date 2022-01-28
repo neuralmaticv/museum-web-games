@@ -273,6 +273,7 @@ img {
     align-items: center;
 }
 
+
 .en {
     font-size: 14px;
     max-width: 143px;
@@ -281,8 +282,20 @@ img {
 }
 
 .lt {
-    margin-top: -100px;
+    margin-top: -80px;
     font-size: 18px;
+    color: rgba(255, 255, 255, 0.952);
+    background-color: transparent;
+    display: none;
+}
+
+.correct {
+    margin-top: -110px;
+    font-size: 15px;
+    margin-left: -162px;
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     color: rgba(255, 255, 255, 0.952);
     background-color: transparent;
     display: none;
