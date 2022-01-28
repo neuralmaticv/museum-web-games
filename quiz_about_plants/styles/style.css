@@ -276,7 +276,7 @@ img {
 .lt {
     margin-top: -100px;
     font-size: 18px;
-    color: rgb(182, 237, 255);
+    color: rgba(255, 255, 255, 0.952);
     background-color: transparent;
     display: none;
 }
