@@ -65,6 +65,7 @@
                     $(".answers").css("display", "none");
                     $(".wbody").css("display", "flex");
                     $(".correct").css("display", "block");
+                    $(".correct").text("Тачан одговор је: " + activeIndex.correctAnswer);
                     $("#wrap").mouseenter(function () {
                         $("#par").text(activeIndex.explanation);
                     })
@@ -74,7 +75,8 @@
                         $(".answers").css("display", "table");
                         $(".wbody").css("display", "none");
                         $(".lt").css("display", "none");
-                        
+                        $(".correct").css("display", "none");
+
                         let btn = $("#" + activeIndex.id + ".answer");
                         btn.css("visibility", "hidden")
                         $(".img#" + activeIndex.id).css("display", "none");
