@@ -31,6 +31,12 @@ body {
     left: 434px;
 }
 
+.ru {
+    font-size: 25px;
+    top: 330px;
+    left: 434px;
+}
+
 .box {
     display: box;
     display: -webkit-box;
