@@ -121,6 +121,11 @@ img {
         margin-left: 29%;
         margin-right: 29%;
     }
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 .btn {
