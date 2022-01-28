@@ -18,11 +18,10 @@ body {
 
 .text-loading {
     position: absolute;
-    font-size: 45px;
+    font-size: 30px;
     top: 330px;
-    left: 455px;
-    color: black;
-    font-family: 'Brush Script MT', cursive;
+    left: 465px;
+    color: black; 
 
 }
 
@@ -80,14 +79,14 @@ body {
     -ms-justify-content: center;
     height: 8px;
     width: 8px;
-    margin-top: -23px;
-    margin-left: 124px;
+    margin-top: -14px;
+    margin-left: 110px;
     background-color: #222;
 }
 
 .lte {
-    margin-top: -18px;
-    margin-left: 167px;
+    margin-top: -15px;
+    margin-left: 155px;
 }
 
 .cupcakeInner {
@@ -121,17 +120,17 @@ body {
     height: 8px;
     width: 8px;
     margin-top: -8px;
-    margin-left: 135px;
+    margin-left: 120px;
     background-color: #222;
 }
 
 .lte1 {
     margin-top: -8px;
-    margin-left: 177px;
+    margin-left: 165px;
 }
 .lte11 {
     margin-top: -14px;
-    margin-left: 170px;
+    margin-left: 150px;
 }
 
 .cupcakeInner1 {
@@ -165,18 +164,18 @@ body {
     height: 8px;
     width: 8px;
     margin-top: -8px;
-    margin-left: 145px;
+    margin-left: 130px;
     background-color: #222;
 }
 
 .lte2 {
     margin-top: -8px;
-    margin-left: 187px;
+    margin-left: 175px;
 }
 
 .lte22 {
     margin-top: -8px;
-    margin-left: 180px;
+    margin-left: 160px;
 }
 
 .cupcakeInner2 {
@@ -204,7 +203,7 @@ body {
 
 .lte3 {
     margin-top: -8px;
-    margin-left: 190px;
+    margin-left: 170px;
 }
 
 @-webkit-keyframes cupcakeAnimate {
