@@ -42,9 +42,9 @@
         k++;
         for (let i = 0; i < l.length; i++) {
             if (i < 4) {
-                $(".g1").append("<div class='answer' id='" + l[i].id + "'>" + l[i].correctAnswer + "</div>")
+                $(".g1").append("<div class='answer en' id='" + l[i].id + "'>" + l[i].correctAnswer + "</div>")
             } else {
-                $(".g2").append("<div class='answer' id='" + l[i].id + "'>" + l[i].correctAnswer + "</div>")
+                $(".g2").append("<div class='answer en' id='" + l[i].id + "'>" + l[i].correctAnswer + "</div>")
             }
             $(".answer").unbind().on('click', function () {
                 active = $(this);
@@ -64,7 +64,12 @@
                     $(".images").css("display", "none");
                     $(".answers").css("display", "none");
                     $(".wbody").css("display", "flex");
+<<<<<<< HEAD
+                    $(".correct").css("display", "block");
+                    $(".correct").text("Correct answer is: " + activeIndex.correctAnswer);
+=======
                     $(".correct").css("display", "block")
+>>>>>>> 926fc451b6efe977088aeb22e8db715fc06aa155
                     $("#wrap").mouseenter(function () {
                         $("#par").text(activeIndex.explanation);
                     })
@@ -74,6 +79,7 @@
                         $(".answers").css("display", "table");
                         $(".wbody").css("display", "none");
                         $(".lt").css("display", "none");
+                        $(".correct").css("display", "none");
                         
                         let btn = $("#" + activeIndex.id + ".answer");
                         btn.css("visibility", "hidden")
