@@ -129,7 +129,7 @@ const questions = [
     },
     {
         id: 15,
-        picture: "images/",
+        picture: "images/image (12).png",
         correctAnswer: "Mountain germander",
         explanation: "In our region, the mountain germander is a highly valued medicinal plant. There is a saying "+
         "stating that \"the mountain germander brings you back to life\" The invigorating mountain "+
