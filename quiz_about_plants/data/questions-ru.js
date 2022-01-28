@@ -218,7 +218,7 @@ const questions = [
     },
     {
         id: 24,
-        picture: "images/",
+        picture: "images/dobricica-removebg-preview1.png",
         correctAnswer: "Будра",
         explanation: "Славяне верят, что будра может сделать человека лучше! Благодаря своим лечебным "+
         "компонентам, она используется для лечения многих заболеваний, особенно при болезнях "+

@@ -207,7 +207,7 @@ const questions = [
     },
     {
         id: 24,
-        picture: "images/",
+        picture: "images/dobricica-removebg-preview1.png",
         correctAnswer: "Ground-ivy",
         explanation: "For ground-ivy, the Slavs believe it can make a man better! Due to its medicinal ingredients, "+
         "it is used to treat many diseases, and is especially used in diseases of the respiratory organs."
