@@ -64,6 +64,7 @@
                     $(".images").css("display", "none");
                     $(".answers").css("display", "none");
                     $(".wbody").css("display", "flex");
+                    $(".correct").css("display", "block")
                     $("#wrap").mouseenter(function () {
                         $("#par").text(activeIndex.explanation);
                     })
