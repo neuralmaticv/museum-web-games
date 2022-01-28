@@ -110,7 +110,7 @@ const questions = [
     },
     {
         id: 13,
-        picture: "images/",
+        picture: "images/hajdu-removebg-preview.png",
         correctAnswer: "Yarrow",
         explanation: "Crushed leaves of yarrow when applied to a fresh wound make one of the most effective ways "+
         "to stop bleeding and promote wound healing. Yarrow tea successfully cures intestinal and "+
@@ -182,7 +182,7 @@ const questions = [
     },
     {
         id: 21,
-        picture: "images/",
+        picture: "images/zalf-removebg-preview.png",
         correctAnswer: "Sage",
         explanation: "Sage is a highly valued plant in our country. It was once popularly called sacred grass, due to "+
         "its exceptional medicinal properties. The medieval medical school in Salermo had so much "+
@@ -199,7 +199,7 @@ const questions = [
     },
     {
         id: 23,
-        picture: "images/",
+        picture: "images/bs-removebg-preview.png",
         correctAnswer: "Marsh mallow",
         explanation: "Marsh mallow is a plant that grows up to 2 meters in height. It has a branched and fleshy "+
         "root, which is yellow on the outside and white on the inside. It has a beneficial effect on cough, "+

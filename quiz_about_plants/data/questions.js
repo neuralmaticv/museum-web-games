@@ -108,7 +108,7 @@ const questions = [
     },
     {
         id: 13,
-        picture: "images/",
+        picture: "images/hajdu-removebg-preview.png",
         correctAnswer: "Хајдучка трава",
         explanation: "Угњечени листови хајдучке траве кад се привију на свјежу рану представљају једно од "+
         "најефикаснијих начина за заустављање краварења и зарастање рана. Чај од хајдучке траве "+
@@ -179,7 +179,7 @@ const questions = [
     },
     {
         id: 21,
-        picture: "images/",
+        picture: "images/zalf-removebg-preview.png",
         correctAnswer: "Жалфија",
         explanation: "Жалфија је код нас врло цијењена биљка. Некад су је у народу звали и света трава, због "+ 
         "изузетног љековитог својства. Средњовјековна медицинска школа у Салерму је толико "+ 
@@ -197,7 +197,7 @@ const questions = [
     },
     {
         id: 23,
-        picture: "images/",
+        picture: "images/bs-removebg-preview.png",
         correctAnswer: "Бијели сљез",
         explanation: "Бијели сљез је биљка која нарасте и до 2 метра у висину. Има разгранат и меснат "+
         "коријен, који је споља жут, а изнутра бијел. Повољно дјелује код кашља, бронхитиса, "+
@@ -214,7 +214,7 @@ const questions = [
     },
     {
         id: 25,
-        picture: "images/tt-removebg-preview (3).png",
+        picture: "images/",
         correctAnswer: "Шумска јагода",
         explanation: "Шумска јагода је опште позната и препознатљива шумска биљка, врло омиљена код "+ 
         "становништва. Чај од коријена шумске јагоде употребљава се за лијечење пролива, а чај "+ 

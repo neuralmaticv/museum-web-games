@@ -115,7 +115,7 @@ const questions = [
     },
     {
         id: 13,
-        picture: "images/",
+        picture: "images/hajdu-removebg-preview.png",
         correctAnswer: "Тысячелистник",
         explanation: "Измельченные листья тысячелистника – одно из самых эффективных средств для "+
         "остановки кровотечения и заживления ран. Чай из тысячелистника успешно лечит "+
@@ -192,7 +192,7 @@ const questions = [
     },
     {
         id: 21,
-        picture: "images/",
+        picture: "images/zalf-removebg-preview.png",
         correctAnswer: "Шалфей",
         explanation: "Шалфей является очень ценным растением в нашем регионе. Когда-то его называли "+
         "святой травой благодаря исключительным лечебным свойствам. В средневековой "+
@@ -210,7 +210,7 @@ const questions = [
     },
     {
         id: 23,
-        picture: "images/",
+        picture: "images/bs-removebg-preview.png",
         correctAnswer: "Алтей",
         explanation: "Алтей - это растение, вырастающее до 2 метров в высоту. У него разветвленный "+
         "мясистый корень, желтый снаружи и белый внутри. Помогает при кашле, бронхите, астме, "+
