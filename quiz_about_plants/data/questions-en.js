@@ -249,7 +249,7 @@ const questions = [
     },
     {
         id: 29,
-        picture: "images/",
+        picture: "images/malee-removebg-preview.png",
         correctAnswer: "Male plantago",
         explanation: "There are several different types of plantago and they all have a similar medicinal effect. The "+
         "male plantago has narrow leaves gathered in a ground rosette from which several erect ribbed "+

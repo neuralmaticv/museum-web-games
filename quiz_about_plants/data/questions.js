@@ -248,7 +248,7 @@ const questions = [
     },
     {
         id: 29,
-        picture: "images/",
+        picture: "images/malee-removebg-preview.png",
         correctAnswer: "Мушка боквица",
         explanation: "Постоји више различитих врста боквица и све имају слично љековито дејство. Мушка "+
         "боквица има уске листове скупљене у приземну розету из којих избија неколико "+ 

@@ -273,6 +273,13 @@ img {
     align-items: center;
 }
 
+.en {
+    font-size: 14px;
+    max-width: 143px;
+    min-width: 143px;
+    
+}
+
 .lt {
     margin-top: -100px;
     font-size: 18px;
