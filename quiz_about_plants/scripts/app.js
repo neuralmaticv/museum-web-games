@@ -93,7 +93,7 @@
         setTimeout(() => {
             $(".home").css("visibility", "hidden");
             displayElements();
-        }, 2000)
+        }, 10000)
 
         return;
     })
