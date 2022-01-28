@@ -205,8 +205,7 @@ const questions = [
     },
     {
         id: 24,
-        picture: "images
-        /dobricica-removebg-preview1.png",
+        picture: "images/dobricica-removebg-preview1.png",
         correctAnswer: "Добричица",
         explanation: "За добричицу, Словени вјерују да може учинити човјека бољим! Због својих "+ 
         "љековитих састојака користи се за лијечење многих обољења, а посебно се примјењује код "+
