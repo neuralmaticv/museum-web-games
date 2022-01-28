@@ -64,8 +64,12 @@
                     $(".images").css("display", "none");
                     $(".answers").css("display", "none");
                     $(".wbody").css("display", "flex");
+<<<<<<< HEAD
                     $(".correct").css("display", "block");
                     $(".correct").text("Правильный ответ: " + activeIndex.correctAnswer);
+=======
+                    $(".correct").css("display", "block")
+>>>>>>> 926fc451b6efe977088aeb22e8db715fc06aa155
                     $("#wrap").mouseenter(function () {
                         $("#par").text(activeIndex.explanation);
                     })
