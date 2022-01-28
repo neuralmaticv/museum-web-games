@@ -227,7 +227,7 @@ const questions = [
     },
     {
         id: 25,
-        picture: "images/tt-removebg-preview (3).png",
+        picture: "images/wildst-removebg-preview.png",
         correctAnswer: "Земляника",
         explanation: "Земляника - известное и узнаваемое лесное растение, пользующееся большой "+
         "популярностью у населения. Чай из корня земляники используется для лечения диареи, а "+

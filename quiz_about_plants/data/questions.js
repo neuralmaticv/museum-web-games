@@ -214,7 +214,7 @@ const questions = [
     },
     {
         id: 25,
-        picture: "images/",
+        picture: "images/wildst-removebg-preview.png",
         correctAnswer: "Шумска јагода",
         explanation: "Шумска јагода је опште позната и препознатљива шумска биљка, врло омиљена код "+ 
         "становништва. Чај од коријена шумске јагоде употребљава се за лијечење пролива, а чај "+ 

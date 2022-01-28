@@ -215,7 +215,7 @@ const questions = [
     },
     {
         id: 25,
-        picture: "images/tt-removebg-preview (3).png",
+        picture: "images/wildst-removebg-preview.png",
         correctAnswer: "Wild strawberry",
         explanation: "The wild strawberry is a well-known and recognizable forest plant, very popular among the "+
         "population. Wild strawberry root tea is used to treat diarrhea, and leaf tea is used to purify the "+
