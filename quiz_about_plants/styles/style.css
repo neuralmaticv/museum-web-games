@@ -32,12 +32,6 @@ body {
     left: 434px;
 }
 
-.ru {
-    font-size: 25px;
-    top: 330px;
-    left: 434px;
-}
-
 .box {
     display: box;
     display: -webkit-box;
@@ -129,10 +123,6 @@ body {
     margin-top: -8px;
     margin-left: 177px;
 }
-.lte11 {
-    margin-top: -14px;
-    margin-left: 170px;
-}
 
 .cupcakeInner1 {
     align-self: center;
@@ -174,11 +164,6 @@ body {
     margin-left: 187px;
 }
 
-.lte22 {
-    margin-top: -8px;
-    margin-left: 180px;
-}
-
 .cupcakeInner2 {
     align-self: center;
     -ms-align-self: center;
@@ -199,12 +184,6 @@ body {
     background-color: #222;
     animation: coreAnimate 1s alternate ease-in-out infinite;
 
-}
-
-
-.lte3 {
-    margin-top: -8px;
-    margin-left: 190px;
 }
 
 @-webkit-keyframes cupcakeAnimate {
@@ -318,8 +297,8 @@ img {
     color: rgba(255, 255, 255, 0.952);
     background-color: transparent;
     display: none;
-    
-    
+
+
 }
 
 .finish-message {
