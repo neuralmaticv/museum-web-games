@@ -3,7 +3,7 @@
  * Interaktivne veb igrice za izložbu "Upotreba ljekovitog bilja u narodnoj medicini"
  * 
  * Posljednja izmjena: 
- * 2021-11-30
+ * 2022-02-22
  * 
  * Autori:
  * Aleksandar Obradović 
@@ -74,6 +74,7 @@ let counter = 0;                                     // brojac pitanja
 const nQuestions = 10;                               // ukupan broj pitanja
 const wrongSound = new Audio('sounds/wrong.wav');
 const correctSound = new Audio('sounds/correct.wav');
+const applauseSound = new Audio('sounds/applause.wav');
 
 
 // Elementi i promjenljive za prvi tip pitanja
@@ -159,6 +160,7 @@ function startQuiz() {
 }
 
 function gameEnd() {
+    applauseSound.play();
     gameInProgress = false;
     message.textContent = mainWordsList[0] + " " + points + " " + mainWordsList[1] + " " + nQuestions + " " + mainWordsList[2];
 
@@ -481,11 +483,11 @@ function clearUserInput() {
     userSurname.value = "";
 }
 
-resultsList.innerHTML = quizResults.map(res => {
-    return `<li>${res.firstName} ${res.lastName} <span>${res.score}</span></li>`
-}).join("");
-
 function showResults() {
+   resultsList.innerHTML = quizResults.map(res => {
+        return `<li>${res.firstName} ${res.lastName} <span>${res.score}</span></li>`
+    }).join("");
+
     homeScreen.classList.add("hide");
     resultsSection.classList.remove("hide");
 }
