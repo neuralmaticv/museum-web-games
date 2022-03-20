@@ -222,7 +222,7 @@ const questions = [
     },
     {
         id: 26,
-        picture: "images/majcinaD-removebg-preview.png",
+        picture: "images/trat.jpg",
         correctAnswer: "Мајчина душица",
         explanation: "Мајчина душица је мала бусенаста или пузава биљка, при дну одрвењена. Свијетло "+ 
         "ружичасти цвјетови скупљени су на врховима грана у цвасти, пријатног мириса. Чај од "+
