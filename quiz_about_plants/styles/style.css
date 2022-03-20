@@ -1,10 +1,12 @@
 body {
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/newbgg.jpg');
     user-select: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .container {
@@ -21,18 +23,18 @@ body {
     font-size: 30px;
     top: 330px;
     left: 465px;
-    color: black; 
+    color: black;
 
 }
 
 .sr {
-    font-size: 31px;
+    font-size: 28px;
     top: 330px;
     left: 434px;
 }
 
 .ru {
-    font-size: 25px;
+    font-size: 23px;
     top: 330px;
     left: 434px;
 }
@@ -248,6 +250,7 @@ body {
 
 .images {
     max-width: 50%;
+
     margin: 0 auto;
     padding-top: 100px;
     padding-bottom: 50px;
@@ -259,6 +262,8 @@ img {
 }
 
 .img {
+    border: 2px solid rgb(176, 33, 23);
+    border-radius: 50%;
     position: relative;
     top: -80px;
     left: 100px;
@@ -268,14 +273,15 @@ img {
 
 .answers {
     position: relative;
+    /*top: -55px;
+    left: 29px;*/
     top: -55px;
-    left: 29px;
     margin: auto;
     display: table;
 }
 
 .answer {
-    background-color: #1d6e6f;
+    background-color: rgb(176, 33, 23);
     color: lightblue;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
