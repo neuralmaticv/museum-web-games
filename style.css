@@ -87,3 +87,17 @@ img.bg {
     margin-left: -512px;
   }
 }
+
+.logos {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+}
+.logos img {
+  width: 10em;
+}
+.logos #faculty-logo {
+  width: 7em;
+}
