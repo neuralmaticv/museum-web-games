@@ -98,7 +98,7 @@ body {
     -ms-justify-content: center;
     height: 50%;
     width: 50%;
-    background-color: rgb(0, 216, 215);
+    background-color: rgb(176, 33, 23);
     animation: cupcakeAnimate 500ms alternate ease-in-out infinite;
 
 }
@@ -143,7 +143,7 @@ body {
     -ms-justify-content: center;
     height: 50%;
     width: 50%;
-    background-color: rgb(0, 216, 215);
+    background-color: rgb(176, 33, 23);
     animation: cupcakeAnimate 500ms alternate ease-in-out infinite;
 
 }
@@ -188,7 +188,7 @@ body {
     -ms-justify-content: center;
     height: 50%;
     width: 50%;
-    background-color: rgb(0, 216, 215);
+    background-color: rgb(176, 33, 23);
     animation: cupcakeAnimate 500ms alternate ease-in-out infinite;
 
 }
@@ -241,7 +241,7 @@ body {
 
 .start {
     position: absolute;
-    left: 360px;
+    left: 380px;
     bottom: 156px;
 
 }
@@ -308,8 +308,8 @@ img {
 }
 
 .lt {
-    margin-top: -80px;
-    font-size: 18px;
+    margin-top: -60px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.952);
     background-color: transparent;
     display: none;
@@ -317,7 +317,7 @@ img {
 
 .correct {
     margin-top: -110px;
-    font-size: 15px;
+    font-size: 20px;
     width: 300px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
