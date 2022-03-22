@@ -139,7 +139,7 @@ const questions = [
     },
     {
         id: 16,
-        picture: "images/360_F_111593254_LPpRCYUEgoij4f4g0GQgj1ptGn12ZwYl-removebg-preview.png",
+        picture: "images/zova.jpg",
         correctAnswer: "Elderberry",
         explanation: "The elderberry grows as a shrub or smaller tree adorned with tiny, white fragrant flowers "+
         "gathered in a large inflorescence at the tops of the branches. Elderberry tea has been shown to be "+
@@ -147,7 +147,7 @@ const questions = [
     },
     {
         id: 17,
-        picture: "images/image (8).png",
+        picture: "images/divizma.jpg",
         correctAnswer: "Mullein",
         explanation: "Mullein grows like a weed all around us. In the first year, it forms a large rosette of large "+
         "leaves, and in the second year, the stem grows up to 2 meters in height. The leaves are woolly "+
@@ -156,7 +156,7 @@ const questions = [
     },
     {
         id: 18,
-        picture: "images/Silver-birch-removebg-preview.png",
+        picture: "images/breza.jpg",
         correctAnswer: "Birch",
         explanation: "Birch is a recognizable tree by its white bark that peels and separates easily. The leaves are "+
         "triangular, serrated along the edge. The male flowers are hanging tassels, while the female ones "+
@@ -165,7 +165,7 @@ const questions = [
     },
     {
         id: 19,
-        picture: "images/shepherds-purse-capsella-bursapastoris-isolated-260nw-1958118127-removebg-preview.png",
+        picture: "images/hocu_necu.jpg",
         correctAnswer: "Shepherd's purse",
         explanation: "Shepherd's purse is a herbaceous plant with an upright tree. The leaves of the rosette are on "+
         "the stalks, while the leaves of the stalk are sessile. It has tiny clustered flowers, and the fruits are "+
@@ -173,7 +173,7 @@ const questions = [
     },
     {
         id: 20,
-        picture: "images/image (9).png",
+        picture: "images/rosopas.jpg",
         correctAnswer: "Greater celandine",
         explanation: "The greater celandine is a herbaceous plant that grows like a weed. When the plant is injured, "+
         "orange milk sap leaks from it, which has a spicy and bitter smell and taste. That is why animals "+

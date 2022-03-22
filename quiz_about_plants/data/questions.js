@@ -136,7 +136,7 @@ const questions = [
     },
     {
         id: 16,
-        picture: "images/360_F_111593254_LPpRCYUEgoij4f4g0GQgj1ptGn12ZwYl-removebg-preview.png",
+        picture: "images/zova.jpg",
         correctAnswer: "Зова",
         explanation: "Зова расте као грм или мање дрво које красе ситни, бијели мирисни цвјетићи скупљени "+
         "у велику цваст на врховима грана. Чај од зове се показао као одлично средство против "+
@@ -144,7 +144,7 @@ const questions = [
     },
     {
         id: 17,
-        picture: "images/image (8).png",
+        picture: "images/divizma.jpg",
         correctAnswer: "Дивизма",
         explanation: "Дивизма расте као коров свуда око нас. Прве године образује велику розету крупних "+ 
         "листова, а друге године израста стабљика до 2 метра висине. Листови су вунасто длакави, "+ 
@@ -153,7 +153,7 @@ const questions = [
     },
     {
         id: 18,
-        picture: "images/Silver-birch-removebg-preview.png",
+        picture: "images/breza.jpg",
         correctAnswer: "Бреза",
         explanation: "Бреза је препознатљиво дрво по бијелој кори која се лако гули и одваја. Листови су "+
         "троугласти, по рубу зупчасти. Мушки цвјетови су висеће ресе, док женске стоје усправно. "+
@@ -162,7 +162,7 @@ const questions = [
     },
     {
         id: 19,
-        picture: "images/shepherds-purse-capsella-bursapastoris-isolated-260nw-1958118127-removebg-preview.png",
+        picture: "images/hocu_necu.jpg",
         correctAnswer: "Хоћу-нећу",
         explanation: "Хоћу-нећу или русомача је зељаста биљка са усправним стаблом. Листови розете су на "+ 
         "дршкама, док су листови стабла сједећи. Има ситне цвјетове скупљене у гроздове, а "+
@@ -170,7 +170,7 @@ const questions = [
     },
     {
         id: 20,
-        picture: "images/image (9).png",
+        picture: "images/rosopas.jpg",
         correctAnswer: "Росопас",
         explanation: "Росопас је зељаста биљка која расте као коров. Кад се биљка озлиједи, из ње цури "+
         "наранџасти млијечни сок који је љутог и горког мириса и укуса. Због тога га животиње "+

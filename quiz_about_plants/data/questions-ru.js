@@ -145,7 +145,7 @@ const questions = [
     },
     {
         id: 16,
-        picture: "images/360_F_111593254_LPpRCYUEgoij4f4g0GQgj1ptGn12ZwYl-removebg-preview.png",
+        picture: "images/zova.jpg",
         correctAnswer: "Бузина",
         explanation: "Бузина растет в виде куста или маленького дерева, украшенного крошечными белыми "+
         "ароматными цветками, собранными в большие соцветия на концах ветвей. Было доказано, "+
@@ -154,7 +154,7 @@ const questions = [
     },
     {
         id: 17,
-        picture: "images/image (8).png",
+        picture: "images/divizma.jpg",
         correctAnswer: "Коровяк",
         explanation: "Коровяк растет везде вокруг нас, как сорняк. В первый год он образует большую "+
         "розетку из крупных листьев, на второй год стебель вырастает до 2 метров в высоту. "+
@@ -163,7 +163,7 @@ const questions = [
     },
     {
         id: 18,
-        picture: "images/Silver-birch-removebg-preview.png",
+        picture: "images/breza.jpg",
         correctAnswer: "Береза",
         explanation: "Береза ​​- дерево узнаваемое по белой коре, которая легко отслаивается и отделяется. "+
         "Листья треугольные, зубчатые по краям. Мужские цветки представляют собой поникшие "+
@@ -173,7 +173,7 @@ const questions = [
     },
     {
         id: 19,
-        picture: "images/shepherds-purse-capsella-bursapastoris-isolated-260nw-1958118127-removebg-preview.png",
+        picture: "images/hocu_necu.jpg",
         correctAnswer: "Пастушья сумка",
         explanation: "Пастушья сумка, или сумочник пастуший - травянистое растение с прямостоячим "+
         "стеблем. Листья розетки находятся на черешках, стеблевые листья - сидячие. Цветки "+
@@ -182,7 +182,7 @@ const questions = [
     },
     {
         id: 20,
-        picture: "images/image (9).png",
+        picture: "images/rosopas.jpg",
         correctAnswer: "Чистотел",
         explanation: "Чистотел - травянистое растение, которое растет как сорняк. При повреждении "+
         "растения из него вытекает млечный сок оранжевого цвета, имеющий пряно-горький запах "+
