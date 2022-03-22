@@ -1,7 +1,7 @@
 const questions = [
     {
         id: 1,
-        picture: "images/kamilica.png",
+        picture: "images/kamilica.jpg",
         correctAnswer: "Камилица",
         explanation: "Камилица је једна од најљековитијих и најмириснија биљка, која има широку примјену у лијечењу разних обољења. " +
             "Посебно се показала учинковита код упала коже и слузокоже, " +
@@ -10,7 +10,7 @@ const questions = [
     },
     {
         id: 2,
-        picture: "images/kopriva1.png",
+        picture: "images/kopriva.jpg",
         correctAnswer: "Коприва",
         explanation: "Коприва или жара се сматра једном од најљековитијих биљака у нашим крајевима. " +
             "Стабљика и листови су прекривени длачицама пуним мравље киселине које жаре, истварају пликове на кожи. " +
@@ -18,7 +18,7 @@ const questions = [
     },
     {
         id: 3,
-        picture: "images/neven.png",
+        picture: "images/neven.jpg",
         correctAnswer: "Невен",
         explanation: "Невен се узгаја као украсна и љековита биљка. Најчешће се употребљава у виду " +
             "„невенове масти“ за зарастање рана и других кожних обољења, а у виду чаја користи се за " +
@@ -26,7 +26,7 @@ const questions = [
     },
     {
         id: 4,
-        picture: "images/maslacak (2).png",
+        picture: "images/maslacak.jpg",
         correctAnswer: "Маслачак",
         explanation: "Маслачак је зељаста биљка са меснатим коријеном и издуженим неправилно урезаним " +
             "листовима, скупљени у приземну розету. Стабљика је шупља пуна млијечног сока, а на " +
@@ -36,7 +36,7 @@ const questions = [
     },
     {
         id: 5,
-        picture: "images/hmelj.png",
+        picture: "images/hmelj.jpg",
         correctAnswer: "Хмељ",
         explanation: "Хмељ садржи супстанце које имају умирујући и успављујући ефекат. Народно искуство " +
             "и научна испитивања показала су да је хмељ одлично средство против несанице, па се у " +
@@ -44,7 +44,7 @@ const questions = [
     },
     {
         id: 6,
-        picture: "images/vodopija.png",
+        picture: "images/vodopija.jpg",
         correctAnswer: "Водопија",
         explanation: "Водопија има усправну угласту стабљику, док је коријен дебео и вретенаст. Доњи "+
         "листови су сужени у дршку, а горњи сједећи. Цвјетови су крупни, свијетло плаве боје. "+
@@ -54,7 +54,7 @@ const questions = [
     },
     {
         id: 7,
-        picture: "images/istockphoto-612402456-170667a-removebg-preview.png",
+        picture: "images/brsljen.jpg",
         correctAnswer: "Бршљан",
         explanation: "Бршљан је дрвенаста пењачица која се пење уз усправну подлогу или друге биљке "+
         "помоћу ваздушног коријења. Због изванредних љековитих својстава, показао се као један "+ 
@@ -64,7 +64,7 @@ const questions = [
     },
     {
         id: 8,
-        picture: "images/crocus-one-first-spring-flowers-260nw-762940639-removebg-preview.png",
+        picture: "images/ljubicica.jpg",
         correctAnswer: "Љубичица",
         explanation: "Код нас постоји више врста љубичица, са лијепим љубичастим цвјетовима. Али, "+ 
         "љековито дјеловање има само мирисна љубичица, па се остале врсте не сакупљају. Чај од "+
@@ -73,7 +73,7 @@ const questions = [
     },
     {
         id: 9,
-        picture: "images/istockphoto-1180142132-612x612-removebg-preview.png",
+        picture: "images/crvena_djetalina.jpg",
         correctAnswer: "Црвена дјетелина",
         explanation: "Црвена дјетелина има усправну, неразгранату стабљику на чијем врху се налазе црвени "+ 
         "цвјетови, скупљени у главицу. У народној медицини употребљава се против екцема и "+
@@ -82,7 +82,7 @@ const questions = [
     },
     {
         id: 10,
-        picture: "images/lipa.png",
+        picture: "images/lipa.jpg",
         correctAnswer: "Липа",
         explanation: "Код нас разликујемо три врсте липа: ситнолисну, крупнолисну и сребрну липу. Осим "+
         "љековитих својстава, веома је омиљен народни чај због изузетног укуса и мириса."
@@ -90,7 +90,7 @@ const questions = [
     },
     {
         id: 11,
-        picture: "images/nnana-removebg-preview1.png",
+        picture: "images/nana.jpg",
         correctAnswer: "Нана",
         explanation: "У природи расте неколико различитих врста нана и углавном све имају љековита "+
         "својства (питома, дуголисна, барска, кудрава нана итд). Нана је нашла добру примјену у "+
@@ -100,7 +100,7 @@ const questions = [
     },
     {
         id: 12,
-        picture: "images/mallow-flower-on-white-background-260nw-1712657380-removebg-preview.png",
+        picture: "images/crni_sljez.jpg",
         correctAnswer: "Црни сљез",
         explanation: "Црни сљез је љековита и јестива биљка из породице сљезова. Показао се као одлично "+ 
         "средство које поспјешује растварање и излучивање слузи код болести дисајних органа."
@@ -108,7 +108,7 @@ const questions = [
     },
     {
         id: 13,
-        picture: "images/hajdu-removebg-preview.png",
+        picture: "images/hajducka_trava.jpg",
         correctAnswer: "Хајдучка трава",
         explanation: "Угњечени листови хајдучке траве кад се привију на свјежу рану представљају једно од "+
         "најефикаснијих начина за заустављање краварења и зарастање рана. Чај од хајдучке траве "+
@@ -117,7 +117,7 @@ const questions = [
     },
     {
         id: 14,
-        picture: "images/w1-removebg-preview.png",
+        picture: "images/divlja_ruza.jpg",
         correctAnswer: "Дивља ружа",
         explanation: "Шипак или дивља ружа је трновит и разгранат жбун са лијепим, ружичастим до бијелим "+ 
         "цвјетовима, врло пријатног мириса. Зрели плодови су наранџасто-црвени и богати "+
@@ -127,7 +127,7 @@ const questions = [
     },
     {
         id: 15,
-        picture: "images/image (12).png",
+        picture: "images/iva.jpg",
         correctAnswer: "Трава ива",
         explanation: "У нашим крајевима, трава ива је веома цијењена љековита биљка. За њу се каже „трава "+
         "ива од мртва прави жива“. Сматра се да окрепљујући чај од траве иве лијечи различита "+

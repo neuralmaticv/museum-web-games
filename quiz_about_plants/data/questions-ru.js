@@ -1,7 +1,7 @@
 const questions = [
     {
         id: 1,
-        picture: "images/kamilica.png",
+        picture: "images/kamilica.jpg",
         correctAnswer: "Ромашка",
         explanation: "Ромашка - одно из самых лечебных и ароматных растений, которое находит широкое "+
         "применение при лечении различных заболеваний. Она особенно эффективна при "+
@@ -11,7 +11,7 @@ const questions = [
     },
     {
         id: 2,
-        picture: "images/kopriva1.png",
+        picture: "images/kopriva.jpg",
         correctAnswer: "Крапива",
         explanation: "Крапива считается одним из самых лечебных растений в нашем регионе. Стебель и "+
         "листья покрыты жгучими волосками полными муравьиной кислоты, при соприкосновении "+
@@ -21,7 +21,7 @@ const questions = [
     },
     {
         id: 3,
-        picture: "images/neven.png",
+        picture: "images/neven.jpg",
         correctAnswer: "Календула",
         explanation: "Календулу выращивают как декоративное и лекарственное растение. Чаще всего ее "+
         "применяют в виде \«мази из календулы\» для заживления ран и других кожных "+
@@ -29,7 +29,7 @@ const questions = [
     },
     {
         id: 4,
-        picture: "images/maslacak (2).png",
+        picture: "images/maslacak.jpg",
         correctAnswer: "Одуванчик",
         explanation: "Одуванчик - травянистое растение с мясистым корнем и удлиненными, неправильно "+
         "надрезанными листьями, собранными в прикорневую розетку. Стебель полый, "+
@@ -39,7 +39,7 @@ const questions = [
     },
     {
         id: 5,
-        picture: "images/hmelj.png",
+        picture: "images/hmelj.jpg",
         correctAnswer: "Хмель",
         explanation: "В хмеле содержатся вещества, оказывающие успокоительное и снотворное действие. "+
         "Народный опыт и научные исследования показали, что хмель является отличным "+
@@ -48,7 +48,7 @@ const questions = [
     },
     {
         id: 6,
-        picture: "images/vodopija.png",
+        picture: "images/vodopija.jpg",
         correctAnswer: "Цикорий",
         explanation: "Стебель цикория прямостоячий, угловатый, а корень толстый, веретенообразный. "+
         "Прикорневые листья сужены в черешок, а верхние - сидячие. Цветки крупные, светло- "+
@@ -58,7 +58,7 @@ const questions = [
     },
     {
         id: 7,
-        picture: "images/istockphoto-612402456-170667a-removebg-preview.png",
+        picture: "images/brsljen.jpg",
         correctAnswer: "Плющ",
         explanation: "Плющ - древесный альпинист, который лазит по вертикальным или другим растениям, "+
         "используя воздушные корни. Благодаря своим исключительным лечебным свойствам, он "+
@@ -69,7 +69,7 @@ const questions = [
     },
     {
         id: 8,
-        picture: "images/crocus-one-first-spring-flowers-260nw-762940639-removebg-preview.png",
+        picture: "images/ljubicica.jpg",
         correctAnswer: "Фиалка",
         explanation: "У нас растет несколько видов фиалок с красивыми фиолетовыми цветками. Но "+
         "лечебными свойствами обладает только душистая фиалка, поэтому другие виды не "+
@@ -78,7 +78,7 @@ const questions = [
     },
     {
         id: 9,
-        picture: "images/istockphoto-1180142132-612x612-removebg-preview.png",
+        picture: "images/crvena_djetalina.jpg",
         correctAnswer: "Красный клевер",
         explanation: "Красный клевер имеет прямой неразветвленный стебель, увенчанный красными "+
         "цветками, собранными в виде головок. В народной медицине его применяют против "+
@@ -87,7 +87,7 @@ const questions = [
     },
     {
         id: 10,
-        picture: "images/lipa.png",
+        picture: "images/lipa.jpg",
         correctAnswer: "Липы",
         explanation: "Мы выделяем три вида липы: мелколистную, крупнолистную и липу серебристую. "+
         "Обладает лечебными свойствами, а также благодаря исключительному вкусу и аромату в "+
@@ -96,7 +96,7 @@ const questions = [
     },
     {
         id: 11,
-        picture: "images/nnana-removebg-preview1.png",
+        picture: "images/nana.jpg",
         correctAnswer: "Мята",
         explanation: "В природе существует несколько разных видов мяты, которые обладают лечебными "+
         "свойствами (перечная, длиннолистая, болотная, колосистая и т.д.). Мята широко "+
@@ -106,7 +106,7 @@ const questions = [
     },
     {
         id: 12,
-        picture: "images/mallow-flower-on-white-background-260nw-1712657380-removebg-preview.png",
+        picture: "images/crni_sljez.jpg",
         correctAnswer: "Мальва лесная",
         explanation: "Мальва лесная – лекарственное съедобное растение семейства Мальвовые. Является "+
         "отличным средством, способствующим растворению и выведению слизи при "+
@@ -115,7 +115,7 @@ const questions = [
     },
     {
         id: 13,
-        picture: "images/hajdu-removebg-preview.png",
+        picture: "images/hajducka_trava.jpg",
         correctAnswer: "Тысячелистник",
         explanation: "Измельченные листья тысячелистника – одно из самых эффективных средств для "+
         "остановки кровотечения и заживления ран. Чай из тысячелистника успешно лечит "+
@@ -124,7 +124,7 @@ const questions = [
     },
     {
         id: 14,
-        picture: "images/w1-removebg-preview.png",
+        picture: "images/divlja_ruza.jpg",
         correctAnswer: "Роза собачья",
         explanation: "Шиповник или собачья роза - колючий и разветвленный куст с красивыми розовыми "+
         "или белыми цветами с очень приятным запахом. Созревшие плоды имеют оранжево- "+
@@ -135,7 +135,7 @@ const questions = [
     },
     {
         id: 15,
-        picture: "images/image (12).png",
+        picture: "images/iva.jpg",
         correctAnswer: "Трава дубровник",
         explanation: "В наших краях трава дубровник горный - очень ценное лекарственное растение. Про это "+
         "растение говорят: «дубровник горный живых из мертвых оживляет». Считается, что "+

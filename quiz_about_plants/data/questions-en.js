@@ -1,7 +1,7 @@
 const questions = [
     {
         id: 1,
-        picture: "images/kamilica.png",
+        picture: "images/kamilica.jpg",
         correctAnswer: "Chamomile",
         explanation: "Chamomile is one of the most medicinal and fragrant plants, which has wide application in "+
         "the treatment of various diseases. It has been particularly effective in inflammation of the skin "+
@@ -10,7 +10,7 @@ const questions = [
     },
     {
         id: 2,
-        picture: "images/kopriva1.png",
+        picture: "images/kopriva.jpg",
         correctAnswer: "Nettle",
         explanation: "Nettle is considered one of the most medicinal plants in our region. The stem and leaves are "+
         "covered with hairs full of formic acid that sting, and create blisters on the skin. The whole plant "+
@@ -19,7 +19,7 @@ const questions = [
     },
     {
         id: 3,
-        picture: "images/neven.png",
+        picture: "images/neven.jpg",
         correctAnswer: "Marigold",
         explanation: "Marigold is grown as an ornamental and medicinal plant. It is most often used in the form of "+
         "\"marigold ointment\" for healing wounds and other skin diseases, and in the form of tea it is used "+
@@ -27,7 +27,7 @@ const questions = [
     },
     {
         id: 4,
-        picture: "images/maslacak (2).png",
+        picture: "images/maslacak.jpg",
         correctAnswer: "Dandelion",
         explanation: "Dandelion is a herbaceous plant with a fleshy root and elongated irregularly incised leaves, "+
         "gathered in a ground rosette. The stem is hollow full of milky sap, and at the top is a yellow "+
@@ -37,7 +37,7 @@ const questions = [
     },
     {
         id: 5,
-        picture: "images/hmelj.png",
+        picture: "images/hmelj.jpg",
         correctAnswer: "Common hop",
         explanation: "Common hop contains substances that have a calming and soothing effect. Folk experience "+
         "and scientific research have shown that common hop is an excellent remedy against insomnia, so "+
@@ -46,7 +46,7 @@ const questions = [
     },
     {
         id: 6,
-        picture: "images/vodopija.png",
+        picture: "images/vodopija.jpg",
         correctAnswer: "Common chicory",
         explanation: "Common chicory has an upright angular stem, while the root is thick and spindle-shaped. The "+
         "lower leaves are narrowed into a stalk, and the upper are sessile. The flowers are large, light "+
@@ -56,7 +56,7 @@ const questions = [
     },
     {
         id: 7,
-        picture: "images/istockphoto-612402456-170667a-removebg-preview.png",
+        picture: "images/brsljen.jpg",
         correctAnswer: "Ivy",
         explanation: "Ivy is a woody, climbing plant that climbs up suitable surfaces or other plants using aerial "+
         "roots. Due to its exceptional medicinal properties, it has proven to be one of the basic ingredients "+
@@ -66,7 +66,7 @@ const questions = [
     },
     {
         id: 8,
-        picture: "images/crocus-one-first-spring-flowers-260nw-762940639-removebg-preview.png",
+        picture: "images/ljubicica.jpg",
         correctAnswer: "Violets",
         explanation: "There are several types of violets in our country, with beautiful purple flowers. However, "+
         "only fragrant violet has a medicinal effect, so other species are not collected. Violet flower tea is "+
@@ -75,7 +75,7 @@ const questions = [
     },
     {
         id: 9,
-        picture: "images/istockphoto-1180142132-612x612-removebg-preview.png",
+        picture: "images/crvena_djetalina.jpg",
         correctAnswer: "Red clover",
         explanation: "The red clover has an upright, unbranched stem topped with red flowers, gathered in a head. "+
         "In folk medicine, it is used against eczema and other skin diseases."
@@ -83,7 +83,7 @@ const questions = [
     },
     {
         id: 10,
-        picture: "images/lipa.png",
+        picture: "images/lipa.jpg",
         correctAnswer: "Linden",
         explanation: "We distinguish three types of linden: small-leaved, large-leaved and silver linden. In addition "+
         "to its medicinal properties, it is a very popular folk tea due to its exceptional taste and aroma."
@@ -91,7 +91,7 @@ const questions = [
     },
     {
         id: 11,
-        picture: "images/nnana-removebg-preview1.png",
+        picture: "images/nana.jpg",
         correctAnswer: "Mint",
         explanation: "Several different types of mint grow in nature and mostly all of them have medicinal "+
         "properties (peppermint, horse mint, pennyroyal, spearmint, etc.). Mint has been found beneficial "+
@@ -101,7 +101,7 @@ const questions = [
     },
     {
         id: 12,
-        picture: "images/mallow-flower-on-white-background-260nw-1712657380-removebg-preview.png",
+        picture: "images/crni_sljez.jpg",
         correctAnswer: "Common mallow",
         explanation: "Common mallow is a medicinal and edible plant in the Malvaceae family. It has been shown "+
         "to be an excellent agent that promotes the dissolution and secretion of mucus in diseases of the "+
@@ -110,7 +110,7 @@ const questions = [
     },
     {
         id: 13,
-        picture: "images/hajdu-removebg-preview.png",
+        picture: "images/hajducka_trava.jpg",
         correctAnswer: "Yarrow",
         explanation: "Crushed leaves of yarrow when applied to a fresh wound make one of the most effective ways "+
         "to stop bleeding and promote wound healing. Yarrow tea successfully cures intestinal and "+
@@ -119,7 +119,7 @@ const questions = [
     },
     {
         id: 14,
-        picture: "images/w1-removebg-preview.png",
+        picture: "images/divlja_ruza.jpg",
         correctAnswer: "Rose haw",
         explanation: "Rose hip or rose haw is a thorny and branched shrub with beautiful, pink to white flowers, "+
         "with a very pleasant scent. Ripe fruits are orange to red and rich in vitamin C, the amount of "+
@@ -129,7 +129,7 @@ const questions = [
     },
     {
         id: 15,
-        picture: "images/image (12).png",
+        picture: "images/iva.jpg",
         correctAnswer: "Mountain germander",
         explanation: "In our region, the mountain germander is a highly valued medicinal plant. There is a saying "+
         "stating that \"the mountain germander brings you back to life\" The invigorating mountain "+
