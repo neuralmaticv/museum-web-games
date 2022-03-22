@@ -192,7 +192,7 @@ const questions = [
     },
     {
         id: 21,
-        picture: "images/zalf-removebg-preview.png",
+        picture: "images/zalfija.jpg",
         correctAnswer: "Шалфей",
         explanation: "Шалфей является очень ценным растением в нашем регионе. Когда-то его называли "+
         "святой травой благодаря исключительным лечебным свойствам. В средневековой "+
@@ -201,7 +201,7 @@ const questions = [
     },
     {
         id: 22,
-        picture: "images/kantarion-removebg-preview.png",
+        picture: "images/kantarion.jpg",
         correctAnswer: "Зверобой",
         explanation: "Зверобой, благодаря своим целебным свойствам, используется с древних времен. "+
         "Стебель его крепкий и разветвленный с небольшими листьями, покрытыми маслянистыми "+
@@ -210,7 +210,7 @@ const questions = [
     },
     {
         id: 23,
-        picture: "images/bs-removebg-preview.png",
+        picture: "images/bijeli_sljez.jpg",
         correctAnswer: "Алтей",
         explanation: "Алтей - это растение, вырастающее до 2 метров в высоту. У него разветвленный "+
         "мясистый корень, желтый снаружи и белый внутри. Помогает при кашле, бронхите, астме, "+
@@ -218,7 +218,7 @@ const questions = [
     },
     {
         id: 24,
-        picture: "images/dobricica-removebg-preview1.png",
+        picture: "images/dobricica.jpg",
         correctAnswer: "Будра",
         explanation: "Славяне верят, что будра может сделать человека лучше! Благодаря своим лечебным "+
         "компонентам, она используется для лечения многих заболеваний, особенно при болезнях "+
@@ -227,7 +227,7 @@ const questions = [
     },
     {
         id: 25,
-        picture: "images/wildst-removebg-preview.png",
+        picture: "images/jagoda.jpg",
         correctAnswer: "Земляника",
         explanation: "Земляника - известное и узнаваемое лесное растение, пользующееся большой "+
         "популярностью у населения. Чай из корня земляники используется для лечения диареи, а "+
@@ -235,7 +235,7 @@ const questions = [
     },
     {
         id: 26,
-        picture: "images/majcinaD-removebg-preview.png",
+        picture: "images/majcina_dusica.jpg",
         correctAnswer: "Тимьян",
         explanation: "Тимьян - небольшое кустарниковое или стелющееся растение, деревянистое снизу. "+
         "Ярко-розовые цветки собраны на концах ветвей в соцветия, обладают приятным "+
@@ -243,7 +243,7 @@ const questions = [
     },
     {
         id: 27,
-        picture: "images/zenskabokv.png",
+        picture: "images/zenska_bokvica.jpg",
         correctAnswer: "Подорожник большой",
         explanation: "Подорожник большой имеет широкие листья, густо усаженные в наземной розетке, из "+
         "которой вырастают один или несколько цветоносов. На верхушке цветоноса находится "+
@@ -252,7 +252,7 @@ const questions = [
     },
     {
         id: 28,
-        picture: "images/gavez-removebg-preview (2).png",
+        picture: "images/gavez.jpg",
         correctAnswer: "Окопник",
         explanation: "Мазь из корня окопника можно наносить непосредственно на неочищенные раны на "+
         "коже, предотвращая воспаление. Доказано, что даже самые глубокие порезы заживают без "+
@@ -261,7 +261,7 @@ const questions = [
     },
     {
         id: 29,
-        picture: "images/malee-removebg-preview.png",
+        picture: "images/muska_bokvica.jpg",
         correctAnswer: "Подорожник ланцетолистный",
         explanation: "Существует несколько различных видов подорожника, и все они обладают схожими "+
         "лечебными свойствами. У подорожника ланцетолистного узкие листья, собранные в "+ 
@@ -270,7 +270,7 @@ const questions = [
     },
     {
         id: 30,
-        picture: "images/ss-removebg-preview.png",
+        picture: "images/jagorcevina.jpg",
         correctAnswer: "Первоцвет",
         explanation: "Существует множество видов первоцветов, не все из которых обладают лечебными "+
         "свойствами. Наибольшим лечебным эффектом обладает вид, имеющий стебли длиной до "+

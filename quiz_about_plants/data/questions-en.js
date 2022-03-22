@@ -182,7 +182,7 @@ const questions = [
     },
     {
         id: 21,
-        picture: "images/zalf-removebg-preview.png",
+        picture: "images/zalfija.jpg",
         correctAnswer: "Sage",
         explanation: "Sage is a highly valued plant in our country. It was once popularly called sacred grass, due to "+
         "its exceptional medicinal properties. The medieval medical school in Salermo had so much "+
@@ -190,7 +190,7 @@ const questions = [
     },
     {
         id: 22,
-        picture: "images/kantarion-removebg-preview.png",
+        picture: "images/kantarion.jpg",
         correctAnswer: "St. John's wort",
         explanation: "St. John's wort has been used since ancient times due to its medicinal properties. It has a firm "+
         "and branched stem with small leaves, covered with oily glands like dots. St. John&#39;s wort relieves "+
@@ -199,7 +199,7 @@ const questions = [
     },
     {
         id: 23,
-        picture: "images/bs-removebg-preview.png",
+        picture: "images/bijeli_sljez.jpg",
         correctAnswer: "Marsh mallow",
         explanation: "Marsh mallow is a plant that grows up to 2 meters in height. It has a branched and fleshy "+
         "root, which is yellow on the outside and white on the inside. It has a beneficial effect on cough, "+
@@ -207,7 +207,7 @@ const questions = [
     },
     {
         id: 24,
-        picture: "images/dobricica-removebg-preview1.png",
+        picture: "images/dobricica.jpg",
         correctAnswer: "Ground-ivy",
         explanation: "For ground-ivy, the Slavs believe it can make a man better! Due to its medicinal ingredients, "+
         "it is used to treat many diseases, and is especially used in diseases of the respiratory organs."
@@ -215,7 +215,7 @@ const questions = [
     },
     {
         id: 25,
-        picture: "images/wildst-removebg-preview.png",
+        picture: "images/jagoda.jpg",
         correctAnswer: "Wild strawberry",
         explanation: "The wild strawberry is a well-known and recognizable forest plant, very popular among the "+
         "population. Wild strawberry root tea is used to treat diarrhea, and leaf tea is used to purify the "+
@@ -223,7 +223,7 @@ const questions = [
     },
     {
         id: 26,
-        picture: "images/majcinaD-removebg-preview.png",
+        picture: "images/majcina_dusica.jpg",
         correctAnswer: "Thyme",
         explanation: "Thyme is a small bushy or creeping plant, woody at the bottom. The bright pink flowers are "+
         "gathered on the tops of the branches in an inflorescence, with a pleasant scent. Thyme tea is a "+
@@ -231,7 +231,7 @@ const questions = [
     },
     {
         id: 27,
-        picture: "images/zenskabokv.png",
+        picture: "images/zenska_bokvica.jpg",
         correctAnswer: "Female plantago",
         explanation: "The female plantago has broad leaves, densely arranged in a ground rosette from which one "+
         "or more flower stalks emerge. At the top of the stalks there is a long spiked inflorescence. When "+
@@ -240,7 +240,7 @@ const questions = [
     },
     {
         id: 28,
-        picture: "images/gavez-removebg-preview (2).png",
+        picture: "images/gavez.jpg",
         correctAnswer: "Comfrey",
         explanation: "Comfrey root ointment can be applied directly to uncleaned wounds on the skin, preventing "+
         "poisoning. Even the deepest cuts have been shown to heal without scarring. Due to its "+
@@ -249,7 +249,7 @@ const questions = [
     },
     {
         id: 29,
-        picture: "images/malee-removebg-preview.png",
+        picture: "images/muska_bokvica.jpg",
         correctAnswer: "Male plantago",
         explanation: "There are several different types of plantago and they all have a similar medicinal effect. The "+
         "male plantago has narrow leaves gathered in a ground rosette from which several erect ribbed "+
@@ -257,7 +257,7 @@ const questions = [
     },
     {
         id: 30,
-        picture: "images/ss-removebg-preview.png",
+        picture: "images/jagorcevina.jpg",
         correctAnswer: "Primrose",
         explanation: "There are several types of primrose that are not all equally medicinal. The most medicinal is "+
         "considered to be a species that has stems up to 20 cm long, on the tops of which there are several "+

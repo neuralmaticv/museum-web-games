@@ -179,7 +179,7 @@ const questions = [
     },
     {
         id: 21,
-        picture: "images/zalf-removebg-preview.png",
+        picture: "images/zalfija.jpg",
         correctAnswer: "Жалфија",
         explanation: "Жалфија је код нас врло цијењена биљка. Некад су је у народу звали и света трава, због "+ 
         "изузетног љековитог својства. Средњовјековна медицинска школа у Салерму је толико "+ 
@@ -188,7 +188,7 @@ const questions = [
     },
     {
         id: 22,
-        picture: "images/kantarion-removebg-preview.png",
+        picture: "images/kantarion.jpg",
         correctAnswer: "Кантарион",
         explanation: "Кантарион због своје љековитости има примјену од давнина. Има чврсту и разгранату "+ 
         "стабљику са малим листовима, прекривеним уљаним жлијездама попут тачкица. "+
@@ -197,7 +197,7 @@ const questions = [
     },
     {
         id: 23,
-        picture: "images/bs-removebg-preview.png",
+        picture: "images/bijeli_sljez.jpg",
         correctAnswer: "Бијели сљез",
         explanation: "Бијели сљез је биљка која нарасте и до 2 метра у висину. Има разгранат и меснат "+
         "коријен, који је споља жут, а изнутра бијел. Повољно дјелује код кашља, бронхитиса, "+
@@ -205,7 +205,7 @@ const questions = [
     },
     {
         id: 24,
-        picture: "images/dobricica-removebg-preview1.png",
+        picture: "images/dobricica.jpg",
         correctAnswer: "Добричица",
         explanation: "За добричицу, Словени вјерују да може учинити човјека бољим! Због својих "+ 
         "љековитих састојака користи се за лијечење многих обољења, а посебно се примјењује код "+
@@ -214,7 +214,7 @@ const questions = [
     },
     {
         id: 25,
-        picture: "images/wildst-removebg-preview.png",
+        picture: "images/jagoda.jpg",
         correctAnswer: "Шумска јагода",
         explanation: "Шумска јагода је опште позната и препознатљива шумска биљка, врло омиљена код "+ 
         "становништва. Чај од коријена шумске јагоде употребљава се за лијечење пролива, а чај "+ 
@@ -222,7 +222,7 @@ const questions = [
     },
     {
         id: 26,
-        picture: "images/trat.jpg",
+        picture: "images/majcina_dusica.jpg",
         correctAnswer: "Мајчина душица",
         explanation: "Мајчина душица је мала бусенаста или пузава биљка, при дну одрвењена. Свијетло "+ 
         "ружичасти цвјетови скупљени су на врховима грана у цвасти, пријатног мириса. Чај од "+
@@ -230,7 +230,7 @@ const questions = [
     },
     {
         id: 27,
-        picture: "images/zenskabokv.png",
+        picture: "images/zenska_bokvica.jpg",
         correctAnswer: "Женска боквица",
         explanation: "Женска боквица има широке листове, густо послагане у приземну розету из које избија "+ 
         "једна или више цвјетних стабљика. На врху стабљика налази се дуга класаста цваст. Када "+ 
@@ -239,7 +239,7 @@ const questions = [
     },
     {
         id: 28,
-        picture: "images/gavez-removebg-preview (2).png",
+        picture: "images/gavez.jpg",
         correctAnswer: "Гавез",
         explanation: "Маст од коријена гавеза може да се директно наноси на неочишћене ране на кожи, "+
         "спречавајући тровање. Показало се да и најдубље посјекотине зарастају без ожиљака. Због "+ 
@@ -248,7 +248,7 @@ const questions = [
     },
     {
         id: 29,
-        picture: "images/malee-removebg-preview.png",
+        picture: "images/muska_bokvica.jpg",
         correctAnswer: "Мушка боквица",
         explanation: "Постоји више различитих врста боквица и све имају слично љековито дејство. Мушка "+
         "боквица има уске листове скупљене у приземну розету из којих избија неколико "+ 
@@ -257,7 +257,7 @@ const questions = [
     },
     {
         id: 30,
-        picture: "images/ss-removebg-preview.png",
+        picture: "images/jagorcevina.jpg",
         correctAnswer: "Јагорчевина",
         explanation: "Постоји више врста јагорчевина, али нису све једнако љековите. Најљековитијом се "+ 
         "сматра врста која има дуге стабљике до 20 цм на чијим врховима се налази више "+ 
