@@ -7,13 +7,13 @@
     font-size: 19px;
 }
 
-.box {
+.boxx {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 360px;
-    height: 360px;
+    width: 380px;
+    height: 380px;
     background: #111845a6;
     box-sizing: border-box;
     overflow: hidden;
@@ -24,7 +24,7 @@
     padding: 20px;
 }
 
-.box:before {
+.boxx:before {
     content: '';
     position: absolute;
     top: 0;
@@ -36,12 +36,12 @@
     pointer-events: none;
 }
 
-box:hover:before {
+boxx:hover:before {
     left: -50%;
     transform: skewX(-5deg);
 }
 
-.box .content {
+.boxx .content {
     position: absolute;
     top: 15px;
     left: 15px;
@@ -53,7 +53,7 @@ box:hover:before {
     box-shadow: 0 5px 10px rgba(9, 0, 0, 0.5);
 }
 
-.box span {
+.boxx span {
     position: absolute;
     top: 0;
     left: 0;
@@ -63,23 +63,23 @@ box:hover:before {
     box-sizing: border-box;
 }
 
-.box span:nth-child(1) {
+.boxx span:nth-child(1) {
     transform: rotate(0deg);
 }
 
-.box span:nth-child(2) {
+.boxx span:nth-child(2) {
     transform: rotate(90deg);
 }
 
-.box span:nth-child(3) {
+.boxx span:nth-child(3) {
     transform: rotate(180deg);
 }
 
-.box span:nth-child(4) {
+.boxx span:nth-child(4) {
     transform: rotate(270deg);
 }
 
-.box span:before {
+.boxx span:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -105,4 +105,12 @@ box:hover:before {
         transform: scaleX(0);
         transform-origin: right;
     }
+}
+
+.lt {
+    position: absolute;
+    text-align: center;
+    font-size: 19px;
+    top: 100%;
+    right: 28%;
 }

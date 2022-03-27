@@ -1,12 +1,11 @@
 body {
-    background-image: url('../images/newbgg.jpg');
+    background-image: url('../images/vecteezy.jpg');
     user-select: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .container {
@@ -24,7 +23,6 @@ body {
     top: 330px;
     left: 465px;
     color: black;
-
 }
 
 .sr {
@@ -48,16 +46,32 @@ body {
     display: flex;
 }
 
-.cupcakeCircle, .cupcakeInner, .cupcakeCore, .cupcakeCircle1, .cupcakeInner1, .cupcakeCore1,
-.cupcakeCircle2, .cupcakeInner2, .cupcakeCore2 {
+.cupcakeCircle,
+.cupcakeInner,
+.cupcakeCore,
+.cupcakeCircle1,
+.cupcakeInner1,
+.cupcakeCore1,
+.cupcakeCircle2,
+.cupcakeInner2,
+.cupcakeCore2 {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
 }
 
-.cupcake, .letter, .cupcakeCircle, .cupcakeInner, .cupcakeCore, .cupcakeCircle1, .cupcakeInner1, .cupcakeCore1,
-.cupcakeCircle2, .cupcakeInner2, .cupcakeCore2 {
+.cupcake,
+.letter,
+.cupcakeCircle,
+.cupcakeInner,
+.cupcakeCore,
+.cupcakeCircle1,
+.cupcakeInner1,
+.cupcakeCore1,
+.cupcakeCircle2,
+.cupcakeInner2,
+.cupcakeCore2 {
     flex: none;
     -webkit-flex: none;
     -moz-flex: none;
@@ -65,13 +79,15 @@ body {
     -o-flex: none;
 }
 
-.letter, .cupcakeCircle, .cupcakeCircle1, .cupcakeCircle2 {
+.letter,
+.cupcakeCircle,
+.cupcakeCircle1,
+.cupcakeCircle2 {
     align-self: center;
     -webkit-align-self: center;
     -moz-align-self: center;
     -o-align-self: center;
     -ms-align-self: center;
-
 }
 
 .cupcakeCircle {
@@ -100,7 +116,6 @@ body {
     width: 50%;
     background-color: rgb(176, 33, 23);
     animation: cupcakeAnimate 500ms alternate ease-in-out infinite;
-
 }
 
 .cupcakeCore {
@@ -110,9 +125,7 @@ body {
     width: 15%;
     background-color: #222;
     animation: coreAnimate 1s alternate ease-in-out infinite;
-
 }
-
 
 .cupcakeCircle1 {
     align-items: center;
@@ -145,7 +158,6 @@ body {
     width: 50%;
     background-color: rgb(176, 33, 23);
     animation: cupcakeAnimate 500ms alternate ease-in-out infinite;
-
 }
 
 .cupcakeCore1 {
@@ -155,9 +167,7 @@ body {
     width: 15%;
     background-color: #222;
     animation: coreAnimate 1s alternate ease-in-out infinite;
-
 }
-
 
 .cupcakeCircle2 {
     align-items: center;
@@ -190,7 +200,6 @@ body {
     width: 50%;
     background-color: rgb(176, 33, 23);
     animation: cupcakeAnimate 500ms alternate ease-in-out infinite;
-
 }
 
 .cupcakeCore2 {
@@ -200,9 +209,7 @@ body {
     width: 15%;
     background-color: #222;
     animation: coreAnimate 1s alternate ease-in-out infinite;
-
 }
-
 
 .lte3 {
     margin-top: -8px;
@@ -237,20 +244,14 @@ body {
     }
 }
 
-
-
 .start {
     position: absolute;
     left: 380px;
     bottom: 156px;
-
 }
-
-
 
 .images {
     max-width: 50%;
-
     margin: 0 auto;
     padding-top: 100px;
     padding-bottom: 50px;
@@ -282,7 +283,7 @@ img {
 
 .answer {
     background-color: rgb(176, 33, 23);
-    color: lightblue;
+    color: rgba(255, 255, 255, 0.938);
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -299,7 +300,6 @@ img {
     vertical-align: middle;
     align-items: center;
 }
-
 
 .en {
     font-size: 14px;
@@ -324,8 +324,6 @@ img {
     color: rgba(255, 255, 255, 0.952);
     background-color: transparent;
     display: none;
-
-
 }
 
 .finish-message {
@@ -335,7 +333,7 @@ img {
     left: 0;
     right: 0;
     margin: auto;
-    color: rgb(182, 237, 255);
+    color: rgba(173, 5, 5, 0.747);
     width: 500px;
     height: 300px;
     font-family: Arial, Helvetica, sans-serif;
@@ -343,7 +341,8 @@ img {
     font-size: 17px;
 }
 
-.finish-message h1, h3 {
+.finish-message h1,
+h3 {
     text-align: center;
 }
 
@@ -351,10 +350,10 @@ img {
     display: block;
     width: 140px;
     height: 40px;
-    background-color: #1d6e6f;
-    color: lightblue;
+    background-color: rgb(176, 33, 23);
+    color: rgba(255, 255, 255, 0.938);
     text-align: center;
-    border: 8px solid #1d6e6f;
+    border: 8px solid rgb(176, 33, 23);
     cursor: pointer;
     border-radius: 25px;
     font-family: Arial, Helvetica, sans-serif;

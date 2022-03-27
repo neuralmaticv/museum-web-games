@@ -61,20 +61,17 @@
                 } else {
                     wrongSound.play()
                     $(".images").css("display", "none");
-                    $(".box").css("display", "flex");
+                    $(".boxx").css("display", "flex");
                     $(".answers").css("display", "none");
-                    $(".correct").css("display", "block");
-                    $(".correct").text("Тачан одговор је: " + activeIndex.correctAnswer);
-                    $("#wrap").mouseenter(function() {
-                        $("#par").text(activeIndex.explanation);
-                    })
+                    $("#title").text("Тачан одговор је: " + activeIndex.correctAnswer);
+                    $("#explanation").text(activeIndex.explanation);
                     $(".lt").css("display", "inline-block");
                     $(".lt").unbind().on('click', function() {
                         $(".images").css("display", "block");
                         $(".answers").css("display", "table");
-                        $(".wbody").css("display", "none");
+                        $(".boxx").css("display", "none");
                         $(".lt").css("display", "none");
-                        $(".correct").css("display", "none");
+                        $(".title").css("display", "none");
 
                         let btn = $("#" + activeIndex.id + ".answer");
                         btn.css("visibility", "hidden")
