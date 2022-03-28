@@ -63,14 +63,13 @@
                     $(".images").css("display", "none");
                     $(".answers").css("display", "none");
                     $(".boxx").css("display", "flex");
-                    $(".correct").css("display", "block");
                     $("#title").text("Correct answer is: " + activeIndex.correctAnswer);
                     $("#explanation").text(activeIndex.explanation);
                     $(".lt").css("display", "inline-block");
                     $(".lt").unbind().on('click', function() {
                         $(".images").css("display", "block");
                         $(".answers").css("display", "table");
-                        $("boxx").css("display", "none");
+                        $(".boxx").css("display", "none");
                         $(".lt").css("display", "none");
                         $(".correct").css("display", "none");
 

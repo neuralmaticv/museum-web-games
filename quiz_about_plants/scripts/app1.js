@@ -63,7 +63,6 @@
                     $(".images").css("display", "none");
                     $(".answers").css("display", "none");
                     $(".boxx").css("display", "flex");
-                    $(".correct").css("display", "block");
                     $("#title").text("Правильный ответ: " + activeIndex.correctAnswer);
                     $("#explanation").text(activeIndex.explanation);
                     $(".lt").css("display", "inline-block");
