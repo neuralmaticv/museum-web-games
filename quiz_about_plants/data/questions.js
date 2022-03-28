@@ -25,7 +25,7 @@ const questions = [{
     },
     {
         id: 4,
-        picture: "images/maslacak1.jpg",
+        picture: "images/maslacak.jpg",
         correctAnswer: "Маслачак",
         explanation: "Маслачак је зељаста биљка са меснатим коријеном и издуженим неправилно урезаним " +
             "листовима, скупљени у приземну розету. Стабљика је шупља пуна млијечног сока, а на " +
@@ -116,7 +116,7 @@ const questions = [{
     },
     {
         id: 14,
-        picture: "images/divlja_ruza1.jpg",
+        picture: "images/divlja_ruza.jpg",
         correctAnswer: "Дивља ружа",
         explanation: "Шипак или дивља ружа је трновит и разгранат жбун са лијепим, ружичастим до бијелим " +
             "цвјетовима, врло пријатног мириса. Зрели плодови су наранџасто-црвени и богати " +
@@ -221,7 +221,7 @@ const questions = [{
     },
     {
         id: 26,
-        picture: "images/majcina_dusica1.jpg",
+        picture: "images/majcina_dusica.jpg",
         correctAnswer: "Мајчина душица",
         explanation: "Мајчина душица је мала бусенаста или пузава биљка, при дну одрвењена. Свијетло " +
             "ружичасти цвјетови скупљени су на врховима грана у цвасти, пријатног мириса. Чај од " +

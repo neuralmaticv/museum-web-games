@@ -46,7 +46,7 @@
             } else {
                 $(".g2").append("<div class='answer en' id='" + l[i].id + "'>" + l[i].correctAnswer + "</div>")
             }
-            $(".answer").unbind().on('click', function () {
+            $(".answer").unbind().on('click', function() {
                 active = $(this);
                 if (active.attr('id') == activeIndex.id) {
                     correctSound.play()
@@ -58,22 +58,19 @@
                     $(".images").append("<img class='img' src='" + l[indexList[k]].picture + "' id='" + l[indexList[k]].id + "' alt='" + l[indexList[k]].correctAnswer + "'></img>");
                     activeIndex = l[indexList[k]]
                     k++;
-                }
-                else {
+                } else {
                     wrongSound.play()
                     $(".images").css("display", "none");
                     $(".answers").css("display", "none");
-                    $(".wbody").css("display", "flex");
+                    $(".boxx").css("display", "flex");
                     $(".correct").css("display", "block");
-                    $(".correct").text("Правильный ответ: " + activeIndex.correctAnswer);
-                    $("#wrap").mouseenter(function () {
-                        $("#par").text(activeIndex.explanation);
-                    })
+                    $("#title").text("Правильный ответ: " + activeIndex.correctAnswer);
+                    $("#explanation").text(activeIndex.explanation);
                     $(".lt").css("display", "inline-block");
-                    $(".lt").unbind().on('click', function () {
+                    $(".lt").unbind().on('click', function() {
                         $(".images").css("display", "block");
                         $(".answers").css("display", "table");
-                        $(".wbody").css("display", "none");
+                        $(".boxx").css("display", "none");
                         $(".lt").css("display", "none");
                         $(".correct").css("display", "none");
 
@@ -89,7 +86,7 @@
         }
     }
 
-    $(document).ready(function () {
+    $(document).ready(function() {
         setTimeout(() => {
             $(".home").css("display", "none");
             displayElements();
