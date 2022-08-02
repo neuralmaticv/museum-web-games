@@ -2,4 +2,4 @@
 
 
 
-Games are available at this [link](https://bogdanvjestica.github.io/muzej-rs/index.html).
+Games are available at this [link](https://vladocodes.github.io/muzej-rs/).
