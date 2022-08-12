@@ -2,4 +2,4 @@
 
 
 
-Games are available at this [link](https://vladocodes.github.io/muzej-rs/).
+Games are available at this [link](https://vladocodes.github.io/museum-web-games).
