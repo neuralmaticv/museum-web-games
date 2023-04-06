@@ -2,4 +2,4 @@
 
 
 
-Games are available at this [link](https://vladocodes.github.io/museum-web-games).
+Games are available at this [link](https://neuralmaticv.github.io/museum-web-games).
